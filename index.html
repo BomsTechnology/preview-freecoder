@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <section id="gridproduct120123">
+      <div id="wrapper" class="wrapper">
+        <div class="card">
+          <div class="hd-card">
+            <div class="colors">
+              <div class="color"></div>
+              <div class="color"></div>
+              <div class="color"></div>
+            </div>
+            <a href="#">
+              <div class="ctn-images">
+                <div class="ctn-images-items active">
+                  <img src="./images/1_1_1.webp" class="init-image" alt="" />
+                  <img src="./images/1_1_2.webp" class="hov-image" alt="" />
+                </div>
+              </div>
+              <ul class="sizes">
+                <li>36</li>
+                <li>37</li>
+                <li>38</li>
+                <li>39</li>
+                <li>40</li>
+                <li>31</li>
+                <li>32</li>
+              </ul>
+            </a>
+          </div>
+          <a href="#">
+            <div class="ctn-info">
+              <p>Bullz joniz lounoutin</p>
+              <p>FCFA497,400</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+  </body>
+
+  <script>
+    const cards = [
+      {
+        name: "Bullz joniz lounoutin",
+        price: "FCFA497,400",
+        sizes: [36, 37, 38, 39, 40, 41, 42, 43, 44, 45],
+        items: [
+          {
+            color: "#e74c3c",
+            init_image: "./images/1_1_1.webp",
+            hover_image: "./images/1_1_2.webp",
+          },
+          {
+            color: "#f1c40f",
+            init_image: "./images/1_2_1.webp",
+            hover_image: "./images/1_2_2.webp",
+          },
+          {
+            color: "#2980b9",
+            init_image: "./images/1_3_1.webp",
+            hover_image: "./images/1_3_2.webp",
+          },
+        ],
+      },
+      {
+        name: "Bullz joniz lounoutin",
+        price: "FCFA497,400",
+        sizes: [36, 37, 38, 39, 40, 41, 42],
+        items: [
+          {
+            color: "#60a3bc",
+            init_image: "./images/2_1_1.webp",
+            hover_image: "./images/2_1_2.webp",
+          },
+          {
+            color: "#fad390",
+            init_image: "./images/2_2_1.webp",
+            hover_image: "./images/2_2_2.webp",
+          },
+        ],
+      },
+      {
+        name: "Bullz joniz lounoutin",
+        price: "FCFA497,400",
+        sizes: [36, 37, 38, 39, 40],
+        items: [
+          {
+            color: "#0a3d62",
+            init_image: "./images/3_1_1.webp",
+            hover_image: "./images/3_1_2.webp",
+          },
+          {
+            color: "#b71540",
+            init_image: "./images/3_2_1.webp",
+            hover_image: "./images/3_2_2.webp",
+          },
+        ],
+      },
+      {
+        name: "Bullz joniz lounoutin",
+        price: "FCFA497,400",
+        sizes: [36, 37, 38, 39, 40, 41, 42, 43, 44, 45],
+        items: [
+          {
+            color: "#e74c3c",
+            init_image: "./images/4_1_1.webp",
+            hover_image: "./images/4_1_2.webp",
+          },
+        ],
+      },
+    ];
+    let html = "";
+    cards.forEach((card, index) => {
+      html += `<div class="card card_${
+        index + 1
+      }"><div class="hd-card"><div class="colors">`;
+      card.items.forEach((item) => {
+        html += `<div class="color" style="background-color: ${item.color}"></div>`;
+      });
+      html += '</div><a href="#"><div class="ctn-images">';
+      card.items.forEach((item, index) => {
+        if (index == 0) {
+          html += `<div class="ctn-images-items active"><img src="${item.init_image}" class="init-image" alt="" /><img src="${item.hover_image}" class="hov-image" alt="" /></div>`;
+        } else {
+          html += `<div class="ctn-images-items"><img src="${item.init_image}" class="init-image" alt="" /><img src="${item.hover_image}" class="hov-image" alt="" /></div>`;
+        }
+      });
+      html += '</div><ul class="sizes">';
+      card.sizes.forEach((size) => {
+        html += `<li>${size}</li>`;
+      });
+      html += `</ul></a></div><a href="#"> <div class="ctn-info"><p>${card.name}</p><p>${card.price}</p></div></a></div></div>`;
+    });
+
+    document.getElementById("wrapper").innerHTML = html;
+    let items = document.getElementsByClassName("card");
+
+    for (let i = 0; i < items.length; i++) {
+      let colors = document.querySelectorAll(`.card_${i + 1} .color`);
+      colors.forEach((color, indexC) => {
+        color.addEventListener("click", function (e) {
+          e.preventDefault();
+          let ctn_image = document.querySelectorAll(
+            `.card_${i + 1} .ctn-images-items`
+          );
+          ctn_image.forEach((image, indexI) => {
+            if (indexC === indexI) {
+              image.classList.add("active");
+            } else {
+              image.classList.remove("active");
+            }
+          });
+        });
+      });
+    }
+  </script>
+</html>
