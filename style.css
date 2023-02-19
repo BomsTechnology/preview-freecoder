@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -5,7 +7,7 @@
 }
 
 body {
-    font-family: sans-serif;
+    font-family: 'DM Sans', sans-serif;
     width: 100%;
     height: 100%;
 }
@@ -31,10 +33,9 @@ body {
 #contactsection190223 .container  .form_container {
     width: 100%;
     margin-top: 50px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 40px;
 }
 
 #contactsection190223 .container  .left_form,
@@ -42,16 +43,18 @@ body {
     background-color: #f1f5f9;
     border-radius: 20px;
     padding: 20px;
+    width: 100%;
+    height: 100%;
+    display: block;
 }
 
-#contactsection190223 .container .left_form {
-    margin-right: 20px;
-    width: 40%;
+
+#contactsection190223 .container  .left_form {
+    grid-column: span 2 / span 2;
 }
 
 #contactsection190223 .container .right_form {
-    margin-left: 20px;
-    width: 60%;
+    grid-column: span 3 / span 3;
 }
 
 #contactsection190223 .container .form_container .form_subtitle {
@@ -118,7 +121,7 @@ body {
 }
 
 #contactsection190223 .container .mt-5 {
-    margin-top: 80px;
+    margin-top: 50px;
 }
 
 #contactsection190223 .container .info_container .card_info {
@@ -141,13 +144,13 @@ body {
 }
 
 #contactsection190223 .container .info_container .card_info p {
-    font-size: 13px;
+    font-size: 14px;
     color: #6b7280;
 }
 
 #contactsection190223 .container .info_container .card_info h6 {
     margin: 8px 0;
-    font-size: 12px;
+    font-size: 13px;
 }
 
 #contactsection190223 .container .info_container .card_info svg.wathsapp {
@@ -184,20 +187,17 @@ body {
         padding: 0;
     }
 
-    #contactsection190223 .container .left_form {
-        margin-right: 0px;
-        width: 100%;
+    #contactsection190223 .container  .left_form {
+        grid-column: span 1 / span 1;
     }
     
     #contactsection190223 .container .right_form {
-        margin-left: 0px;
-        margin-top: 20px;
-        width: 100%;
+        grid-column: span 1 / span 1;
     }
 
     #contactsection190223 .container  .form_container {
-        margin-top: 50px;
-        flex-direction: column;
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        gap: 20px;
     }
 
     #contactsection190223 .container .action_btn_container button {
