@@ -31,30 +31,7 @@
                 <div class="left_form">
                     <h5 class="form_subtitle">Jour</h5>
                     <div class="days_container">
-                        <div class="day_item">
-                            <span>Lun</span>
-                            <div class="day">20</div>
-                        </div>
-                        <div class="day_item">
-                            <span>Mar.</span>
-                            <div class="day">21</div>
-                        </div>
-                        <div class="day_item">
-                            <span>Mer.</span>
-                            <div class="day">22</div>
-                        </div>
-                        <div class="day_item">
-                            <span>Jeu.</span>
-                            <div class="day curr_day">23</div>
-                        </div>
-                        <div class="day_item">
-                            <span>Ven.</span>
-                            <div class="day">24</div>
-                        </div>
-                        <div class="day_item">
-                            <span>Sam.</span>
-                            <div class="day">25</div>
-                        </div>
+                        
                     </div>
                     <h5 class="form_subtitle">Magasin</h5>
                     <div class="input_container">
@@ -165,5 +142,43 @@
 
         </div>
     </section>
+
+    <script>
+        let curr = new Date();
+        let allDays = ['Lun.', 'Mar.', 'Mer.', 'Jeu.', 'Ven.', 'Sam.'];
+        let week = []
+
+        for (let i = 1; i <= 7; i++) {
+            let first = curr.getDate() - curr.getDay() + i 
+            let day = new Date(curr.setDate(first)).toISOString().slice(0, 10);
+            week.push(day)
+        }
+
+        let html = '';
+
+        allDays.forEach((day,index) => {
+            let currentD = week[index] == new Date().toISOString().slice(0, 10) ? 'curr_day' : '';
+            html += ` <div class="day_item">
+                            <span>${day}</span>
+                            <div class="day ${currentD}">${week[index][8] + week[index][9]}</div>
+                        </div>`;
+        });
+
+        document.querySelector('#makeappointmentsection200223 .days_container').innerHTML = html;
+
+        let days = document.querySelectorAll('#makeappointmentsection200223 .day');
+        days.forEach((d) => {
+            d.addEventListener('click', function(e) {
+                e.preventDefault();
+                days.forEach((cD) => {
+                    if(cD == d) {
+                        cD.classList.add('curr_day');
+                    }else{
+                        cD.classList.remove('curr_day');
+                    }
+                })
+            })
+        })
+    </script>
 </body>
 </html>
