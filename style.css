@@ -12,34 +12,43 @@ body {
     height: 100%;
 }
 
-#contactsection190223 {
+#makeappointmentsection200223 {
     width: 100%;
     height: 100%;
 }
 
-#contactsection190223 .container {
+#makeappointmentsection200223 .container {
     max-width: 1300px;
     margin: 0 auto;
     padding: 20px;
 }
 
-#contactsection190223 .container .contact_title {
+#makeappointmentsection200223 .container .ma_title {
     text-align: center;
     font-size: 32px;
-    font-weight: 600;
+    font-weight: 200;
     text-transform: uppercase;
+    color: #3b82f6;
 }
 
-#contactsection190223 .container  .form_container {
+#makeappointmentsection200223 .container .ma_subtitle {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 200;
+    margin: 5px auto;
+    max-width: 70%;
+}
+
+#makeappointmentsection200223 .container  .form_container {
     width: 100%;
-    margin-top: 50px;
+    margin-top: 10px;
     display: grid;
     grid-template-columns: repeat(5, minmax(0, 1fr));
     gap: 40px;
 }
 
-#contactsection190223 .container  .left_form,
-#contactsection190223 .container .right_form {
+#makeappointmentsection200223 .container  .left_form,
+#makeappointmentsection200223 .container .right_form {
     background-color: #f1f5f9;
     border-radius: 20px;
     padding: 20px;
@@ -49,37 +58,60 @@ body {
 }
 
 
-#contactsection190223 .container  .left_form {
-    grid-column: span 2 / span 2;
-}
-
-#contactsection190223 .container .right_form {
+#makeappointmentsection200223 .container  .left_form {
     grid-column: span 3 / span 3;
 }
 
-#contactsection190223 .container .form_container .form_subtitle {
+#makeappointmentsection200223 .container .right_form {
+    grid-column: span 2 / span 2;
+}
+
+#makeappointmentsection200223 .container .form_container .form_subtitle {
     font-size: 20px;
     font-weight: 500;
     font-style: normal;
     text-align: left;
-    margin-bottom: 15px !important;
     display: block;
 }
 
-#contactsection190223 .container .input_container {
+#makeappointmentsection200223 .container .right_form .input_container {
     width: 100%;
-    margin-bottom: 30px;
+    margin-top: 20px;
 }
 
-#contactsection190223 .container .input_container.ctn2 {
+#makeappointmentsection200223 .container .left_form .input_container {
+    width: 60%;
+    margin: 8px 0px;
+}
+
+#makeappointmentsection200223 .container .bl5 {
+    color: #3b82f6;
+}
+
+#makeappointmentsection200223 .container .form_title {
+    display: flex;
+    align-items: center;
+    font-size: 28px;
+    font-weight: 600;
+    margin-top: 30px;
+}
+
+#makeappointmentsection200223 .container .form_title svg {
+    height: 45px;
+    width: 45px;
+    margin-right: 10px;
+}
+
+#makeappointmentsection200223 .container .input_container.ctn2 {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
 }
 
-#contactsection190223 .container .input_container input, 
-#contactsection190223 .container .input_container select {
+#makeappointmentsection200223 .container .input_container input, 
+#makeappointmentsection200223 .container .input_container select,
+#makeappointmentsection200223 .container .input_container button {
     display: block;
     width: 100%;
     padding: 14px 10px;
@@ -88,10 +120,19 @@ body {
     background-color: #fff;
     border: none;
     outline: none;
+}
+
+#makeappointmentsection200223 .container .input_container button {
+    border: 0.5px solid #3b82f6;
+    cursor: pointer;
+}
+
+#makeappointmentsection200223 .container .right_form .input_container input, 
+#makeappointmentsection200223 .container .right_form .input_container select {
     text-align: center;
 }
 
-#contactsection190223 .container .right_form textarea {
+#makeappointmentsection200223 .container .right_form textarea {
     display: block;
     width: 100%;
     border: none;
@@ -103,61 +144,52 @@ body {
     font-size: 16px;
 }
 
-#contactsection190223 .container .mr-2 {
+#makeappointmentsection200223 .container .mr-2 {
     margin-right: 5px;
 }
 
-#contactsection190223 .container .ml-2 {
+#makeappointmentsection200223 .container .ml-2 {
     margin-left: 5px;
 }
 
-#contactsection190223 .container .info_container {
+#makeappointmentsection200223 .container .info_container {
     width: 100%;
     margin-top: 50px;
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 80px;
-    padding: 0 100px;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 40px;
+    padding: 0 80px;
 }
 
-#contactsection190223 .container .mt-5 {
-    margin-top: 50px;
-}
-
-#contactsection190223 .container .info_container .card_info {
+#makeappointmentsection200223 .container .info_container .card_info {
     width: 100%;
     padding: 20px;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     justify-content: flex-start;
-    border: 1px solid #3b82f6;
     border-radius: 10px;
     min-height: 160px;
-    text-align: center;
+    text-align: left;
 }
 
-#contactsection190223 .container .info_container .card_info svg {
-    width: 45px;
-    height: 45px;
-    color: #000;
+#makeappointmentsection200223 .container .info_container .card_info img {
+    height: 80px;
+    object-fit: cover;
 }
 
-#contactsection190223 .container .info_container .card_info p {
-    font-size: 14px;
+#makeappointmentsection200223 .container .info_container .card_info p {
+    font-size: 16px;
     color: #6b7280;
 }
 
-#contactsection190223 .container .info_container .card_info h6 {
+#makeappointmentsection200223 .container .info_container .card_info h6 {
     margin: 8px 0;
-    font-size: 13px;
+    font-size: 22px;
+    font-weight: 600;
 }
 
-#contactsection190223 .container .info_container .card_info svg.wathsapp {
-    color: #22c55e; 
-}
-
-#contactsection190223 .container .action_btn_container {
+#makeappointmentsection200223 .container .action_btn_container {
     width: 100%;
     display: flex;
     align-items: center;
@@ -165,7 +197,7 @@ body {
     margin-top: 30px;
 }
 
-#contactsection190223 .container .action_btn_container button {
+#makeappointmentsection200223 .container .action_btn_container button {
     color: #fff;
     border: none;
     outline: none;
@@ -179,75 +211,130 @@ body {
     width: 100%;
 }
 
+#makeappointmentsection200223 .container .days_container {
+    display: flex;
+    width: 100%;
+    padding: 15px 5px;
+    flex-wrap: wrap;
+}
+
+#makeappointmentsection200223 .container .days_container .day_item {
+    margin: 8px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#makeappointmentsection200223 .container .days_container .day_item span {
+    font-size: 12px;
+    font-weight: 300;
+    margin-bottom: 8px;
+}
+
+#makeappointmentsection200223 .container .days_container .day_item  .day {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+#makeappointmentsection200223 .container .days_container .day_item  .day.curr_day {
+    background-color: #3b82f6;
+    color: #fff;
+}
+
+#makeappointmentsection200223 .fixed_image {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 400px;
+    width: auto;
+    display: none;
+}
+
+#makeappointmentsection200223 .fixed_image.left {
+    left: 0;
+}
+
+#makeappointmentsection200223 .fixed_image.right {
+    right: 0;
+}
+
+@media only screen and (min-width: 1500px) {
+    #makeappointmentsection200223 .fixed_image {
+        display: block;
+    }
+}
+
 @media only screen and (max-width: 767px) {
-    #contactsection190223 .container .info_container {
+    
+    #makeappointmentsection200223 .container .info_container {
         margin-top: 20px;
         grid-template-columns: repeat(1, minmax(0, 1fr));
-        gap: 40px;
+        gap: 20px;
         padding: 0;
     }
 
-    #contactsection190223 .container  .left_form {
+    #makeappointmentsection200223 .container  .left_form {
         grid-column: span 1 / span 1;
     }
     
-    #contactsection190223 .container .right_form {
+    #makeappointmentsection200223 .container .right_form {
         grid-column: span 1 / span 1;
     }
 
-    #contactsection190223 .container  .form_container {
+    #makeappointmentsection200223 .container  .form_container {
         grid-template-columns: repeat(1, minmax(0, 1fr));
         gap: 20px;
     }
 
-    #contactsection190223 .container .action_btn_container button {
-        font-size: 16px;
-        max-width: 100%;
-        width: 100%;
+    #makeappointmentsection200223 .container .info_container .card_info img {
+        height:50px;
     }
 
-    #contactsection190223 .container .info_container .card_info svg {
-        width: 40px;
-        height:40px;
-    }
-
-    #contactsection190223 .container .mt-5 {
-        margin-top: unset;
-    }
-
-    #contactsection190223 .container .mr-2 {
+    #makeappointmentsection200223 .container .mr-2 {
         margin-right: unset;
         margin-bottom: 20px;
     }
     
-    #contactsection190223 .container .ml-2 {
+    #makeappointmentsection200223 .container .ml-2 {
         margin-left: unset;
     }
 
-    #contactsection190223 .container .input_container.ctn2 {
+    #makeappointmentsection200223 .container .input_container.ctn2 {
         flex-direction: column;
     }
 
-    #contactsection190223 .container .input_container {
+    #makeappointmentsection200223 .container .input_container {
         width: 100%;
         margin-bottom: 20px;
     }
 
-    #contactsection190223 .container .contact_title {
-        font-size: 24px;
+    #makeappointmentsection200223 .container .ma_title {
+        font-size: 26px;
     }
 
-    #contactsection190223 .container .right_form textarea {
-        height: 250px;
-        font-size: 14px;
+    #makeappointmentsection200223 .container .ma_subtitle {
+        font-size: 16px;
+        max-width: 95%;
     }
     
-    #contactsection190223 .container .input_container input, 
-    #contactsection190223 .container .input_container select {
+    #makeappointmentsection200223 .container .input_container input, 
+    #makeappointmentsection200223 .container .input_container select {
         font-size: 14px;
     }
 
-    #contactsection190223 .container .form_container .form_subtitle {
+    #makeappointmentsection200223 .container .form_container .form_subtitle {
         font-size: 18px;
+    }#makeappointmentsection200223 .container .left_form .input_container {
+        width: 100%;
+        margin: 8px 0px;
     }
 }
