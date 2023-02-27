@@ -72,7 +72,6 @@ body {
     width: 60%;
     padding-bottom: 35px;
     display: flex;
-
     margin-left: 50px;
 }
 
@@ -107,6 +106,59 @@ body {
     line-height: 145.5%;
     outline: none;
     color: #fff;
+}
+
+#contactsection270223 .container .input_item .cust_select {
+    display: block;
+    width: 100%;
+    border: 2px solid rgba(241, 242, 234, 0.1);
+    background-color: transparent;
+    padding: 0;
+    font-size: 16px;
+    letter-spacing: 0.05em;
+    line-height: 145.5%;
+    outline: none;
+    color: #fff;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+#contactsection270223 .container .input_item .cust_select svg {
+    width: 15px;
+    height: 15px;
+    color: #55627B;
+    transition: all 500ms ;
+}
+
+#contactsection270223 .container .input_item .cust_select.open {
+    border-bottom: none !important;
+}
+
+#contactsection270223 .container .input_item .cust_select.open  > .icon svg {
+    transform: rotate(90deg);
+}
+
+#contactsection270223 .container .element_container {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    background-color: #232C3F;
+    z-index: 30;
+    height: 0;
+    transition: all 500ms ;
+}
+
+#contactsection270223 .container .innner_container {
+    border: 2px solid rgba(241, 242, 234, 0.1);
+}
+
+#contactsection270223 .container .input_item .cust_select span {
+    display: block;
+    padding: 15px;
 }
 
 #contactsection270223 .container .input_item textarea {
@@ -229,5 +281,10 @@ body {
     #contactsection270223 .container {
         padding: 40px 20px;
     }
+
+    #contactsection270223 .container .input_item .cust_select {
+        font-size: 14px;
+    }
 }
+
 
