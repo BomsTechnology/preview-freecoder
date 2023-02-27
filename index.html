@@ -25,15 +25,30 @@
                 <div class="left_form">
                     <div class="input_item">
                         <label for="prenom">Prénom</label>
-                        <input type="text" id="prenom" placeholder="Entrez votre prénom">
+                        <input type="text" id="prenom" name="prenom" placeholder="Entrez votre prénom">
                     </div>
                     <div class="input_item">
-                        <label for="prenom">Adresse mail</label>
-                        <input type="text" id="prenom" placeholder="Entrez votre adresse mail">
+                        <label for="email">Adresse mail</label>
+                        <input type="text" id="email" name="email" placeholder="Entrez votre adresse mail">
                     </div>
                     <div class="input_item">
                         <label for="prenom">Sujet de votre contact</label>
-                        <input type="text" id="prenom" placeholder="Trouvez votre sujet">
+                        <div class="cust_select">
+                            <input type="hidden" name="contact_sujebct" id="cust_select_input">
+                            <span class="libelle">Trouvez un sujet</span>
+                            <span class="icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                                </svg>
+                            </span>
+                            <div class="element_container">
+                                <span class="innner_container">
+                                    <span class="cust_select_item_element">Aide à l'achat</span>
+                                    <span class="cust_select_item_element">Accident, casse ou vol d'un vélo</span>
+                                    <span class="cust_select_item_element">Patenariat</span>
+                                </span>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="right_form">
@@ -51,5 +66,32 @@
             </div>
         </div>
     </section>
+
+    <script>
+        let custSelect = document.querySelector('#contactsection270223 .cust_select');
+        let libelle = document.querySelector('#contactsection270223 .cust_select .libelle');
+        let input = document.querySelector('#contactsection270223 .cust_select #cust_select_input');
+        let custSelectIems = document.querySelectorAll('#contactsection270223 .cust_select .cust_select_item_element');
+
+        custSelect.addEventListener('click', function(e) {
+            let elt = custSelect.querySelector('.element_container');
+                e.preventDefault();
+                if(custSelect.classList.contains('open')){
+                    elt.style.height = '0px';
+                    custSelect.classList.remove('open')
+                }else {
+                    elt.style.height = elt.scrollHeight + 'px';
+                    custSelect.classList.add('open')
+                }
+            });
+
+        custSelectIems.forEach((elt) => {
+            elt.addEventListener('click', function(e) {
+                e.preventDefault();
+                libelle.innerHTML = elt.innerHTML;
+                input.innerHTML = elt.innerHTML;
+            })
+        })
+    </script>
 </body>
 </html>
