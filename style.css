@@ -7,284 +7,132 @@
 body {
     width: 100%;
     height: 100%;
-    background-color: #232C3F;
-    color: #fff;
     font-family: sans-serif;
 }
 
-#contactsection270223 {
+#customtabssection270223 {
     width: 100%;
-    height: 100%;background-color: #232C3F;
-    color: #fff;
+    height: 100%;
 }
 
-#contactsection270223 .container {
+#customtabssection270223 .wrapper {
     max-width: 1300px;
     width: 100%;
     margin: 0 auto;
-    padding: 100px 20px;
 }
 
-#contactsection270223 .container .contact_header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: row;
-    padding: 20px 0;
-    border-bottom: 1px solid #384050;
+
+#customtabssection270223 .wrap_text_item .wrap_text_head svg {
+    height: 18px;
+    width: 18px;
+    transition: all 500ms;
 }
 
-#contactsection270223 .container .contact_header .contact_title {
-    font-size: 24px;
-    line-height: 145.5%;
-    letter-spacing: 0.05em;
+#customtabssection270223 .wrap_text_item {
+    border: 2px solid #000;
+    border-bottom: none;
+    padding: 100px;
 }
 
-#contactsection270223 .container .contact_header .contact_tel {
-    font-size: 16px;
-    line-height: 145.5%;
-    letter-spacing: 0.05em;
-    display: flex;
-    align-items: center;
-    margin-top: 0;
+#customtabssection270223 .wrap_text_item:last-child {
+    border-bottom: 2px solid #000;
 }
 
-#contactsection270223 .container .contact_tel svg {
-    width: 15px;
-    height: 15px;
-    color: #55627B;
-    margin-right: 15px;
-}
-
-#contactsection270223 .container .contact_form {
-    margin-top: 50px;
-    display: flex;
-    align-items: stretch;
-    flex-direction: row;
-}
-
-#contactsection270223 .container .left_form {
-    width: 40%;
-    margin-right: 50px;
-}
-
-#contactsection270223 .container .right_form {
-    width: 60%;
-    padding-bottom: 35px;
-    display: flex;
-    margin-left: 50px;
-}
-
-#contactsection270223 .container .input_item {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    margin-bottom: 35px;
-    width: 100%;
-}
-
-#contactsection270223 .container .input_item label {
+#customtabssection270223 .wrapper span {
     display: block;
-    font-size: 16px;
-    line-height: 145.5%;
-    font-weight: 500;
-    letter-spacing: 0.05em;
-    margin-bottom: 10px;
 }
 
-#contactsection270223 .container .input_item input, 
-#contactsection270223 .container .input_item select,
-#contactsection270223 .container .input_item textarea {
-    display: block;
-    width: 100%;
-    border: 2px solid rgba(241, 242, 234, 0.1);
-    background-color: transparent;
-    padding: 15px;
-    font-size: 16px;
-    letter-spacing: 0.05em;
-    line-height: 145.5%;
-    outline: none;
-    color: #fff;
-}
-
-#contactsection270223 .container .input_item .cust_select {
-    display: block;
-    width: 100%;
-    border: 2px solid rgba(241, 242, 234, 0.1);
-    background-color: transparent;
-    padding: 0;
-    font-size: 16px;
-    letter-spacing: 0.05em;
-    line-height: 145.5%;
-    outline: none;
-    color: #fff;
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    cursor: pointer;
-}
-
-#contactsection270223 .container .input_item .cust_select svg {
-    width: 15px;
-    height: 15px;
-    color: #55627B;
-    transition: all 500ms ;
-}
-
-#contactsection270223 .container .input_item .cust_select.open {
-    border-bottom: none !important;
-}
-
-#contactsection270223 .container .input_item .cust_select.open  > .icon svg {
+#customtabssection270223 .wrap_text_item.open > .wrap_text_head .icon svg {
     transform: rotate(90deg);
 }
 
-#contactsection270223 .container .element_container {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    background-color: #232C3F;
-    z-index: 30;
-    height: 0;
-    transition: all 500ms ;
-}
-
-#contactsection270223 .container .innner_container {
-    border: 2px solid rgba(241, 242, 234, 0.1);
-}
-
-#contactsection270223 .container .input_item .cust_select span {
-    display: block;
-    padding: 15px;
-}
-
-#contactsection270223 .container .input_item textarea {
-    resize: none;
-    flex: 1 1 0%;
-    min-height: 100%;
-    height: 100%;
-    width: 100% !important;
-}
-
-#contactsection270223 .container .input_item input::placeholder, 
-#contactsection270223 .container .input_item textarea::placeholder {
-    color: #55627B;
-}
-
-#contactsection270223 .container .action_btn {
+#customtabssection270223 .wrap_text_head {
     display: flex;
-    justify-content: flex-start;
-}
-
-#contactsection270223 .container .action_btn  button {
-    border: 2px solid rgba(241, 242, 234, 0.1);
-    background-color: transparent;
-    outline: none;
-    min-width: 200px;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 20px;
+    font-weight: 500;
     cursor: pointer;
-    transition: all 500ms ;
-    overflow: hidden;
-    position: relative;
-    height: 50px;
 }
 
-#contactsection270223 .container .action_btn  button .libelle {
-    color: #fff;
-    padding: 15px;
-    font-weight: 850;
-    font-size: 14px;
+#customtabssection270223 .wrapper {
+    display: flex;
+    width: 100%;
+    align-items: stretch;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+#customtabssection270223 .title {
+    font-size: 32px;
+    font-weight: 500;
+    margin-top: 20px;
+}
+
+#customtabssection270223 .subtitle {
+    color: brown;
+    font-weight: 500;
+    font-size: 10px;
     text-transform: uppercase;
-    line-height: 17px;
-    text-align: center;
-    letter-spacing: 0.1em;
-    background-color: transparent;
-    cursor: pointer;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 10;
 }
 
-#contactsection270223 .container .action_btn  button .overlay {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: 0;
-    background-color: #fff;
-    top: 0;
-    left: -100%;
-    transition: all 500ms ;
+#customtabssection270223 .wrap_text_body .inner_wrap_text {
+    margin-top: 20px;
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: justify;
 }
 
-#contactsection270223 .container .action_btn  button:hover {
-    color: #232C3F;
+#customtabssection270223 .left,
+#customtabssection270223 .right {
+    width: 50%;
 }
 
-#contactsection270223 .container .action_btn  button:hover > .overlay  {
-    left: 0;
+#customtabssection270223 .left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #000;
+    border-right: none;
+    padding: 80px 20px;
 }
 
-#contactsection270223 .container .action_btn  button:hover > .libelle  {
-   color: #232C3F;
-   transition: all 500ms ;
+#customtabssection270223 .wrap_text_body {
+    height: 0;
+    overflow: hidden;
+    transition: all 500ms;
 }
 
 @media only screen and (max-width: 780px) {
-    #contactsection270223 .container .left_form ,
-    #contactsection270223 .container .right_form  {
+    #customtabssection270223 .left,
+    #customtabssection270223 .right {
         width: 100%;
-        margin: 0 !important;
-        padding-bottom: 0 !important;
     }
 
-    #contactsection270223 .container .contact_form {
+    #customtabssection270223 .wrapper {
         flex-direction: column;
     }
 
-    #contactsection270223 .container .contact_header {
-        flex-direction: column;
-        align-items: flex-start;
+    #customtabssection270223 .wrap_text_item {
+        padding: 40px 20px !important;
     }
 
-    #contactsection270223 .container .contact_header .contact_tel {
-        margin-top: 15px;
+    #customtabssection270223 .wrap_text_head {
+        font-size: 16px;
+    }
+
+    #customtabssection270223 .wrap_text_body .inner_wrap_text {
         font-size: 14px;
     }
 
-    #contactsection270223 .container .contact_header .contact_title {
-        font-size: 20px;
+    #customtabssection270223 .wrap_text_item {
+        border-left: none !important;
+        border-right: none !important;
     }
 
-    #contactsection270223 .container .action_btn  button .libelle {
-        font-size: 12px;
-    }
-
-    #contactsection270223 .container .input_item label {
-        font-size: 14px;
-    }
-
-    #contactsection270223 .container .input_item input, 
-    #contactsection270223 .container .input_item select,
-    #contactsection270223 .container .input_item textarea {
-        font-size: 14px;
-    }
-
-    #contactsection270223 .container .input_item textarea {
-        min-height: 300px;
-    }
-
-    #contactsection270223 .container {
-        padding: 40px 20px;
-    }
-
-    #contactsection270223 .container .input_item .cust_select {
-        font-size: 14px;
+    #customtabssection270223 .wrap_text_item:first-child {
+        border-top: none !important;
     }
 }
-
-
