@@ -26,6 +26,7 @@ body {
     visibility: hidden;
     z-index: -1;
     transition: opacity 500ms, background-color 600ms;
+    overflow: hidden;
 }
 
 #sizeguide010323 .modal_container.open {
@@ -242,5 +243,15 @@ body {
     #sizeguide010323 .size_container_header .size_container_header_left,
     #sizeguide010323 .size_container_header .size_container_header_right {
         font-size: 14px ;
+    }
+
+    #sizeguide010323 .modal_container {
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+    
+    #sizeguide010323 .modal_container .size_guide_modal {
+         overflow-x: hidden;
+         overflow-y: auto;
     }
 }
