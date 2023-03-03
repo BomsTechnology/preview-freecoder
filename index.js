@@ -1,39 +1,130 @@
-let sizes = [ { "hauteur":"1940", "largeur":"1000", "prix":"297", "id":"44619369971998" }, { "hauteur":"1940", "largeur":"1300", "prix":"308", "id":"44619370004766" }, { "hauteur":"1940", "largeur":"1600", "prix":"331", "id":"44619370037534" }, { "hauteur":"1940", "largeur":"1900", "prix":"0", "id":"44619370070302" }, { "hauteur":"2091", "largeur":"1000", "prix":"311", "id":"44619370103070" }, { "hauteur":"2091", "largeur":"1300", "prix":"322", "id":"44619370135838" }, { "hauteur":"2091", "largeur":"1600", "prix":"345", "id":"44619370168606" }, { "hauteur":"2091", "largeur":"1900", "prix":"368", "id":"44619370201374" }, { "hauteur":"2241", "largeur":"1000", "prix":"324", "id":"44619370234142" }, { "hauteur":"2241", "largeur":"1300", "prix":"335", "id":"44619370266910" }, { "hauteur":"2241", "largeur":"1600", "prix":"358", "id":"44619370299678" }, { "hauteur":"2241", "largeur":"1900", "prix":"381", "id":"44619370332446" }, { "hauteur":"2421", "largeur":"1000", "prix":"338", "id":"44619370365214" }, { "hauteur":"2421", "largeur":"1300", "prix":"349", "id":"44619370397982" }, { "hauteur":"2421", "largeur":"1600", "prix":"372", "id":"44619370430750" }, { "hauteur":"2421", "largeur":"1900", "prix":"394", "id":"44619370463518" }, { "hauteur":"2571", "largeur":"1000", "prix":"351", "id":"44619370529054" }, { "hauteur":"2571", "largeur":"1300", "prix":"362", "id":"44619370594590" }, { "hauteur":"2571", "largeur":"1600", "prix":"385", "id":"44619370627358" }, { "hauteur":"2571", "largeur":"1900", "prix":"408", "id":"44619370660126" }, { "hauteur":"2701", "largeur":"1000", "prix":"378", "id":"44619370692894" }, { "hauteur":"2701", "largeur":"1300", "prix":"389", "id":"44619370725662" }, { "hauteur":"2701", "largeur":"1600", "prix":"412", "id":"44619370758430" }, { "hauteur":"2701", "largeur":"1900", "prix":"0", "id":"44619370791198" }, ];
+import { sizes, poseTypes, coloris }  from './data.js';
 
-let poseTypes = [
-    {
-        "id": "tunnel",
-        "value": 100,
-        "image": "https://www.promoustiquaire.com/img/co/178.jpg",
-        "label": "En tunnel (dans le tableau)",
-    },
-    {
-        "id": "applique",
-        "value": 200,
-        "image": "https://www.promoustiquaire.com/img/co/179.jpg",
-        "label": "En applique (pose frontale)",
-    },
-];
 
-let coloris = [
-    {
-        "id": "blanc",
-        "value": 100,
-        "image": "https://www.promoustiquaire.com/img/co/26.jpg",
-        "label": "Blanc",
-    },
-    {
-        "id": "standard",
-        "value": 200,
-        "image": "https://www.promoustiquaire.com/img/co/29.jpg",
-        "label": "Coloris Standard",
-    },
-    {
-        "id": "imitationbois",
-        "value": 300,
-        "image": "https://www.promoustiquaire.com/img/co/30.jpg",
-        "label": "Imitation bois",
-    },
-];
+let ralentiseur = document.querySelector('#configsection160223 #step_4 .select_item_content #ralentiseur');
+let inputWidth = document.querySelector('#configsection160223 #step_2 .input_item_content #input_width');
+let inputHeight = document.querySelector('#configsection160223 #step_2 .input_item_content #input_height');
+let idPrice = document.querySelector('#configsection160223 #step_2  #id_price');
 
-export { sizes, poseTypes, coloris };
+let selectOptions = document.querySelectorAll('#configsection160223 .config_preview .left .option');
+
+let totalPrice = document.querySelector('#configsection160223 .config_preview .right .price');
+
+let valWidth = 0;
+let valHeight = 0;
+
+let typeDePosePrice = 0;
+let colorisStructurePrice = 0;
+let ralentiseurPrice = 0;
+let price = 0;
+
+
+let html = '';
+
+poseTypes.forEach((elt, index) => {
+    html = index == 0 ? '' : html;
+    let checked = index == 0 ? 'checked' : '';
+    html += `
+                <div class="image_item_content">
+                    <input type="radio" name="typedepose" id="${elt.id}" value="100" ${checked}>
+                    <label for="${elt.id}">
+                        <div class="image_container">
+                            <img src="${elt.image}" alt="${elt.label}">
+                        </div>
+                        <p>${elt.label}</p>
+                    </label>
+                </div>
+            `;
+});
+
+document.querySelector('#configsection160223 #step_1 .wrap__item_content').innerHTML = html;
+selectOptions[0].innerHTML = poseTypes[0].label;
+typeDePosePrice = poseTypes[0].value;
+
+coloris.forEach((elt, index) => {
+    html = index == 0 ? '' : html;
+    let checked = index == 0 ? 'checked' : '';
+    html += `
+                <div class="image_item_content">
+                    <input type="radio" name="coloris" id="${elt.id}" value="100" ${checked}>
+                    <label for="${elt.id}">
+                        <div class="image_container">
+                            <img src="${elt.image}" alt="${elt.label}">
+                        </div>
+                        <p>${elt.label}</p>
+                    </label>
+                </div>
+            `;
+});
+
+document.querySelector('#configsection160223 #step_3 .wrap__item_content').innerHTML = html;
+selectOptions[2].innerHTML = coloris[0].label;
+colorisStructurePrice = coloris[0].value;
+
+inputWidth.addEventListener('input', function(e) {
+    e.preventDefault();
+
+    if(e.target.value){
+        valWidth = parseInt(e.target.value);
+        let result = sizes.filter((elt) => elt.hauteur >= valHeight && elt.largeur >= valWidth);
+        
+        if(result.length != 0){
+            idPrice.value = result[0].id;
+            price = parseInt(result[0].prix);
+            totalPrice.innerHTML = typeDePosePrice + colorisStructurePrice + ralentiseurPrice + price + ' €';
+        }
+
+        selectOptions[1].innerHTML = `Largeur : ${valWidth} mm - Hauteur : ${valHeight} mm`;
+    }
+});
+
+
+inputHeight.addEventListener('input', function(e) {
+    e.preventDefault();
+
+    if(e.target.value){
+        valHeight = parseInt(e.target.value);
+        let result = sizes.filter((elt) => elt.hauteur >= valHeight && elt.largeur >= valWidth);
+
+        if(result.length != 0){
+            idPrice.value = result[0].id;
+            price = parseInt(result[0].prix);
+            totalPrice.innerHTML = typeDePosePrice + colorisStructurePrice + ralentiseurPrice + price + ' €';
+        }
+
+        selectOptions[1].innerHTML = `Largeur : ${valWidth} mm - Hauteur : ${valHeight} mm`;
+    }
+});
+
+let typeDePoses = document.querySelectorAll('#configsection160223 #step_1 .image_item_content input[type="radio"]');
+
+typeDePoses.forEach((elt, index) => {
+    elt.addEventListener('click', function(e) {        
+        if(e.target.checked){
+            typeDePosePrice = parseInt(poseTypes[index].value);
+            selectOptions[0].innerHTML = poseTypes[index].label;
+            totalPrice.innerHTML = typeDePosePrice + colorisStructurePrice + ralentiseurPrice + price + ' €';
+        }
+    });
+});
+
+let colorisStructures = document.querySelectorAll('#configsection160223 #step_3 .image_item_content input[type="radio"]');
+
+colorisStructures.forEach((elt, index) => {
+    elt.addEventListener('click', function(e) {     
+        if(e.target.checked){
+            colorisStructurePrice = parseInt(coloris[index].value);
+            selectOptions[2].innerHTML = coloris[index].label;
+            totalPrice.innerHTML = typeDePosePrice + colorisStructurePrice + ralentiseurPrice + price + ' €';
+        }
+    });
+});
+
+ralentiseur.addEventListener('change', function(e) {
+    ralentiseurPrice = parseInt(e.target.value);
+    selectOptions[3].innerHTML = e.target.value == '0' ? 'Sans ralentisseur' : 'Avec ralentisseur';
+    totalPrice.innerHTML = typeDePosePrice + colorisStructurePrice + ralentiseurPrice + price + ' €';
+});
+
+
+totalPrice.innerHTML = typeDePosePrice + colorisStructurePrice + ralentiseurPrice + price + ' €';
