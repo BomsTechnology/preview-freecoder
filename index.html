@@ -8,118 +8,136 @@
     <title>Document</title>
 </head>
 <body>
-    <section id="sizeguide010323">
-        <!-- Modal guide de taille -->
-        <div class="modal_container">
-            <div class="size_guide_modal">
-                <h3 class="title_modal">
-                    <span class="ico" id="closeSizeGuide">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                          </svg>                          
-                    </span>
-                    <span>
-                        Guide des tailles
-                    </span>
-                </h3>
-                <div class="wrapper_modal">
-                    <div class="brand_container">
-                        <ul class="brand_list">
-                            <li class="brand_list_item">Adidas</li>
-                            <li class="brand_list_item">Nike</li>
-                            <li class="brand_list_item">Hoka</li>
+    <div style="max-width: 800px; margin: 0 auto; padding: 20px;">
+        <section id="configsection160223">
+            <h3 class="title">CONFIGUREZ VOTRE MOUSTIQUAIRE ENROULABLE SUR-MESURE</h3>
+            <p class="subtitle">
+                <em>(En 5 étapes)</em>
+            </p>
+            <div class="wrapper">
+                <div id="step_1" class="wrap__item">
+                    <h4 class="wrap__item_title">1/ Type de poste <sup>*</sup> <span class="info">Info</span> </h4> 
+                    <div class="wrap__item_desc">
+                        <ul>
+                            <li><p>Par défaut : Pose en tunnel (dans l'encadrement, entre les murs.)</p></li>
+                            <li><p>Optionnel : Pose frontale (en applique) : face au mur, contre la façade</p></li>
                         </ul>
                     </div>
-                <div class="size_container">
-                    <div class="size_container_header">
-                        <div class="size_container_header_left">
-                            <span>Femme</span>
-                        </div>
-                        <div class="size_container_header_right">
-                            <span>Homme</span>
-                        </div>
+                    <div class="wrap__item_content">
                     </div>
-                    <div class="size_container_body">
-                        <div class="size_container_body_item">
-                            <div class="size_container_body_left">
-                                <img src="https://thumbs.dreamstime.com/b/elizabeth-tower-big-ben-london-england-may-stands-north-end-houses-parliament-houses-bell-name-60924273.jpg" alt="">
+                </div>
+
+                <div id="step_2" class="wrap__item">
+                    <h4 class="wrap__item_title">2/ Dimensions <sup>*</sup> <span class="info">Info</span> </h4> 
+                    <div class="wrap__item_desc">
+                        <p>Indiquez la largeur et la hauteur de votre encadrement. Consultez notre page pour savoir 
+                          <a href="#">Comment prendre les mesures?</a>  
+                        </p>
+                    </div>
+                    <input type="hidden" name="id_price" id="id_price">
+                    <div class="wrap__item_content">
+                        <div class="wrap_in_grp">
+                            <div class="input_item_content">
+                                <div class="input_group">
+                                    <span class="add-on">Largeur</span>
+                                    <input type="number" id="input_width" name="input_width">
+                                    <span class="add-on">mm</span>
+                                </div>
+                                <small>Valeurs disponibles : 500mm - 2200mm </small>
                             </div>
-                            <div class="size_container_body_right">
-                                <img src="https://thumbs.dreamstime.com/b/elizabeth-tower-big-ben-london-england-may-stands-north-end-houses-parliament-houses-bell-name-60924273.jpg" alt="">
-                            </div>
-                        </div>
-                        <div class="size_container_body_item">
-                            <div class="size_container_body_left">
-                                <img src="https://img.freepik.com/premium-photo/elizabeth-tower-palace-westminster-big-ben_261932-986.jpg?w=2000" alt="">
-                            </div>
-                            <div class="size_container_body_right">
-                                <img src="https://img.freepik.com/premium-photo/elizabeth-tower-palace-westminster-big-ben_261932-986.jpg?w=2000" alt="">
-                            </div>
-                        </div>
-                        <div class="size_container_body_item">
-                            <div class="size_container_body_left">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/London_%28UK%29%2C_Elizabeth_Tower%2C_-Big_Ben-_--_2010_--_1979.jpg/1200px-London_%28UK%29%2C_Elizabeth_Tower%2C_-Big_Ben-_--_2010_--_1979.jpg" alt="">
-                            </div>
-                            <div class="size_container_body_right">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/London_%28UK%29%2C_Elizabeth_Tower%2C_-Big_Ben-_--_2010_--_1979.jpg/1200px-London_%28UK%29%2C_Elizabeth_Tower%2C_-Big_Ben-_--_2010_--_1979.jpg" alt="">
+                            <div class="input_item_content">
+                                <div class="input_group">
+                                    <span class="add-on">Hauteur</span>
+                                    <input type="number" id="input_height" name="input_height">
+                                    <span class="add-on">mm</span>
+                                </div>
+                                <small>Valeurs disponibles : 500mm - 2200mm </small>
                             </div>
                         </div>
                     </div>
                 </div>
+
+                <div id="step_3" class="wrap__item">
+                    <h4 class="wrap__item_title">3/ Coloris de la structure <sup>*</sup> <span class="info">Info</span> </h4> 
+                    <div class="wrap__item_desc">
+                        <p>Sélectionnez le coloris souhaité de la moustiquaire (Coffre & Coulisses). Coloris de la toile : Gris Foncé.</p>
+                    </div>
+                    <div class="wrap__item_content">
+                    </div>
+                </div>
+
+                <div id="step_4" class="wrap__item">
+                    <h4 class="wrap__item_title">4/ Ralentisseur <sup>*</sup> <span class="info">Info</span> </h4> 
+                    <div class="wrap__item_desc">
+                        <p>Option ralentisseur pour freinée la remontée de la toile. <strong>ATTENTION !</strong>  Pour des dimensions (en hauteur) &lt;1800mm et &gt;800mm, ne pas ajouter de ralentisseur. Cela risque de gêner la remontée de la toile.</p>
+                    </div>
+                    <div class="wrap__item_content">
+                        <div class="select_item_content">
+                            <select id="ralentiseur" ><option  value="" disabled="">Choisir une valeur dans la liste</option> <option value="0" selected="selected">Sans ralentisseur</option><option  value="15">Avec ralentisseur (15,00&nbsp;€)</option></select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="config_preview">
+                    <div class="wrapper__config_preview">
+                        <div class="left">
+                            <p>Votre configuration</p>
+                            <ul>
+                                <li>
+                                    <a href="#step_1">
+                                        <strong>1/ Type de pose : </strong>
+                                        <span class="option">
+                                            
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#step_2">
+                                        <strong>2/ Dimensions : </strong>
+                                        <span class="option">
+                                            Largeur : 0 mm -
+                                            Hauteur : 0 mm
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#step_3">
+                                        <strong>3/ Coloris de la structure : </strong>
+                                        <span class="option">
+                                            
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#step_4">
+                                        <strong>4/ Ralentisseur : </strong>
+                                        <span class="option">
+                                            Sans ralentisseur
+                                        </span>
+                                    </a>
+                                    </li>
+                                </ul>
+                        </div>
+                        <div class="right">
+                            <div class="ctn_price">
+                                <span>Prix final (TTC)</span>
+                                <span class="price">0€</span>
+                            </div>
+
+                            <button class="add-to-cart">
+                                <span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+                                  </svg>
+                                  </span>
+                                <span>AJouter au panier</span>
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-
-        <!-- Bouton d'ouverture du modal id=openSizeGuide -->
-        <div style="height: 100vh; width: 100%; display: flex; align-items: center; justify-content: center;">
-            <button type="button" id="openSizeGuide" style="border: none; background: #000; color: #fff; padding: 10px; cursor: pointer;">open modal</button>
-        </div>
-    </section>
-
-    <script>
-        let body = document.querySelector('body');
-        let btnOpenModal = document.querySelector('#sizeguide010323 #openSizeGuide');
-        let btnCloseModal = document.querySelector('#sizeguide010323 #closeSizeGuide');
-        let sizeGuideModalContainer = document.querySelector('#sizeguide010323 .modal_container');
-        let sizeGuideModal = document.querySelector('#sizeguide010323 .size_guide_modal');
-        let bradListItem = document.querySelectorAll('#sizeguide010323 .brand_list .brand_list_item');
-        let bradSizeItem = document.querySelectorAll('#sizeguide010323 .size_container_body .size_container_body_item');
-
-        btnOpenModal.addEventListener('click', function(e) {
-            e.preventDefault();
-            sizeGuideModalContainer.classList.add('open');
-            body.style.overflow = 'hidden';
-        });
-
-        btnCloseModal.addEventListener('click', function(e) {
-            e.preventDefault();
-            sizeGuideModalContainer.classList.remove('open');
-            body.style.overflow = 'inherit';
-        });
-
-        bradListItem.forEach((item, index) => {
-            item.addEventListener('click', function(e) {
-                e.preventDefault();
-                bradListItem.forEach((currItem, currIndex) => {
-                    if(item === currItem){
-                        bradListItem[currIndex].classList.add('active');
-                        bradSizeItem[currIndex].classList.add('active');
-                    }else{
-                        bradListItem[currIndex].classList.remove('active');
-                        bradSizeItem[currIndex].classList.remove('active');
-                    }
-                });
-            });
-        });
-
-        sizeGuideModalContainer.addEventListener("click", async function (e) {
-            e.preventDefault();
-            let clickInside = sizeGuideModal.contains(e.target);
-            if (!clickInside) {
-                sizeGuideModalContainer.classList.remove('open');
-                body.style.overflow = 'inherit';
-            }
-        });
-    </script>
+        </section>
+    </div>
+    <script src="./index.js" type="module"></script>
 </body>
 </html>
