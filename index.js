@@ -74,7 +74,7 @@ inputWidth.addEventListener('input', function(e) {
             totalPrice.innerHTML = typeDePosePrice + colorisStructurePrice + ralentiseurPrice + price + ' €';
             btn.classList.remove('disabled');
             btn.disabled  = false;
-        }else{git
+        }else{
             btn.classList.add('disabled');
             btn.disabled  = true;
         }
