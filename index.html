@@ -16,7 +16,7 @@
             </p>
             <div class="wrapper">
                 <div id="step_1" class="wrap__item">
-                    <h4 class="wrap__item_title">1/ Type de poste <sup>*</sup> <span class="info">Info</span> </h4> 
+                    <h4 class="wrap__item_title">1/ Type de poste <sup>*</sup> </h4> 
                     <div class="wrap__item_desc">
                         <ul>
                             <li><p>Par défaut : Pose en tunnel (dans l'encadrement, entre les murs.)</p></li>
@@ -28,11 +28,9 @@
                 </div>
 
                 <div id="step_2" class="wrap__item">
-                    <h4 class="wrap__item_title">2/ Dimensions <sup>*</sup> <span class="info">Info</span> </h4> 
+                    <h4 class="wrap__item_title">2/ Dimensions <sup>*</sup> </h4> 
                     <div class="wrap__item_desc">
-                        <p>Indiquez la largeur et la hauteur de votre encadrement. Consultez notre page pour savoir 
-                          <a href="#">Comment prendre les mesures?</a>  
-                        </p>
+                        
                     </div>
                     <input type="hidden" name="id_price" id="id_price">
                     <div class="wrap__item_content">
@@ -40,25 +38,25 @@
                             <div class="input_item_content">
                                 <div class="input_group">
                                     <span class="add-on">Largeur</span>
-                                    <input type="number" id="input_width" name="input_width">
+                                    <input type="number" id="input_width" min="1" max="1900" name="input_width">
                                     <span class="add-on">mm</span>
                                 </div>
-                                <small>Valeurs disponibles : 500mm - 2200mm </small>
+                                <small>Valeurs disponibles : 1 mm - 1900 mm </small>
                             </div>
                             <div class="input_item_content">
                                 <div class="input_group">
                                     <span class="add-on">Hauteur</span>
-                                    <input type="number" id="input_height" name="input_height">
+                                    <input type="number" id="input_height" min="1" max="2701" name="input_height">
                                     <span class="add-on">mm</span>
                                 </div>
-                                <small>Valeurs disponibles : 500mm - 2200mm </small>
+                                <small>Valeurs disponibles : 1 mm - 2701 mm </small>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <div id="step_3" class="wrap__item">
-                    <h4 class="wrap__item_title">3/ Coloris de la structure <sup>*</sup> <span class="info">Info</span> </h4> 
+                    <h4 class="wrap__item_title">3/ Coloris de la structure <sup>*</sup> </h4> 
                     <div class="wrap__item_desc">
                         <p>Sélectionnez le coloris souhaité de la moustiquaire (Coffre & Coulisses). Coloris de la toile : Gris Foncé.</p>
                     </div>
@@ -67,7 +65,7 @@
                 </div>
 
                 <div id="step_4" class="wrap__item">
-                    <h4 class="wrap__item_title">4/ Ralentisseur <sup>*</sup> <span class="info">Info</span> </h4> 
+                    <h4 class="wrap__item_title">4/ Ralentisseur <sup>*</sup> </h4> 
                     <div class="wrap__item_desc">
                         <p>Option ralentisseur pour freinée la remontée de la toile. <strong>ATTENTION !</strong>  Pour des dimensions (en hauteur) &lt;1800mm et &gt;800mm, ne pas ajouter de ralentisseur. Cela risque de gêner la remontée de la toile.</p>
                     </div>
@@ -124,13 +122,14 @@
                                 <span class="price">0€</span>
                             </div>
 
-                            <button class="add-to-cart">
-                                <span>
+                            <button class="add-to-cart disabled" id="add_to_cart" type="submit" disabled>
+                                <span class="">
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
                                   </svg>
                                   </span>
-                                <span>AJouter au panier</span>
+                                <span class="">AJouter au panier</span>
+                                <span class="hide">Indisponible</span>
                             </button>
                         </div>
                     </div>
