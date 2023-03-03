@@ -180,6 +180,10 @@ body {
     line-height: 1.5;
 }
 
+#configsection160223 .hide {
+    display: none;
+}
+
 #configsection160223 .wrap__item .input_item_content small {
     font-size: 11px;
     font-weight: 400;
@@ -327,6 +331,15 @@ body {
     line-height: 1.5;
     border-radius: 0;
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+#configsection160223 .add-to-cart.disabled {
+    opacity: 0.5;
+    cursor: default;
+}
+
+#configsection160223 .add-to-cart.disabled:hover {
+    background: #333;
 }
 
 #configsection160223  .ctn_price {
