@@ -1,308 +1,39 @@
-export default [
+let sizes = [ { "hauteur":"1940", "largeur":"1000", "prix":"297", "id":"44619369971998" }, { "hauteur":"1940", "largeur":"1300", "prix":"308", "id":"44619370004766" }, { "hauteur":"1940", "largeur":"1600", "prix":"331", "id":"44619370037534" }, { "hauteur":"1940", "largeur":"1900", "prix":"0", "id":"44619370070302" }, { "hauteur":"2091", "largeur":"1000", "prix":"311", "id":"44619370103070" }, { "hauteur":"2091", "largeur":"1300", "prix":"322", "id":"44619370135838" }, { "hauteur":"2091", "largeur":"1600", "prix":"345", "id":"44619370168606" }, { "hauteur":"2091", "largeur":"1900", "prix":"368", "id":"44619370201374" }, { "hauteur":"2241", "largeur":"1000", "prix":"324", "id":"44619370234142" }, { "hauteur":"2241", "largeur":"1300", "prix":"335", "id":"44619370266910" }, { "hauteur":"2241", "largeur":"1600", "prix":"358", "id":"44619370299678" }, { "hauteur":"2241", "largeur":"1900", "prix":"381", "id":"44619370332446" }, { "hauteur":"2421", "largeur":"1000", "prix":"338", "id":"44619370365214" }, { "hauteur":"2421", "largeur":"1300", "prix":"349", "id":"44619370397982" }, { "hauteur":"2421", "largeur":"1600", "prix":"372", "id":"44619370430750" }, { "hauteur":"2421", "largeur":"1900", "prix":"394", "id":"44619370463518" }, { "hauteur":"2571", "largeur":"1000", "prix":"351", "id":"44619370529054" }, { "hauteur":"2571", "largeur":"1300", "prix":"362", "id":"44619370594590" }, { "hauteur":"2571", "largeur":"1600", "prix":"385", "id":"44619370627358" }, { "hauteur":"2571", "largeur":"1900", "prix":"408", "id":"44619370660126" }, { "hauteur":"2701", "largeur":"1000", "prix":"378", "id":"44619370692894" }, { "hauteur":"2701", "largeur":"1300", "prix":"389", "id":"44619370725662" }, { "hauteur":"2701", "largeur":"1600", "prix":"412", "id":"44619370758430" }, { "hauteur":"2701", "largeur":"1900", "prix":"0", "id":"44619370791198" }, ];
+
+let poseTypes = [
     {
-        question: 'Pourquoi faire mon diagnostic cappillaire ?',
-        question_id: 'pourquoi_faire_mon_diagnostic_cappillaire',
-        answer_type: '',
-        answers: [
-            {
-                type:'text', 
-                path:'', 
-                value:'C\'est 100% gratuit',
-                info: '',
-            },
-            {
-                type:'text', 
-                path:'',
-                value:'Rapide (ça prend 5 minutes)',
-                info: '',
-            },
-            {
-                type:'text', 
-                path:'',
-                value:'100% naturels',
-                info: '',
-            },
-            {
-                type:'text', 
-                path:'',
-                value:'Vegan',
-                info: '',
-            },
-            {
-                type:'text', 
-                path:'',
-                value:'Routine simple et personnalisée',
-                info: '',
-            },
-            {
-                type:'text', 
-                path:'',
-                value:'Made in France',
-                info: '',
-            }
-        ],
-        button_text: 'Obtenir mon diagnostic',
+        "id": "tunnel",
+        "value": 100,
+        "image": "https://www.promoustiquaire.com/img/co/178.jpg",
+        "label": "En tunnel (dans le tableau)",
     },
     {
-        question: 'Choix du genre',
-        question_id: 'choix_du_genre',
-        answer_type: 'single',
-        answers: [
-            {
-                type: 'text',
-                path:'',
-                value: 'Femme',
-                info: '',
-            },
-            {
-                type:'text', 
-                path:'',
-                value:'Homme',
-                info:''
-            },
-            {
-                type:'text', 
-                path:'',
-                value:'Non Binaire',
-                info:''
-            },
-        ],
-        button_text: 'Confirmer',
+        "id": "applique",
+        "value": 200,
+        "image": "https://www.promoustiquaire.com/img/co/179.jpg",
+        "label": "En applique (pose frontale)",
+    },
+];
+
+let coloris = [
+    {
+        "id": "blanc",
+        "value": 100,
+        "image": "https://www.promoustiquaire.com/img/co/26.jpg",
+        "label": "Blanc",
     },
     {
-        question: 'Aspect du cheuveux',
-        question_id: 'aspect_du_cheuveux',
-        answer_type: 'single',
-        answers: [
-            {
-                type: 'text',
-                path: '',
-                value: 'Rapides',
-                info: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur reiciendis aperiam unde explicabo',
-            },
-            {
-                type:'text', 
-                path:'',
-                value:'Lisses',
-                info:'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur reiciendis aperiam unde explicabo'
-            },
-            {
-                type:'text', 
-                path:'',
-                value:'Ondulés',
-                info:'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur reiciendis aperiam unde explicabo'
-            },
-            {
-                type: 'text',
-                path:'',
-                value: 'Crépus',
-                info: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur reiciendis aperiam unde explicabo',
-            },
-            {
-                type:'text', 
-                path:'',
-                value:'Frisés',
-                info:'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur reiciendis aperiam unde explicabo'
-            },
-            {
-                type:'text', 
-                path:'',
-                value:'Bouclés',
-                info:'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur reiciendis aperiam unde explicabo'
-            },
-        ],
-        button_text: 'Confirmer',
+        "id": "standard",
+        "value": 200,
+        "image": "https://www.promoustiquaire.com/img/co/29.jpg",
+        "label": "Coloris Standard",
     },
     {
-        question: 'Structure des cheuveux',
-        question_id: 'structure_des_cheuveux',
-        answer_type: 'multiple',
-        answers: [
-            {
-                type: 'text',
-                path:'',
-                value: 'Secs',
-                info: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur reiciendis aperiam unde explicabo',
-            },
-            {
-                type:'text', 
-                path:'',
-                value:'Fins',
-                info:'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur reiciendis aperiam unde explicabo'
-            },
-            {
-                type:'text', 
-                path:'',
-                value:'Abimés',
-                info:'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur reiciendis aperiam unde explicabo'
-            },
-            {
-                type: 'text',
-                path:'',
-                value: 'Parcemés',
-                info: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur reiciendis aperiam unde explicabo',
-            },
-            {
-                type:'text', 
-                path:'',
-                value:'Fourchus',
-                info:'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur reiciendis aperiam unde explicabo'
-            },
-            {
-                type:'text', 
-                path:'',
-                value:'Cassants',
-                info:'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur reiciendis aperiam unde explicabo'
-            },
-            {
-                type: 'text',
-                path:'',
-                value: 'Epais',
-                info: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur reiciendis aperiam unde explicabo',
-            },
-            {
-                type:'text', 
-                path:'',
-                value:'Gras',
-                info:'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur reiciendis aperiam unde explicabo'
-            },
-            {
-                type:'text', 
-                path:'',
-                value:'Dévitalisés',
-                info:'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur reiciendis aperiam unde explicabo'
-            },
-            {
-                type:'text', 
-                path:'',
-                value:'Colorés',
-                info:'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur reiciendis aperiam unde explicabo'
-            },
-        ],
-        button_text: 'Confirmer',
+        "id": "imitationbois",
+        "value": 300,
+        "image": "https://www.promoustiquaire.com/img/co/30.jpg",
+        "label": "Imitation bois",
     },
-    {
-        question: 'Je voudrais que mon produit',
-        question_id: 'je_voudrais_que_mon_produit',
-        answer_type: 'multiple',
-        answers: [
-            {
-                type: 'text',
-                path:'',
-                value: 'Hydrate',
-                info: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur reiciendis aperiam unde explicabo',
-            },
-            {
-                type:'text', 
-                path:'',
-                value:'Lisse',
-                info:'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur reiciendis aperiam unde explicabo'
-            },
-            {
-                type:'text', 
-                path:'',
-                value:'Illumine',
-                info:'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur reiciendis aperiam unde explicabo'
-            },
-            {
-                type: 'text',
-                path:'',
-                value: 'Fortifie',
-                info: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur reiciendis aperiam unde explicabo',
-            },
-            {
-                type:'text', 
-                path:'',
-                value:'Repare en profondeur',
-                info:'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur reiciendis aperiam unde explicabo'
-            },
-            {
-                type:'text', 
-                path:'',
-                value:'Donne du volume',
-                info:'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur reiciendis aperiam unde explicabo'
-            },
-            {
-                type: 'text',
-                path:'',
-                value: 'Nourrit',
-                info: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur reiciendis aperiam unde explicabo',
-            },
-            {
-                type:'text', 
-                path:'',
-                value:'Aide à la repousse',
-                info:'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur reiciendis aperiam unde explicabo'
-            },
-            {
-                type:'text', 
-                path:'',
-                value:'Anti-pélicullaire',
-                info:'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur reiciendis aperiam unde explicabo'
-            },
-            {
-                type:'text', 
-                path:'',
-                value:'Revitalise',
-                info:'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur reiciendis aperiam unde explicabo'
-            },
-            {
-                type:'text', 
-                path:'',
-                value:'Ravive ma couleur',
-                info:'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur reiciendis aperiam unde explicabo'
-            },
-            {
-                type:'text', 
-                path:'', 
-                value:'Anti-cheveux gras',
-                info:'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur reiciendis aperiam unde explicabo'
-            },
-        ],
-        button_text: 'Confirmer',
-    },
-    {
-        question: 'Ma senteur préféré',
-        question_id: 'ma_senteur_prefere',
-        answer_type: 'single',
-        answers: [
-            {
-                type: 'image',
-                path: 'https://oudandmusk.fr/2013-home_default/oliban-d-oman-resine-encens-louban-dakar.jpg',
-                value: 'Musc Blanc',
-                info: '',
-            },
-            {
-                type:'image', 
-                path:'https://www.tastingtable.com/img/gallery/which-country-produces-the-most-coconuts/intro-1661971699.webp',
-                value:'Coconut',
-                info:''
-            },
-            {
-                type:'image', 
-                path:'https://nanoil.us/assets/uploads/2019/06/60315fbea2d2f6f8668eb1c1694c7bfe.jpg',
-                value:'Monoi',
-                info:''
-            },
-            {
-                type: 'image',
-                path:'https://i0.wp.com/bonpourtoi.ca/app/uploads/2021/06/BPT-Articles-fraises-quebec-tinyjpg-2.jpeg?fit=2530%2C1860&ssl=1',
-                value: 'Fraise',
-                info: '',
-            },
-            {
-                type:'image', 
-                path:'https://ichef.bbci.co.uk/news/800/cpsprodpb/1884/live/0ec843d0-6110-11ed-b950-4dadc68f0cfc.jpg',
-                value:'Banane',
-                info:'',
-            },
-            {
-                type:'image', 
-                path:'https://www.radiofrance.fr/s3/cruiser-production/2022/02/c8cf1de7-a946-4964-bc73-7c324b89326b/870x489_gettyimages-135607225.webp',
-                value:'Ananas',
-                info:'',
-            },
-        ],
-        button_text: 'J\'obtiens mon diagnostic',
-    },
-]
+];
+
+export { sizes, poseTypes, coloris };
