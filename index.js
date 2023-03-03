@@ -1,10 +1,10 @@
 import { sizes, poseTypes, coloris }  from './data.js';
 
-
 let ralentiseur = document.querySelector('#configsection160223 #step_4 .select_item_content #ralentiseur');
 let inputWidth = document.querySelector('#configsection160223 #step_2 .input_item_content #input_width');
 let inputHeight = document.querySelector('#configsection160223 #step_2 .input_item_content #input_height');
 let idPrice = document.querySelector('#configsection160223 #step_2  #id_price');
+let btn = document.querySelector('#configsection160223  .config_preview #add_to_cart');
 
 let selectOptions = document.querySelectorAll('#configsection160223 .config_preview .left .option');
 
@@ -66,15 +66,38 @@ inputWidth.addEventListener('input', function(e) {
 
     if(e.target.value){
         valWidth = parseInt(e.target.value);
-        let result = sizes.filter((elt) => elt.hauteur >= valHeight && elt.largeur >= valWidth);
+        let result = sizes.filter((elt) => valHeight != 0 && valWidth != 0 && elt.hauteur >= valHeight && elt.largeur >= valWidth);
         
         if(result.length != 0){
             idPrice.value = result[0].id;
             price = parseInt(result[0].prix);
             totalPrice.innerHTML = typeDePosePrice + colorisStructurePrice + ralentiseurPrice + price + ' €';
+            btn.classList.remove('disabled');
+            btn.disabled  = false;
+        }else{git
+            btn.classList.add('disabled');
+            btn.disabled  = true;
         }
 
         selectOptions[1].innerHTML = `Largeur : ${valWidth} mm - Hauteur : ${valHeight} mm`;
+
+
+        if(price == 0){
+            btn.children[0].classList.add('hide');
+            btn.children[1].classList.add('hide');
+            btn.children[2].classList.remove('hide');
+            btn.disabled  = true;
+        }else{
+            btn.children[0].classList.remove('hide');
+            btn.children[1].classList.remove('hide');
+            btn.children[2].classList.add('hide');
+            btn.disabled  = false;
+        }
+    }else {
+        valWidth = 0;
+        totalPrice.innerHTML = typeDePosePrice + colorisStructurePrice + ralentiseurPrice  + ' €';
+        btn.classList.add('disabled');
+        btn.disabled  = true;
     }
 });
 
@@ -84,15 +107,43 @@ inputHeight.addEventListener('input', function(e) {
 
     if(e.target.value){
         valHeight = parseInt(e.target.value);
-        let result = sizes.filter((elt) => elt.hauteur >= valHeight && elt.largeur >= valWidth);
+        let result = sizes.filter((elt) => valHeight != 0 && valWidth != 0 && elt.hauteur >= valHeight && elt.largeur >= valWidth);
 
         if(result.length != 0){
             idPrice.value = result[0].id;
             price = parseInt(result[0].prix);
             totalPrice.innerHTML = typeDePosePrice + colorisStructurePrice + ralentiseurPrice + price + ' €';
+            btn.classList.remove('disabled');
+            btn.disabled  = false;
+        }else{
+            btn.classList.add('disabled');
+            btn.disabled  = true;
         }
 
         selectOptions[1].innerHTML = `Largeur : ${valWidth} mm - Hauteur : ${valHeight} mm`;
+
+        if(valHeight == 0 || valWidth == 0){
+            btn.classList.add('disabled');
+            btn.disabled  = true;
+        }
+
+        
+        if(price == 0){
+            btn.children[0].classList.add('hide');
+            btn.children[1].classList.add('hide');
+            btn.children[2].classList.remove('hide');
+            btn.disabled  = true;
+        }else{
+            btn.children[0].classList.remove('hide');
+            btn.children[1].classList.remove('hide');
+            btn.children[2].classList.add('hide');
+            btn.disabled  = false;
+        }
+    }else {
+        valHeight = 0;
+        totalPrice.innerHTML = typeDePosePrice + colorisStructurePrice + ralentiseurPrice  + ' €';
+        btn.classList.add('disabled');
+        btn.disabled  = true;
     }
 });
 
