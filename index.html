@@ -8,162 +8,26 @@
     <title>Document</title>
 </head>
 <body>
-    <section id="modalsection110323">
-        <div style="padding: 20px; display: flex; justify-content: center; align-items: center;">
-            <button  id="open_btn" style="border: none; background-color: #a48066; color: #fff; padding: 10px; cursor: pointer;">open modal</button>
-        </div>
-
-        <div class="container_modal">
-            <div class="modal">
-                <span class="close_btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M9.75 9.75l4.5 4.5m0-4.5l-4.5 4.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                      </svg>                      
-                </span>
-                <div class="screen_1 ">
-                    <h3 class="modal_title">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                    </h3>
-                    <p class="modal_desc">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem modi provident amet odit dolore deserunt nam facere iure incidunt. Est accusantium asperiores
-                    </p>
-                    <p class="libelle_size">GROSSE</p>
-                    <div class="container_sizes">
-                        <input type="radio" name="size" id="34" value="34" checked>
-                        <label for="34">
-                            <span>34</span>
-                        </label>
-                        <input type="radio" name="size" id="36" value="36">
-                        <label for="36">
-                            <span>36</span>
-                        </label>
-                        <input type="radio" name="size" id="38" value="38">
-                        <label for="38">
-                            <span>38</span>
-                        </label>
-                        <input type="radio" name="size" id="40" value="40">
-                        <label for="40">
-                            <span>40</span>
-                        </label>
-                        <input type="radio" name="size" id="42" value="42">
-                        <label for="42">
-                            <span>42</span>
-                        </label>
-                        <input type="radio" name="size" id="44" value="44">
-                        <label for="44">
-                            <span>44</span>
-                        </label>
-                    </div>
-                    <input type="email" name="email" class="in_email" id="in_email" placeholder="Email">
-                    <button class="submit_btn" disabled >Lorem dolor ipsum, dolor sit </button>
-                    <div class="container_chk">
-                        <input type="checkbox" name="condition" id="condition">
-                        <label for="condition">Lorem ipsum, dolor sit amet consectetur adipisicing elit</label>
-                    </div>
+    <section id="gridselectproduct130323">
+        <div class="container">
+            <div class="product_grid">
+                
+            </div>
+            <div class="selected_product">
+                <div class="selected_product_container">
+                    <div class="product_selected"></div>
+                    <div class="product_selected"></div>
+                    <div class="product_selected"></div>
+                    <div class="product_selected"></div>
                 </div>
-
-                <div class="screen_2 hide">
-                    <div>
-                        <svg
-                            class="spiner"
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                        >
-                            <circle
-                            style="opacity: 0.25;"
-                                cx="12"
-                                cy="12"
-                                r="10"
-                                stroke="currentColor"
-                                stroke-width="4"
-                            ></circle>
-                            <path
-                                style="opacity: 0.75;"
-                                fill="currentColor"
-                                d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
-                            ></path>
-                        </svg>
-                    </div>
+                <h3 class="title_selected">Build your Own Box</h3>
+                <div class="container_add_to_cart"> 
+                    <button type="button" class="add_to_cart">Pick 4 more boxes</button>
                 </div>
-
-                <div class="screen_3 hide">
-                    <h3 class="modal_title">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                    </h3>
-                    <p class="modal_desc">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem modi provident amet odit dolore deserunt nam facere iure incidunt. Est accusantium asperiores
-                    </p>
-                </div>
+                
             </div>
         </div>
     </section>
-
-    <script>
-        const body = document.querySelector('body');
-        const openModal = document.querySelector('#modalsection110323 #open_btn');
-        const closeModal = document.querySelector('#modalsection110323 .close_btn');
-        const submitBtn = document.querySelector('#modalsection110323 .container_modal .submit_btn');
-        const inputCondition = document.querySelector('#modalsection110323 #condition');
-        const inputEmail = document.querySelector('#modalsection110323 #in_email');
-        const containerModal = document.querySelector('#modalsection110323 .container_modal');
-        const modal = document.querySelector('#modalsection110323 .container_modal .modal');
-        const modalScreen1 = document.querySelector('#modalsection110323 .modal .screen_1');
-        const modalScreen2 = document.querySelector('#modalsection110323 .modal .screen_2');
-        const modalScreen3 = document.querySelector('#modalsection110323 .modal .screen_3');
-
-
-        openModal.addEventListener('click', function(e) {
-            containerModal.classList.add('open');
-            body.style.overflow = "hidden";
-        });
-
-        closeModal.addEventListener('click', function(e) {
-            resetModal();
-        });
-
-        inputEmail.addEventListener('input', function(e) {
-            if(inputCondition.checked && inputEmail.value != ""){
-                submitBtn.disabled = false;
-            }else{
-                submitBtn.disabled = true;
-            }
-        });
-
-        inputCondition.addEventListener('click', function(e) {
-            if(inputCondition.checked && inputEmail.value != ""){
-                submitBtn.disabled = false;
-            }else{
-                submitBtn.disabled = true;
-            }
-        });
-
-        submitBtn.addEventListener('click', function(e) {
-            modalScreen1.classList.add('hide');
-            modalScreen2.classList.remove('hide');
-            setTimeout(() => {
-                modalScreen2.classList.add('hide');
-                modalScreen3.classList.remove('hide');
-            }, 5000)
-        });
-
-        containerModal.addEventListener("click", async function (e) {
-            let clickInside = modal.contains(e.target)
-            if (!clickInside) {
-                resetModal();
-            }
-        });
-
-        function resetModal() {
-            containerModal.classList.remove('open');
-            modalScreen1.classList.remove('hide');
-            modalScreen2.classList.add('hide');
-            modalScreen3.classList.add('hide');
-            inputEmail.value = "";
-            inputCondition.checked = false;
-            submitBtn.disabled = true;
-            body.style.overflow = "unset";
-        }
-    </script>
+    <script src="./index.js" type="module"></script>
 </body>
 </html>
