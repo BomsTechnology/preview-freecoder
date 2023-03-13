@@ -1,181 +1,118 @@
-import { sizes, poseTypes, coloris }  from './data.js';
+import products from './data.js';
 
-let ralentiseur = document.querySelector('#configsection160223 #step_4 .select_item_content #ralentiseur');
-let inputWidth = document.querySelector('#configsection160223 #step_2 .input_item_content #input_width');
-let inputHeight = document.querySelector('#configsection160223 #step_2 .input_item_content #input_height');
-let idPrice = document.querySelector('#configsection160223 #step_2  #id_price');
-let btn = document.querySelector('#configsection160223  .config_preview #add_to_cart');
-
-let selectOptions = document.querySelectorAll('#configsection160223 .config_preview .left .option');
-
-let totalPrice = document.querySelector('#configsection160223 .config_preview .right .price');
-
-let valWidth = 0;
-let valHeight = 0;
-
-let typeDePosePrice = 0;
-let colorisStructurePrice = 0;
-let ralentiseurPrice = 0;
-let price = 0;
-
+const gridContainer = document.querySelector('#gridselectproduct130323 .product_grid');
+const selectedProductContainer = document.querySelector('#gridselectproduct130323 .selected_product_container');
+const btnAddToCart = document.querySelector('#gridselectproduct130323 .add_to_cart');
+const size = 4;
+let productsSelected = [];
 
 let html = '';
-
-poseTypes.forEach((elt, index) => {
-    html = index == 0 ? '' : html;
-    let checked = index == 0 ? 'checked' : '';
+products.forEach((product) => {
     html += `
-                <div class="image_item_content">
-                    <input type="radio" name="typedepose" id="${elt.id}" value="100" ${checked}>
-                    <label for="${elt.id}">
-                        <div class="image_container">
-                            <img src="${elt.image}" alt="${elt.label}">
-                        </div>
-                        <p>${elt.label}</p>
-                    </label>
-                </div>
-            `;
+        <div class="product_card"  onMouseOver="this.style.backgroundColor='${product.color}'" onMouseOut="!this.classList.contains('active') ? this.style.backgroundColor='transparent' : null" data-id="${product.id}">
+            <div class="product_image">
+                <img src="${product.featured_image}" class="featured_image" alt="">
+                <img src="${product.hover_image}" class="hover_image" alt="">
+            </div>
+            <h3 class="product_title">${product.title}</h3>
+            <button type="button" class="product_add">Add</button>
+            <div class="plus_minus_container">
+                <div class="minus">-</div>
+                <div class="selected_number">1</div>
+                <div class="plus">+</div>
+            </div>
+        </div>  `;
 });
 
-document.querySelector('#configsection160223 #step_1 .wrap__item_content').innerHTML = html;
-selectOptions[0].innerHTML = poseTypes[0].label;
-typeDePosePrice = poseTypes[0].value;
+gridContainer.innerHTML = html;
 
-coloris.forEach((elt, index) => {
-    html = index == 0 ? '' : html;
-    let checked = index == 0 ? 'checked' : '';
-    html += `
-                <div class="image_item_content">
-                    <input type="radio" name="coloris" id="${elt.id}" value="100" ${checked}>
-                    <label for="${elt.id}">
-                        <div class="image_container">
-                            <img src="${elt.image}" alt="${elt.label}">
-                        </div>
-                        <p>${elt.label}</p>
-                    </label>
-                </div>
-            `;
-});
+const productCards = document.querySelectorAll('#gridselectproduct130323 .product_card');
 
-document.querySelector('#configsection160223 #step_3 .wrap__item_content').innerHTML = html;
-selectOptions[2].innerHTML = coloris[0].label;
-colorisStructurePrice = coloris[0].value;
+productCards.forEach((card, cardIndex) => {
 
-inputWidth.addEventListener('input', function(e) {
-    e.preventDefault();
+    card.querySelector('.product_add').addEventListener('click', function(e) {
+        if(productsSelected.length < size){
+            card.classList.add('active');
+            productsSelected.push(products[cardIndex]);
+            renderSelectedProducts();
 
-    if(e.target.value){
-        valWidth = parseInt(e.target.value);
-        let result = sizes.filter((elt) => valHeight != 0 && valWidth != 0 && elt.hauteur >= valHeight && elt.largeur >= valWidth);
-        
-        if(result.length != 0){
-            idPrice.value = result[0].id;
-            price = parseInt(result[0].prix);
-            totalPrice.innerHTML = typeDePosePrice + colorisStructurePrice + ralentiseurPrice + price + ' €';
-            btn.classList.remove('disabled');
-            btn.disabled  = false;
-        }else{
-            btn.classList.add('disabled');
-            btn.disabled  = true;
-        }
-
-        selectOptions[1].innerHTML = `Largeur : ${valWidth} mm - Hauteur : ${valHeight} mm`;
-
-
-        if(price == 0){
-            btn.children[0].classList.add('hide');
-            btn.children[1].classList.add('hide');
-            btn.children[2].classList.remove('hide');
-            btn.disabled  = true;
-        }else{
-            btn.children[0].classList.remove('hide');
-            btn.children[1].classList.remove('hide');
-            btn.children[2].classList.add('hide');
-            btn.disabled  = false;
-        }
-    }else {
-        valWidth = 0;
-        totalPrice.innerHTML = typeDePosePrice + colorisStructurePrice + ralentiseurPrice  + ' €';
-        btn.classList.add('disabled');
-        btn.disabled  = true;
-    }
-});
-
-
-inputHeight.addEventListener('input', function(e) {
-    e.preventDefault();
-
-    if(e.target.value){
-        valHeight = parseInt(e.target.value);
-        let result = sizes.filter((elt) => valHeight != 0 && valWidth != 0 && elt.hauteur >= valHeight && elt.largeur >= valWidth);
-
-        if(result.length != 0){
-            idPrice.value = result[0].id;
-            price = parseInt(result[0].prix);
-            totalPrice.innerHTML = typeDePosePrice + colorisStructurePrice + ralentiseurPrice + price + ' €';
-            btn.classList.remove('disabled');
-            btn.disabled  = false;
-        }else{
-            btn.classList.add('disabled');
-            btn.disabled  = true;
-        }
-
-        selectOptions[1].innerHTML = `Largeur : ${valWidth} mm - Hauteur : ${valHeight} mm`;
-
-        if(valHeight == 0 || valWidth == 0){
-            btn.classList.add('disabled');
-            btn.disabled  = true;
-        }
-
-        
-        if(price == 0){
-            btn.children[0].classList.add('hide');
-            btn.children[1].classList.add('hide');
-            btn.children[2].classList.remove('hide');
-            btn.disabled  = true;
-        }else{
-            btn.children[0].classList.remove('hide');
-            btn.children[1].classList.remove('hide');
-            btn.children[2].classList.add('hide');
-            btn.disabled  = false;
-        }
-    }else {
-        valHeight = 0;
-        totalPrice.innerHTML = typeDePosePrice + colorisStructurePrice + ralentiseurPrice  + ' €';
-        btn.classList.add('disabled');
-        btn.disabled  = true;
-    }
-});
-
-let typeDePoses = document.querySelectorAll('#configsection160223 #step_1 .image_item_content input[type="radio"]');
-
-typeDePoses.forEach((elt, index) => {
-    elt.addEventListener('click', function(e) {        
-        if(e.target.checked){
-            typeDePosePrice = parseInt(poseTypes[index].value);
-            selectOptions[0].innerHTML = poseTypes[index].label;
-            totalPrice.innerHTML = typeDePosePrice + colorisStructurePrice + ralentiseurPrice + price + ' €';
+            btnAddToCart.innerHTML =  productsSelected.length == 4  ? `Add To Cart` : `Pick ${size - (productsSelected.length)} more boxes`;
+            btnAddToCart.classList.add(productsSelected.length == 4 ? 'complete' : null);
+            gridContainer.classList.add(productsSelected.length == 4 ? 'complete' : null);
         }
     });
-});
 
-let colorisStructures = document.querySelectorAll('#configsection160223 #step_3 .image_item_content input[type="radio"]');
 
-colorisStructures.forEach((elt, index) => {
-    elt.addEventListener('click', function(e) {     
-        if(e.target.checked){
-            colorisStructurePrice = parseInt(coloris[index].value);
-            selectOptions[2].innerHTML = coloris[index].label;
-            totalPrice.innerHTML = typeDePosePrice + colorisStructurePrice + ralentiseurPrice + price + ' €';
+    card.querySelector('.plus').addEventListener('click', function(e) {
+        if(productsSelected.length < size){
+            productsSelected.push(products[cardIndex]);
+            setActiveCard(card, 'add');
+            renderSelectedProducts();
         }
     });
-});
 
-ralentiseur.addEventListener('change', function(e) {
-    ralentiseurPrice = parseInt(e.target.value);
-    selectOptions[3].innerHTML = e.target.value == '0' ? 'Sans ralentisseur' : 'Avec ralentisseur';
-    totalPrice.innerHTML = typeDePosePrice + colorisStructurePrice + ralentiseurPrice + price + ' €';
-});
+    card.querySelector('.minus').addEventListener('click', function(e) {
+        if(productsSelected.length > 0){
+            let deleteIndex = productsSelected.indexOf(products[cardIndex]);
+            productsSelected.splice(deleteIndex, 1);
+            setActiveCard(card, 'remove');
+            renderSelectedProducts();
+        }
+    });
+
+})
 
 
-totalPrice.innerHTML = typeDePosePrice + colorisStructurePrice + ralentiseurPrice + price + ' €';
+
+function renderSelectedProducts () {
+    let html = "";
+    for(let i = 0; i < size; i++){
+        html +=  productsSelected[i] ? ` 
+            <div class="product_selected active">
+                <span class="remove_btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9.75 9.75l4.5 4.5m0-4.5l-4.5 4.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>                                      
+                </span>
+                <img src="${productsSelected[i].featured_image}" class="featured_image" alt="">
+            </div>` : 
+            ` <div class="product_selected"></div>`;
+    }
+    selectedProductContainer.innerHTML = html;
+    setCloseBtn ();
+}
+
+function setCloseBtn () {
+    selectedProductContainer.querySelectorAll('.remove_btn').forEach((btn, index) => {
+        btn.addEventListener('click', function(e) {
+            let deleteElt = Array.from(productCards).filter((p) => {
+               return  p.getAttribute('data-id') ===  productsSelected[index].id
+            });
+            productsSelected.splice(index, 1);
+            setActiveCard(deleteElt[0], 'remove');
+            renderSelectedProducts();
+        })
+    })
+};
+
+function setActiveCard(elt, type) {
+    if(type == 'add'){
+        elt.querySelector('.selected_number').innerHTML = parseInt(elt.querySelector('.selected_number').innerHTML) + 1;
+        btnAddToCart.innerHTML =  productsSelected.length == 4  ? `Add To Cart` : `Pick ${size - productsSelected.length} more boxes`;
+        btnAddToCart.classList.add(productsSelected.length == 4 ? 'complete' : null);
+        gridContainer.classList.add(productsSelected.length == 4 ? 'complete' : null);
+
+    }else{
+        if(parseInt(elt.querySelector('.selected_number').innerHTML) === 1){
+            elt.classList.remove('active');
+            elt.style.backgroundColor='transparent' 
+        }else{
+            elt.querySelector('.selected_number').innerHTML = parseInt(elt.querySelector('.selected_number').innerHTML) - 1;
+        }
+
+        btnAddToCart.innerHTML =   `Pick ${-(- size + (productsSelected.length))} more boxes`;
+        btnAddToCart.classList.remove('complete');
+        gridContainer.classList.remove('complete');
+    }
+}
+
