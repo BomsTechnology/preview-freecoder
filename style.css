@@ -105,7 +105,7 @@ body {
     padding: 0 150px;
     max-width: 80%;
     width: 100%;
-    margin: 15px auto;
+    margin: 10px auto;
     border: none;
     border-radius: 28px;
     cursor: pointer !important;
@@ -290,7 +290,7 @@ body {
     text-align: center;
 }
 
-#gridselectproduct130323  .switch_pack_item#pack_4.active  ~ .overlay {
+#gridselectproduct130323  .switch_pack_item#pack_3.active  ~ .overlay {
     right: unset;
     left: 5px;
     transition: all 500ms;
@@ -355,7 +355,7 @@ body {
     #gridselectproduct130323 .product_grid {
         max-width: 100%;
         grid-template-columns: repeat(2, minmax(0, 1fr));
-        padding-bottom: 300px;
+        padding-bottom: 350px;
     }
 
     #gridselectproduct130323 .product_title  {
@@ -407,6 +407,10 @@ body {
 
     #gridselectproduct130323 .min_text {
         display: none;
+    }
+
+    #gridselectproduct130323 .min_text.free {
+        display: block;
     }
 
     #gridselectproduct130323 .container_pack_price {
