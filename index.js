@@ -4,10 +4,10 @@ const gridContainer = document.querySelector('#gridselectproduct130323 .product_
 const selectedProductContainer = document.querySelector('#gridselectproduct130323 .selected_product_container');
 const btnAddToCart = document.querySelector('#gridselectproduct130323 .add_to_cart');
 const containerPrice = document.querySelector('#gridselectproduct130323 .container_pack_price');
-const pack4 = document.querySelector('#gridselectproduct130323 .switch_pack #pack_4');
+const pack3 = document.querySelector('#gridselectproduct130323 .switch_pack #pack_3');
 const pack6 = document.querySelector('#gridselectproduct130323 .switch_pack #pack_6');
 
-const pack4Price = {
+const pack3Price = {
     old: '',
     current: '$39',
 };
@@ -17,7 +17,7 @@ const pack6Price = {
     current: '$54',
 };
 
-let size = 4;
+let size = 3;
 let productsSelected = [];
 
 let html = '';
@@ -76,43 +76,37 @@ productCards.forEach((card, cardIndex) => {
 
 });
 
-pack4.addEventListener('click', function(e) {
+pack3.addEventListener('click', function(e) {
     pack6.classList.remove('active');
-    pack4.classList.add('active');
-    size = 4;
+    pack3.classList.add('active');
+    size = 3;
     renderSelectedProducts();
 
-    if(productsSelected[5]){
-        let deleteElt = Array.from(productCards).filter((p) => {
-            return  p.getAttribute('data-id') ===  productsSelected[5].id;
-        });
-        deleteElt.length > 0 ? productsSelected.splice(5, 1) : null;
-        deleteElt.length > 0 ? setActiveCard(deleteElt[0], 'remove') : null;
-    }
-
-    
-    if(productsSelected[4]){
-        let deleteElt = Array.from(productCards).filter((p) => {
-            return  p.getAttribute('data-id') ===  productsSelected[4].id;
-        });
-        deleteElt.length > 0 ? productsSelected.splice(4, 1) : null;
-        deleteElt.length > 0 ? setActiveCard(deleteElt[0], 'remove') : null;
+    for(let i = (productsSelected.length - 1); i > 0; i--){
+        if(productsSelected[i] && i >= size ){
+            let deleteElt = Array.from(productCards).filter((p) => {
+                return  p.getAttribute('data-id') ===  productsSelected[i].id;
+            });
+            deleteElt.length > 0 ? productsSelected.splice(i, 1) : null;
+            deleteElt.length > 0 ? setActiveCard(deleteElt[0], 'remove') : null;
+        }
     }
 
     setActiveCard();
-    setPrice(pack4Price);
-    
+    setPrice(pack3Price);
+    document.querySelector('#gridselectproduct130323 .free').innerHTML = '2 bought 1 free';
 });
 
 
 pack6.addEventListener('click', function(e) {
-    pack4.classList.remove('active');
+    pack3.classList.remove('active');
     pack6.classList.add('active');
     size = 6;
     renderSelectedProducts();
 
     setActiveCard();
     setPrice(pack6Price);
+    document.querySelector('#gridselectproduct130323 .free').innerHTML = '4 bought 2 free';
 });
 
 
@@ -175,4 +169,4 @@ function setPrice(price) {
     containerPrice.querySelector('.current_pack_price').innerHTML = price.current;
 }
 
-renderSelectedProducts();
+renderSelectedProducts()
