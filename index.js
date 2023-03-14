@@ -94,7 +94,7 @@ pack3.addEventListener('click', function(e) {
 
     setActiveCard();
     setPrice(pack3Price);
-    document.querySelector('#gridselectproduct130323 .free').innerHTML = '2 bought 1 free';
+    document.querySelector('#gridselectproduct130323 .free').innerHTML = '2 bought + 1 free';
 });
 
 
@@ -106,7 +106,7 @@ pack6.addEventListener('click', function(e) {
 
     setActiveCard();
     setPrice(pack6Price);
-    document.querySelector('#gridselectproduct130323 .free').innerHTML = '4 bought 2 free';
+    document.querySelector('#gridselectproduct130323 .free').innerHTML = '4 bought + 2 free';
 });
 
 
