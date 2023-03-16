@@ -1,172 +1,53 @@
-import products from './data.js';
+const textCards = Array.from(document.querySelectorAll('#infotabsslider160323 .container_text_card .text_card'));
+const images = Array.from(document.querySelectorAll('#infotabsslider160323 .container_image img'));
+let isPaused = false;
+let time = 1;
+let currentIndex = document.querySelector('#infotabsslider160323 .container_text_card .text_card.active') ? 0 : null;
 
-const gridContainer = document.querySelector('#gridselectproduct130323 .product_grid');
-const selectedProductContainer = document.querySelector('#gridselectproduct130323 .selected_product_container');
-const btnAddToCart = document.querySelector('#gridselectproduct130323 .add_to_cart');
-const containerPrice = document.querySelector('#gridselectproduct130323 .container_pack_price');
-const pack3 = document.querySelector('#gridselectproduct130323 .switch_pack #pack_3');
-const pack6 = document.querySelector('#gridselectproduct130323 .switch_pack #pack_6');
-
-const pack3Price = {
-    old: '',
-    current: '$39',
-};
-
-const pack6Price = {
-    old: '$59',
-    current: '$54',
-};
-
-let size = 3;
-let productsSelected = [];
-
-let html = '';
-products.forEach((product) => {
-    html += `
-        <div class="product_card"  onMouseOver="this.style.backgroundColor='${product.color}'" onMouseOut="!this.classList.contains('active') ? this.style.backgroundColor='transparent' : null" data-id="${product.id}">
-            <div class="product_image">
-                <img src="${product.featured_image}" class="featured_image" alt="">
-                <img src="${product.hover_image}" class="hover_image" alt="">
-            </div>
-            <h3 class="product_title">${product.title}</h3>
-            <button type="button" class="product_add">Add</button>
-            <div class="plus_minus_container">
-                <div class="minus">-</div>
-                <div class="selected_number">1</div>
-                <div class="plus">+</div>
-            </div>
-        </div>  `;
-});
-
-gridContainer.innerHTML = html;
-
-const productCards = document.querySelectorAll('#gridselectproduct130323 .product_card');
-
-productCards.forEach((card, cardIndex) => {
-
-    card.querySelector('.product_add').addEventListener('click', function(e) {
-        if(productsSelected.length < size){
-            card.classList.add('active');
-            productsSelected.push(products[cardIndex]);
-            renderSelectedProducts();
-
-            btnAddToCart.innerHTML =  productsSelected.length == size  ? `Add To Cart` : `Pick ${size - (productsSelected.length)} more boxes`;
-            btnAddToCart.disabled = productsSelected.length == size ? false : true;
-            gridContainer.classList.add(productsSelected.length == size ? 'complete' : null);
-        }
-    });
-
-
-    card.querySelector('.plus').addEventListener('click', function(e) {
-        if(productsSelected.length < size){
-            productsSelected.push(products[cardIndex]);
-            setActiveCard(card, 'add');
-            renderSelectedProducts();
-        }
-    });
-
-    card.querySelector('.minus').addEventListener('click', function(e) {
-        if(productsSelected.length > 0){
-            let deleteIndex = productsSelected.indexOf(products[cardIndex]);
-            productsSelected.splice(deleteIndex, 1);
-            setActiveCard(card, 'remove');
-            renderSelectedProducts();
-        }
-    });
-
-});
-
-pack3.addEventListener('click', function(e) {
-    pack6.classList.remove('active');
-    pack3.classList.add('active');
-    size = 3;
-    renderSelectedProducts();
-
-    for(let i = (productsSelected.length - 1); i > 0; i--){
-        if(productsSelected[i] && i >= size ){
-            let deleteElt = Array.from(productCards).filter((p) => {
-                return  p.getAttribute('data-id') ===  productsSelected[i].id;
-            });
-            deleteElt.length > 0 ? productsSelected.splice(i, 1) : null;
-            deleteElt.length > 0 ? setActiveCard(deleteElt[0], 'remove') : null;
-        }
-    }
-
-    setActiveCard();
-    setPrice(pack3Price);
-    document.querySelector('#gridselectproduct130323 .free').innerHTML = '2 bought + 1 free';
-});
-
-
-pack6.addEventListener('click', function(e) {
-    pack3.classList.remove('active');
-    pack6.classList.add('active');
-    size = 6;
-    renderSelectedProducts();
-
-    setActiveCard();
-    setPrice(pack6Price);
-    document.querySelector('#gridselectproduct130323 .free').innerHTML = '4 bought + 2 free';
-});
-
-
-function renderSelectedProducts () {
-    let html = "";
-    for(let i = 0; i < size; i++){
-        html +=  productsSelected[i] ? ` 
-            <div class="product_selected active">
-                <span class="remove_btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                    </svg>                                                   
-                </span>
-                <img src="${productsSelected[i].featured_image}" class="featured_image" alt="">
-            </div>` : 
-            ` <div class="product_selected"></div>`;
-    }
-    selectedProductContainer.innerHTML = html;
-    setCloseBtn ();
-}
-
-function setCloseBtn () {
-    selectedProductContainer.querySelectorAll('.remove_btn').forEach((btn, index) => {
-        btn.addEventListener('click', function(e) {
-            let deleteElt = Array.from(productCards).filter((p) => {
-               return  p.getAttribute('data-id') ===  productsSelected[index].id
-            });
-            deleteElt.length > 0 ? productsSelected.splice(index, 1) : null;
-            deleteElt.length > 0 ? setActiveCard(deleteElt[0], 'remove') : null;
-            renderSelectedProducts();
-        })
+textCards.forEach((textCard, textCardIndex) => {
+    textCard.addEventListener('click', function(e){
+        textCards.forEach((currTextCard, currTextCardIndex) => {
+            if(textCard === currTextCard){
+                currTextCard.classList.add('active');
+                images[currTextCardIndex].classList.add('active');
+                time = 1;
+                currentIndex = currTextCardIndex;
+            }else{
+                currTextCard.classList.remove('active');
+                images[currTextCardIndex].classList.remove('active');
+            }
+        });
     })
-};
+});
 
-function setActiveCard(elt, type) {
-    if(type == 'add'){
-        elt.querySelector('.selected_number').innerHTML = parseInt(elt.querySelector('.selected_number').innerHTML) + 1;
-    }else if(type == 'remove'){
-        if(parseInt(elt.querySelector('.selected_number').innerHTML) === 1){
-            elt.classList.remove('active');
-            elt.style.backgroundColor='transparent' 
-        }else{
-            elt.querySelector('.selected_number').innerHTML = parseInt(elt.querySelector('.selected_number').innerHTML) - 1;
+if(currentIndex != null){
+    setInterval(() => {
+        if(!isPaused){
+            if(time === 5){
+                textCards[currentIndex].classList.remove('active');
+                images[currentIndex].classList.remove('active');
+                if(currentIndex === textCards.length - 1){
+                    textCards[0].classList.add('active');
+                    images[0].classList.add('active');
+                    currentIndex = 0;
+                }else{
+                    textCards[currentIndex + 1].classList.add('active');
+                    images[currentIndex + 1].classList.add('active');
+                    currentIndex =  currentIndex + 1;
+                }
+                time = 1; 
+            }else{
+                time = time + 1;
+            }
         }
-    }
-
-    btnAddToCart.innerHTML = productsSelected.length == size  ? `Add To Cart` :  `Pick ${-(- size + (productsSelected.length))} more boxes`;
-    btnAddToCart.disabled = productsSelected.length == size ? false : true;
-    productsSelected.length == size ? gridContainer.classList.add('complete') : gridContainer.classList.remove('complete');
+    }, 1000);
 }
 
-function setPrice(price) {
-    if(price.old != ''){
-        containerPrice.querySelector('.old_pack_price').style.display = 'block';
-        containerPrice.querySelector('.old_pack_price').innerHTML = price.old;
-    }else{
-        containerPrice.querySelector('.old_pack_price').style.display = 'none';
-    }
 
-    containerPrice.querySelector('.current_pack_price').innerHTML = price.current;
+function onPause() {
+    isPaused = true;
 }
 
-renderSelectedProducts()
+function onResume() {
+    isPaused = false;
+}
