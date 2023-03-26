@@ -4,484 +4,363 @@
     box-sizing: border-box;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
 body {
     width: 100%;
     height: 100%;
     font-family: sans-serif;
 }
 
-#voltaireconfigsection240323  .swiper {
+#voltaireaccesorysection260323 {
     width: 100%;
-    height: 500px;
-    margin-bottom: 50px;
-  }
-
-  #voltaireconfigsection240323 input[type="radio"],
-  #voltaireconfigsection240323 input[type="checkbox"] {
-    display: none;
-  }
-
-  #voltaireconfigsection240323 input[type="radio"]:checked + label,
-  #voltaireconfigsection240323 input[type="checkbox"]:checked + label {
-    border-color: #000;
-  }
-
-  #voltaireconfigsection240323 #step_3 input[type="radio"]:checked + label .inner_color {
-    position: absolute;
-    top: 0;
-    left: 0;
-    border-radius: 0;
-  }
-
-  #voltaireconfigsection240323 #step_3 input[type="radio"]:checked + label .color {
-    border: none;
-    background-color: #fff;
     height: 100%;
-    width: 100%;
-    border-radius: 0;
+    background-color: #fff;
+    color: #000;
     overflow: hidden;
-    padding: 5px;
-    position: absolute;
-    right: 0;
-    transform: translateX(0);
-    z-index: 1;
+    padding: 60px 20px;
 }
 
-  #voltaireconfigsection240323 #step_3 input[type="radio"]:checked + label .title {
-    color: #fff;
-    z-index: 10;
-  }
-
-  #voltaireconfigsection240323  .swiper-slide {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-  }
-
-  #voltaireconfigsection240323  .swiper-slide img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-#voltaireconfigsection240323 {
-    width: 100%;
-    height: 100%;
-    background-color: #fff;
-    color: #000;
-}
-
-#voltaireconfigsection240323 .container {
-    width: 100%;
-    height: auto;
-    position: relative;
-    display: flex;
-}
-
-#voltaireconfigsection240323 .container .left {
-    width: 50%;
-    display: flex;
-    justify-content: center;
-    padding: 100px 0;
-}
-
-#voltaireconfigsection240323 .container .right {
-    width: 50%;
-    position: sticky;
-    height: 100vh;
-    top: 0;
-    right: 0;
-    background-color: #F5F5F5;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding-bottom: 80px;
-}
-
-#voltaireconfigsection240323  .slider_container {
-    max-width: 80%;
-}
-
-#voltaireconfigsection240323 .step_container {
-    max-width: 60%;
-}
-
-#voltaireconfigsection240323  .step_container .step {
-    border-bottom: 1px solid #F5F5F5;
-    padding: 20px 0;
-    width: 100%;
-    margin-bottom: 100px;
-}
-
-#voltaireconfigsection240323 .step_container .step .step_title {
-    color: #C43218;
-    font-style: normal;
-    font-weight: 850;
-    font-size: 16px;
-    line-height: 19px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    display: flex;
-    align-items: center;
-}
-
-#voltaireconfigsection240323  .step .step_title .icon {
-    margin-left: 10px;
-    color: #000;
-}
-
-#voltaireconfigsection240323  .step.active > .wrapper{
-    height: 0 !important;
-}
-
-#voltaireconfigsection240323 .wrapper {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-    margin-top: 10px;
-    transition: height 500ms;
-}
-
-#voltaireconfigsection240323 .card {
-    width: 100%;   
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-direction: row;
-    margin-top: 20px;
-    background-color: #F5F5F5;
-    cursor: pointer;
-    transition: all 500ms;
-    border: 2px solid transparent;
-    position: relative;
-}
-
-#voltaireconfigsection240323 .card:hover {
-    transform: scale(101%);
-    border: 2px solid rgba(0, 0, 0, 0.1);
-}
-
-#voltaireconfigsection240323  .title {
-    font-size: 16px;
-    font-weight: 700;
-    margin-bottom: 5px;
-}
-
-#voltaireconfigsection240323 .desc {
-    font-size: 16px;
-    color: #8C8C8C;
-    font-weight: 500;
-}
-
-#voltaireconfigsection240323 .desc a {
-    text-decoration: underline;
-    color: inherit;
-}
-
-#voltaireconfigsection240323 .card  .image img {
+#voltaireaccesorysection260323 img {
     max-width: 100%;
-    width: 100%;
     display: block;
-    object-fit: cover;
 }
 
-#voltaireconfigsection240323 #step_1 .card {
-    padding: 20px;
-}
-
-#voltaireconfigsection240323 #step_1 .card  .image {
-    max-width: 25%;
-}
-
-#voltaireconfigsection240323 #step_2 .card,
-#voltaireconfigsection240323 #step_3 .card ,
-#voltaireconfigsection240323 #step_4 .card ,
-#voltaireconfigsection240323 #step_5 .card  {
-    padding: 40px;
-}
-
-#voltaireconfigsection240323 #step_2 .wrapper {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 20px;
-}
-
-#voltaireconfigsection240323 #step_5 .wrapper {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 20px;
-}
-
-#voltaireconfigsection240323 #step_5 .card {
-    text-align: center;
-}
-
-#voltaireconfigsection240323 #step_5 .card  .title {
-    font-size: 24px;
-    line-height: 28px;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    margin: 20px 0;
-    text-align: center;
-}
-
-#voltaireconfigsection240323 .color {
-    border: 2px solid rgba(0, 0, 0, 0.1);
-    background-color: #fff;
-    height: 40px;
-    width: 40px;
-    border-radius: 50%;
-    overflow: hidden;
-    padding: 5px;
-    position: absolute;
-    right: 0;
-    transform: translateX(-40px);
-    transition: all 300ms;
-}
-
-#voltaireconfigsection240323 .color .inner_color {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    transition: all 500ms;
-}
-
-#voltaireconfigsection240323 .footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    border-top: 2px solid rgba(0, 0, 0, 0.1);
-    background-color: #fff;
-    padding: 25px 10px;
-    z-index: 60;
-}
-
-#voltaireconfigsection240323 .swiper-button-next::after,
-#voltaireconfigsection240323 .swiper-button-prev::after {
-    color: #8C8C8C !important;
-    font-size: 30px !important;
-}
-
-#voltaireconfigsection240323 .swiper-pagination-bullet {
-    background-color: #000 !important;
-}
-
-#voltaireconfigsection240323 .footer .inner_footer {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    align-items: center;
-    max-width: 80%;
+#voltaireaccesorysection260323 .container {
+    max-width: 1400px;
     width: 100%;
     margin: 0 auto;
+    position: relative;
 }
 
-#voltaireconfigsection240323  .inner_footer .left {
+#voltaireaccesorysection260323 .container .subtitle {
+    font-style: normal;
+    font-weight: 850;
+    font-size: 8px;
+    line-height: 7px;
+    letter-spacing: 0.1em;
+    color: #C43218;
+    text-transform: uppercase;
+}
+
+#voltaireaccesorysection260323 .container .title {
+    font-style: normal;
+    font-weight: 850;
+    font-size: 20px;
+    letter-spacing: 0.1em;
+    color: #000;
+    text-transform: uppercase;
+    margin: 10px 0;
+}
+
+#voltaireaccesorysection260323 .container hr {
+    color: #C43218;
+    width: 45px;
+}
+
+#voltaireaccesorysection260323 .container .action_btn {
+    border: 2px solid #000;
+    background-color: transparent;
+    outline: none;
+    width: 100%;
+    max-width: 200px;
+    cursor: pointer;
+    transition: all 500ms ;
+    overflow: hidden;
+    height: 40px;
+    opacity: 1;
+    visibility: visible;
+    position: relative;
+    transition: opacity 500ms;
+}
+
+#voltaireaccesorysection260323 .container .action_btn .libelle  {
+    color: #000;
+    font-weight: 850;
+    font-size: 14px;
+    text-transform: uppercase;
+    line-height: 17px;
+    text-align: center;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    position: absolute;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    z-index: 10;
 }
 
-#voltaireconfigsection240323  .inner_footer .left .config_step.active {
+#voltaireaccesorysection260323 .container .action_btn .overlay  {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    background-color: #000;
+    top: 0;
+    left: -100%;
+    transition: all 500ms ;
+}
+
+#voltaireaccesorysection260323 .container .action_btn:hover  {
+    color: #fff;
+}
+
+#voltaireaccesorysection260323 .container .action_btn:hover > .overlay {
+    left: 0;
+}
+
+#voltaireaccesorysection260323 .container .action_btn:hover > .libelle   {
+    color: #fff;
+    transition: all 500ms ;
+ }
+
+ #voltaireaccesorysection260323 .wrapper {
+    margin-top: 60px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: stretch;
+    position: relative;
+ }
+
+ #voltaireaccesorysection260323 .wrapper .left {
+    position: absolute;
+    left: 0;
+    top: 0;
+    cursor: pointer;
+    width: calc(69.5% - 60px);
+    height: 100%;
+    transition: width 1500ms;
+    z-index: 10;
+ }
+
+ #voltaireaccesorysection260323 .wrapper .left.highlight {
+    width: 100%;
+ }
+
+ #voltaireaccesorysection260323 .left.highlight > .card .card_image img{
+    height: 100%;
+}
+
+#voltaireaccesorysection260323 .wrapper .left.highlight > .card .prdt_name {
+    bottom: 90px;
+}
+
+#voltaireaccesorysection260323 .wrapper .left.highlight > .card .prdt_price {
+    right: calc(100% - 60px);
+}
+
+#voltaireaccesorysection260323 .wrapper .left.highlight > .card .prdt_variants {
     opacity: 1;
 }
 
-#voltaireconfigsection240323  .inner_footer .left .config_step {
-    opacity: 0.5;
-    font-style: normal;
-    font-weight: 850;
-    font-size: 16px;
-    line-height: 19px;
-    color: #000000;
-    text-transform: uppercase;
-    margin-right: 50px;
-    letter-spacing: 0.1em;
+#voltaireaccesorysection260323 .wrapper .left.highlight > .card .action_btn {
+    opacity: 1;
+}
+
+#voltaireaccesorysection260323 .wrapper .left .card .action_btn {
+    transition: opacity 1600ms;
+}
+
+#voltaireaccesorysection260323 .wrapper .left .card {
+    height: 100%;
+ }
+
+
+ #voltaireaccesorysection260323 .wrapper .right {
+    width: 30.5%;
+ }
+
+ #voltaireaccesorysection260323 .wrapper .right .card:first-child {
+    margin-bottom: 60px;
+ }
+
+ #voltaireaccesorysection260323 .other_prdt {
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 60px;
+}
+
+#voltaireaccesorysection260323 .card {
+    position: relative;
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    min-height: 350px;
+}
+
+
+
+#voltaireaccesorysection260323 .card .card_image {
+    width: 100%;
+    max-height: 90%;
+    height: 100%;
+    overflow: hidden;
+}
+
+#voltaireaccesorysection260323 .card .card_image img {
+    width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+#voltaireaccesorysection260323 .card .prdt_name {
+    font-size: 20px;
+    line-height: 23px;
+    font-weight: 800;
+    position: absolute;
+    bottom: 25px;
+    left: 25px;
+    transition: all 1000ms ;
+}
+
+#voltaireaccesorysection260323 .card .prdt_price {
+    font-size: 20px;
+    line-height: 23px;
+    font-weight: 500;
+    position: absolute;
+    bottom: 25px;
+    right: 25px;
+    transition: all 1600ms ;
+}
+
+#voltaireaccesorysection260323 .card .prdt_variants {
+    position: absolute;
+    bottom: 60px;
+    left: 25px;
+    opacity: 0;
+    transition: all 500ms;
+}
+
+#voltaireaccesorysection260323 .card .action_btn {
+    position: absolute;
+    bottom: 25px;
+    right: 25px;
+    opacity: 0;
+}
+
+#voltaireaccesorysection260323 .card .prdt_variants {
     display: flex;
     align-items: center;
+    justify-content: flex-start;
 }
 
-#voltaireconfigsection240323  .inner_footer .left .config_step .icon {
-    margin-right: 20px;
-}
-
-#voltaireconfigsection240323  .icon svg {
-    width: 20px;
-    height: 20px;
-}
-
-#voltaireconfigsection240323  .inner_footer .right {
-    display: flex;
-    align-items: stretch;
-}
-
-#voltaireconfigsection240323  .inner_footer .right .submit_btn {
-    border: none;
-    background-color: #26392F;
-    color: #fff;
-    min-width: 200px;
-    text-transform: uppercase;
-    font-size: 14px;
-}
-
-#voltaireconfigsection240323  .inner_footer .right .price {
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    text-align: right;
-    margin-right: 50px;
-    
-}
-
-#voltaireconfigsection240323  .inner_footer .right .price .title {
-    font-size: 18px;
-}
-
-#voltaireconfigsection240323 .mobile_slider_container {
-    display: none;
+#voltaireaccesorysection260323 .card .prdt_variants .color {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin-right: 10px;
 }
 
 @media only screen and (max-width: 1000px) {
-
-    #voltaireconfigsection240323 .wrapper {
-        overflow: hidden;
-    }
-
-    #voltaireconfigsection240323 .mobile_slider_container  {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 0;
-        overflow: hidden;
-        transition: all 800ms;
-        position: relative;
-    }
-
-    #voltaireconfigsection240323 .close_icon {
-        cursor: pointer;
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        z-index: 50;
-    }
-
-    #voltaireconfigsection240323 .close_icon svg {
-        width: 30px;
-        height: 30px;
-    }
-
-    #voltaireconfigsection240323 .mobile_slider_container .swiper-slide img {
-        display: block;
-        width: 100%;
-        height: auto;
-        object-fit: cover;
-    }
-
-    #voltaireconfigsection240323 .mobile_slider_container .swiper {
-        height: 100%;
-    }
-
-    #voltaireconfigsection240323 .container .left {
-        width: 100%;
-        padding-top: 40px;
-        padding-bottom: 90px;
-    }
-
-    #voltaireconfigsection240323 .step_container {
-        max-width: 90%;
-    }
-    
-    #voltaireconfigsection240323 .container .right {
-        display: none;
-    }
-
-    #voltaireconfigsection240323 .step_container .step .step_title {
-        font-size: 13px;
-    }
-
-    #voltaireconfigsection240323  .title {
-        font-size: 12px;
-    }
-    
-    #voltaireconfigsection240323 .desc {
-        font-size: 12px;
-    }
-
-    #voltaireconfigsection240323 #step_2 .card,
-    #voltaireconfigsection240323 #step_5 .card  {
-        padding: 20px;
-    }
-
-    #voltaireconfigsection240323 #step_3 .card ,
-    #voltaireconfigsection240323 #step_4 .card {
-        padding: 20px 40px;
-    }
-
-    #voltaireconfigsection240323 .color {
-        border: 1px solid rgba(0, 0, 0, 0.1);
-        height: 20px;
-        width: 20px;
-        padding: 1px;
-    }
-
-    #voltaireconfigsection240323 #step_5 .card  .title {
-        font-size: 13px;
+    #voltaireaccesorysection260323 .container .title {
+        font-size: 18px;
         margin: 10px 0;
     }
 
-    #voltaireconfigsection240323  .step_container .step {
-        padding: 10px 0;
-        margin-bottom: 40px;
-    }
-
-    #voltaireconfigsection240323 .footer .inner_footer {
-        flex-direction: column;
-    }
-
-    #voltaireconfigsection240323  .inner_footer .left .config_step {
-        font-size: 13px;
-        margin-right: 15px;
-    }
-
-    #voltaireconfigsection240323  .inner_footer .right .submit_btn {
-        border: none;
-        background-color: #26392F;
-        color: #fff;
-        min-width: 200px;
-        text-transform: uppercase;
-        font-size: 12px;
-    }
-
-    #voltaireconfigsection240323  .inner_footer .right {
-        margin-top: 10px;
-    }
-    
-    #voltaireconfigsection240323  .inner_footer .right .price {
-        margin-right: 20px;
-        font-size: 12px;
-    }
-    
-    #voltaireconfigsection240323  .inner_footer .right .price .title {
-        font-size: 13px;
-    }
-
-    #voltaireconfigsection240323  .inner_footer .left .config_step .icon {
+    #voltaireaccesorysection260323 .card .prdt_variants .color {
+        width: 12px;
+        height: 12px;
         margin-right: 5px;
     }
-    
-    #voltaireconfigsection240323  .icon svg {
-        width: 10px;
-        height: 10px;
+
+    #voltaireaccesorysection260323 .action_btn {
+        max-width: 150px !important;
     }
 
-    #voltaireconfigsection240323 input[type="radio"]:checked + label,
-    #voltaireconfigsection240323 input[type="checkbox"]:checked + label {
-        border-width: 1px;
-    } 
+    #voltaireaccesorysection260323 .container .action_btn  .libelle {
+        font-size: 12px;
+    }
+
+    #voltaireaccesorysection260323 .other_prdt {
+        margin-top: 40px;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 40px;
+    }
+
+    #voltaireaccesorysection260323 .wrapper {
+        margin-top: 40px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: stretch;
+        position: relative;
+        flex-direction: column;
+     }
+
+     #voltaireaccesorysection260323  .left.highlight > .card .card_image img{
+        height: auto;
+    }
+    
+    #voltaireaccesorysection260323 .wrapper .left {
+        width: 100%;
+        height: 500px;
+        transition: width 1500ms;
+        position: relative;
+        z-index: 10;
+     }
+    
+     #voltaireaccesorysection260323 .wrapper .left {
+        width: 100%;
+     }
+    
+     #voltaireaccesorysection260323  .wrapper .left .card .prdt_name {
+        bottom: 65px !important;
+        font-size: 13px;
+    }
+
+    #voltaireaccesorysection260323 .card .prdt_name {
+        font-size: 13px;
+    }
+    
+    #voltaireaccesorysection260323  .wrapper .left  .card .prdt_price {
+        left: 25px;
+        font-size: 13px;
+    }
+
+    #voltaireaccesorysection260323  .card .prdt_price {
+        font-size: 13px;
+    }
+    
+    #voltaireaccesorysection260323   .wrapper .left .card .prdt_variants {
+        opacity: 1;
+        bottom: 50px;
+    }
+    
+    #voltaireaccesorysection260323  .wrapper .left .card .action_btn {
+        opacity: 1;
+    }
+    
+    #voltaireaccesorysection260323 .wrapper .left .card .action_btn {
+        transition: opacity 1600ms;
+    }
+    
+    #voltaireaccesorysection260323   .wrapper .left .card {
+        height: 100%;
+     }
+    
+    
+     #voltaireaccesorysection260323  .wrapper .right {
+        width: 100%;
+        margin-top: 40px;
+     }
+    
+     #voltaireaccesorysection260323  .wrapper .right .card:first-child {
+        margin-bottom: 40px;
+     }
+}
+
+@media only screen and (max-width: 780px) {
+    #voltaireaccesorysection260323  .other_prdt {
+        margin-top: 20px;
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        gap: 20px;
+    }
+
+    #voltaireaccesorysection260323  .wrapper .left {
+        height: 400px;
+     }
 }
