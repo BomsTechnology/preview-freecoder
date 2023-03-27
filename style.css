@@ -10,28 +10,28 @@ body {
     font-family: sans-serif;
 }
 
-#voltaireaccesorysection260323 {
+#voltairebloggrid270323 {
     width: 100%;
     height: 100%;
     background-color: #fff;
     color: #000;
     overflow: hidden;
-    padding: 60px 20px;
+    padding: 60px 15px;
 }
 
-#voltaireaccesorysection260323 img {
+#voltairebloggrid270323 img {
     max-width: 100%;
     display: block;
 }
 
-#voltaireaccesorysection260323 .container {
+#voltairebloggrid270323 .container {
     max-width: 1400px;
     width: 100%;
     margin: 0 auto;
     position: relative;
 }
 
-#voltaireaccesorysection260323 .container .subtitle {
+#voltairebloggrid270323 .container .subtitle {
     font-style: normal;
     font-weight: 850;
     font-size: 8px;
@@ -41,7 +41,7 @@ body {
     text-transform: uppercase;
 }
 
-#voltaireaccesorysection260323 .container .title {
+#voltairebloggrid270323 .container .title {
     font-style: normal;
     font-weight: 850;
     font-size: 20px;
@@ -51,12 +51,106 @@ body {
     margin: 10px 0;
 }
 
-#voltaireaccesorysection260323 .container hr {
+#voltairebloggrid270323 .container hr {
     color: #C43218;
     width: 45px;
 }
 
-#voltaireaccesorysection260323 .container .action_btn {
+#voltairebloggrid270323 .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+}
+
+#voltairebloggrid270323 .header .header_right {
+    max-width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: row;
+}
+
+#voltairebloggrid270323 .tag {
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    background-color: #f5f5f5;
+    padding: 15px 40px;
+    font-size: 14px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+#voltairebloggrid270323 .wrapper {
+    margin: 50px 0;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 70px;
+}
+
+#voltairebloggrid270323 .wrapper  .card {
+    min-height: 600px;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+#voltairebloggrid270323 .wrapper  .card:hover > img{
+    transform: scale(105%);
+}
+
+#voltairebloggrid270323 .wrapper  .card.highlight {
+    grid-column: span 2 / span 2;
+    max-height: 500px;
+    
+}
+
+#voltairebloggrid270323 .wrapper  .card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 500ms;
+}
+
+#voltairebloggrid270323 .wrapper  .card .info {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    color: #fff !important;
+    padding: 40px;
+    flex-direction: column;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    left: 0;
+}
+
+#voltairebloggrid270323 .card .info .card_title {
+    margin: 20px 0 !important;
+    font-size: 28px;
+    font-weight: 800;
+}
+
+#voltairebloggrid270323 .category {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+#voltairebloggrid270323 .date {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+#voltairebloggrid270323 .bottom_action {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+#voltairebloggrid270323 .container .action_btn {
     border: 2px solid #000;
     background-color: transparent;
     outline: none;
@@ -65,14 +159,14 @@ body {
     cursor: pointer;
     transition: all 500ms ;
     overflow: hidden;
-    height: 40px;
+    height: 50px;
     opacity: 1;
     visibility: visible;
     position: relative;
     transition: opacity 500ms;
 }
 
-#voltaireaccesorysection260323 .container .action_btn .libelle  {
+#voltairebloggrid270323 .container .action_btn .libelle  {
     color: #000;
     font-weight: 850;
     font-size: 14px;
@@ -92,7 +186,7 @@ body {
     z-index: 10;
 }
 
-#voltaireaccesorysection260323 .container .action_btn .overlay  {
+#voltairebloggrid270323 .container .action_btn .overlay  {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -103,264 +197,73 @@ body {
     transition: all 500ms ;
 }
 
-#voltaireaccesorysection260323 .container .action_btn:hover  {
+#voltairebloggrid270323 .container .action_btn:hover  {
     color: #fff;
 }
 
-#voltaireaccesorysection260323 .container .action_btn:hover > .overlay {
+#voltairebloggrid270323 .container .action_btn:hover > .overlay {
     left: 0;
 }
 
-#voltaireaccesorysection260323 .container .action_btn:hover > .libelle   {
+#voltairebloggrid270323 .container .action_btn:hover > .libelle   {
     color: #fff;
     transition: all 500ms ;
  }
 
- #voltaireaccesorysection260323 .wrapper {
-    margin-top: 60px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: stretch;
-    position: relative;
- }
-
- #voltaireaccesorysection260323 .wrapper .left {
-    position: absolute;
-    left: 0;
-    top: 0;
-    cursor: pointer;
-    width: calc(69.5% - 60px);
-    height: 100%;
-    transition: width 1500ms;
-    z-index: 10;
- }
-
- #voltaireaccesorysection260323 .wrapper .left.highlight {
-    width: 100%;
- }
-
- #voltaireaccesorysection260323 .left.highlight > .card .card_image img{
-    height: 100%;
-}
-
-#voltaireaccesorysection260323 .wrapper .left.highlight > .card .prdt_name {
-    bottom: 90px;
-}
-
-#voltaireaccesorysection260323 .wrapper .left.highlight > .card .prdt_price {
-    right: calc(100% - 60px);
-}
-
-#voltaireaccesorysection260323 .wrapper .left.highlight > .card .prdt_variants {
-    opacity: 1;
-}
-
-#voltaireaccesorysection260323 .wrapper .left.highlight > .card .action_btn {
-    opacity: 1;
-}
-
-#voltaireaccesorysection260323 .wrapper .left .card .action_btn {
-    transition: opacity 1600ms;
-}
-
-#voltaireaccesorysection260323 .wrapper .left .card {
-    height: 100%;
- }
-
-
- #voltaireaccesorysection260323 .wrapper .right {
-    width: 30.5%;
- }
-
- #voltaireaccesorysection260323 .wrapper .right .card:first-child {
-    margin-bottom: 60px;
- }
-
- #voltaireaccesorysection260323 .other_prdt {
-    margin-top: 60px;
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 60px;
-}
-
-#voltaireaccesorysection260323 .card {
-    position: relative;
-    background-color: #f5f5f5;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 50px;
-    min-height: 350px;
-}
-
-
-
-#voltaireaccesorysection260323 .card .card_image {
-    width: 100%;
-    max-height: 90%;
-    height: 100%;
-    overflow: hidden;
-}
-
-#voltaireaccesorysection260323 .card .card_image img {
-    width: 100%;
-    max-height: 100%;
-    object-fit: contain;
-}
-
-#voltaireaccesorysection260323 .card .prdt_name {
-    font-size: 20px;
-    line-height: 23px;
-    font-weight: 800;
-    position: absolute;
-    bottom: 25px;
-    left: 25px;
-    transition: all 1000ms ;
-}
-
-#voltaireaccesorysection260323 .card .prdt_price {
-    font-size: 20px;
-    line-height: 23px;
-    font-weight: 500;
-    position: absolute;
-    bottom: 25px;
-    right: 25px;
-    transition: all 1600ms ;
-}
-
-#voltaireaccesorysection260323 .card .prdt_variants {
-    position: absolute;
-    bottom: 60px;
-    left: 25px;
-    opacity: 0;
-    transition: all 500ms;
-}
-
-#voltaireaccesorysection260323 .card .action_btn {
-    position: absolute;
-    bottom: 25px;
-    right: 25px;
-    opacity: 0;
-}
-
-#voltaireaccesorysection260323 .card .prdt_variants {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-}
-
-#voltaireaccesorysection260323 .card .prdt_variants .color {
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    margin-right: 10px;
-}
-
 @media only screen and (max-width: 1000px) {
-    #voltaireaccesorysection260323 .container .title {
-        font-size: 18px;
-        margin: 10px 0;
+    #voltairebloggrid270323 .wrapper  .card .info {
+        padding: 20px;
     }
-
-    #voltaireaccesorysection260323 .card .prdt_variants .color {
-        width: 12px;
-        height: 12px;
-        margin-right: 5px;
+    
+    #voltairebloggrid270323 .card .info .card_title {
+        margin: 10px 0 !important;
+        font-size: 20px;
     }
-
-    #voltaireaccesorysection260323 .action_btn {
-        max-width: 150px !important;
-    }
-
-    #voltaireaccesorysection260323 .container .action_btn  .libelle {
+    
+    #voltairebloggrid270323 .category {
         font-size: 12px;
     }
-
-    #voltaireaccesorysection260323 .other_prdt {
-        margin-top: 40px;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 40px;
+    
+    #voltairebloggrid270323 .date {
+        font-size: 14px;
     }
-
-    #voltaireaccesorysection260323 .wrapper {
-        margin-top: 40px;
-        display: flex;
-        justify-content: flex-end;
-        align-items: stretch;
-        position: relative;
+    #voltairebloggrid270323 .header {
         flex-direction: column;
-     }
-
-     #voltaireaccesorysection260323  .left.highlight > .card .card_image img{
-        height: auto;
+        align-items: flex-start;
     }
-    
-    #voltaireaccesorysection260323 .wrapper .left {
-        width: 100%;
-        height: 500px;
-        transition: width 1500ms;
-        position: relative;
-        z-index: 10;
-     }
-    
-     #voltaireaccesorysection260323 .wrapper .left {
-        width: 100%;
-     }
-    
-     #voltaireaccesorysection260323  .wrapper .left .card .prdt_name {
-        bottom: 65px !important;
-        font-size: 13px;
-    }
-
-    #voltaireaccesorysection260323 .card .prdt_name {
-        font-size: 13px;
-    }
-    
-    #voltaireaccesorysection260323  .wrapper .left  .card .prdt_price {
-        left: 25px;
-        font-size: 13px;
-    }
-
-    #voltaireaccesorysection260323  .card .prdt_price {
-        font-size: 13px;
-    }
-    
-    #voltaireaccesorysection260323   .wrapper .left .card .prdt_variants {
-        opacity: 1;
-        bottom: 50px;
-    }
-    
-    #voltaireaccesorysection260323  .wrapper .left .card .action_btn {
-        opacity: 1;
-    }
-    
-    #voltaireaccesorysection260323 .wrapper .left .card .action_btn {
-        transition: opacity 1600ms;
-    }
-    
-    #voltaireaccesorysection260323   .wrapper .left .card {
-        height: 100%;
-     }
-    
-    
-     #voltaireaccesorysection260323  .wrapper .right {
-        width: 100%;
-        margin-top: 40px;
-     }
-    
-     #voltaireaccesorysection260323  .wrapper .right .card:first-child {
-        margin-bottom: 40px;
-     }
-}
-
-@media only screen and (max-width: 780px) {
-    #voltaireaccesorysection260323  .other_prdt {
+    #voltairebloggrid270323 .header .header_right {
+        max-width: 100%;
         margin-top: 20px;
+        justify-content: flex-start;
+    }
+    
+    #voltairebloggrid270323 .tag {
+        padding: 10px 30px;
+        font-size: 12px;
+        margin-right: 6px;
+        margin-bottom: 10px;
+    }
+    
+    #voltairebloggrid270323 .wrapper {
+        margin: 30px 0;
         grid-template-columns: repeat(1, minmax(0, 1fr));
-        gap: 20px;
+        gap: 30px;
+    }
+    
+    #voltairebloggrid270323 .wrapper  .card {
+        min-height: 400px;
+    }
+    
+    #voltairebloggrid270323 .wrapper  .card.highlight {
+        grid-column: span 1 / span 1;
+        max-height: 400px;
     }
 
-    #voltaireaccesorysection260323  .wrapper .left {
-        height: 400px;
-     }
+    #voltairebloggrid270323 .container .action_btn  {
+        height: 40px;
+    }
+
+    #voltairebloggrid270323 .container .action_btn .libelle {
+        font-size: 12px;
+    }
 }
