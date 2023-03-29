@@ -155,11 +155,13 @@ a {
     font-size: 10px;
     margin-bottom: 5px;
     text-align: right;
+    font-family: 'Polaris-Book';
 }
 
 .detail_date p {
     color: gray;
     margin-bottom: 5px;
+    font-family: 'Polaris-light';
 }
 
 .detail_date h3 {
@@ -333,7 +335,7 @@ a {
     text-transform: uppercase;
     font-size: 20px;
     margin-bottom: 5px;
-    font-family: 'Polaris-Book';
+    font-family: 'Polaris-light';
 }
 
 .detail_footer .explain {
@@ -342,7 +344,7 @@ a {
     font-weight: 300;
     font-size: 13px;
     text-align: left;
-    font-family: 'Polaris-Book';
+    font-family: 'Polaris-light';
 }
 
 @media only screen and (max-width: 1000px) {
