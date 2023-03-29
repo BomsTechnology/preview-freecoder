@@ -5,265 +5,262 @@
 }
 
 body {
+    font-family: sans-serif;
     width: 100%;
     height: 100%;
-    font-family: sans-serif;
 }
 
-#voltairebloggrid270323 {
+#q4ordergrid290323 {
     width: 100%;
     height: 100%;
     background-color: #fff;
     color: #000;
-    overflow: hidden;
-    padding: 60px 15px;
 }
 
-#voltairebloggrid270323 img {
-    max-width: 100%;
-    display: block;
-}
-
-#voltairebloggrid270323 .container {
-    max-width: 1400px;
+.container {
     width: 100%;
-    margin: 0 auto;
+    height: 100%;
     position: relative;
 }
 
-#voltairebloggrid270323 .container .subtitle {
-    font-style: normal;
-    font-weight: 850;
-    font-size: 8px;
-    line-height: 7px;
-    letter-spacing: 0.1em;
-    color: #C43218;
-    text-transform: uppercase;
-}
-
-#voltairebloggrid270323 .container .title {
-    font-style: normal;
-    font-weight: 850;
-    font-size: 20px;
-    letter-spacing: 0.1em;
-    color: #000;
-    text-transform: uppercase;
-    margin: 10px 0;
-}
-
-#voltairebloggrid270323 .container hr {
-    color: #C43218;
-    width: 45px;
-}
-
-#voltairebloggrid270323 .header {
+.header {
+    width: 100%;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: row;
-    width: 100%;
-}
-
-#voltairebloggrid270323 .header .header_right {
-    max-width: 50%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-    align-items: center;
-    flex-direction: row;
-}
-
-#voltairebloggrid270323 .tag {
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    background-color: #f5f5f5;
-    padding: 15px 40px;
-    font-size: 14px;
-    margin-right: 10px;
-    margin-bottom: 10px;
-}
-
-#voltairebloggrid270323 .wrapper {
-    margin: 50px 0;
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 70px;
-}
-
-#voltairebloggrid270323 .wrapper  .card {
-    min-height: 600px;
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-}
-
-#voltairebloggrid270323 .wrapper  .card:hover > img{
-    transform: scale(105%);
-}
-
-#voltairebloggrid270323 .wrapper  .card.highlight {
-    grid-column: span 2 / span 2;
-    max-height: 500px;
-    
-}
-
-#voltairebloggrid270323 .wrapper  .card img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: all 500ms;
-}
-
-#voltairebloggrid270323 .wrapper  .card .info {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    color: #fff !important;
-    padding: 40px;
     flex-direction: column;
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-end;
-    left: 0;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 1px solid #a8a6a6;
 }
 
-#voltairebloggrid270323 .card .info .card_title {
-    margin: 20px 0 !important;
-    font-size: 28px;
+.header .header_title {
+    font-size: 24px;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.header .header_navigation {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    overflow-x: auto;
+}
+
+.header .header_navigation .header_nav_item {
+    margin: 0 15px;
+    font-weight: 300;
+    text-transform: uppercase;
+    font-size: 15px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.header .header_navigation .header_nav_item.active {
+    color: #0000ff;
+}
+
+.content {
+    width: 100%;
+    max-width: 90%;
+    margin: 30px auto;
+}
+
+.content .section_title {
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #0000ff;
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+}
+
+.content .section_title .icon {
+    margin-left: 10px;
+}
+
+.content .section_title .icon svg {
+    height: 20px;
+    width: 20px;
+}
+
+.wrapper {
+    margin-top: 20px;
+    padding: 0 80px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 100px;
+}
+
+.wrapper .card {
+    border: 1px solid #0000ff;
+    padding: 20px;
+}
+
+.wrapper .card .card_header {
+    border-bottom: 1px solid #a8a6a6;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+}
+
+.card .card_header .card_header_image {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    max-height: 100px;
+}
+
+.card .card_header .card_header_image img {
+    max-width: 100%;
+    object-fit: contain;
+}
+
+.card .card_header .card_header_text {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.card .card_body {
+    margin-top: 10px;
+}
+
+.card .card_body .card_body_state {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #0000ff;
+    color: #fff;
+    font-size: 14px;
+    border-radius: 8px;
+    font-weight: 400;
+    margin: 10px 0;
+    text-transform: uppercase;
+}
+
+.card_body_tile {
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.card_body_tile h3 {
     font-weight: 800;
 }
 
-#voltairebloggrid270323 .category {
-    font-size: 16px;
+.card_body_tile  p {
+    color: #0000ff;
+    margin-left: 15px;
+    font-weight: 300;
+    font-size: 15px;
+}
+
+.card_body_date {
+    margin: 30px 0;
+    font-size: 10px;
+}
+
+.card_body_date p {
+    color: gray;
+    margin-bottom: 5px;
+}
+
+.card_body_date h3 {
     font-weight: 500;
 }
 
-#voltairebloggrid270323 .date {
+.card_footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.card_footer .action_btn {
+    background-color: #f5f5f5;
+    border: none;
     font-size: 18px;
-    font-weight: 500;
-}
-
-#voltairebloggrid270323 .bottom_action {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-}
-
-#voltairebloggrid270323 .container .action_btn {
-    border: 2px solid #000;
-    background-color: transparent;
-    outline: none;
-    width: 100%;
-    max-width: 200px;
-    cursor: pointer;
-    transition: all 500ms ;
-    overflow: hidden;
-    height: 50px;
-    opacity: 1;
-    visibility: visible;
-    position: relative;
-    transition: opacity 500ms;
-}
-
-#voltairebloggrid270323 .container .action_btn .libelle  {
-    color: #000;
-    font-weight: 850;
-    font-size: 14px;
     text-transform: uppercase;
-    line-height: 17px;
-    text-align: center;
-    letter-spacing: 0.1em;
-    cursor: pointer;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    top: 0;
-    left: 0;
-    z-index: 10;
+    font-weight: 600;
+    padding: 15px 40px;
+    min-width: 80%;
+    border-radius: 10px;
 }
 
-#voltairebloggrid270323 .container .action_btn .overlay  {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: 0;
-    background-color: #000;
-    top: 0;
-    left: -100%;
-    transition: all 500ms ;
+a {
+    text-decoration: none;
 }
-
-#voltairebloggrid270323 .container .action_btn:hover  {
-    color: #fff;
-}
-
-#voltairebloggrid270323 .container .action_btn:hover > .overlay {
-    left: 0;
-}
-
-#voltairebloggrid270323 .container .action_btn:hover > .libelle   {
-    color: #fff;
-    transition: all 500ms ;
- }
 
 @media only screen and (max-width: 1000px) {
-    #voltairebloggrid270323 .wrapper  .card .info {
-        padding: 20px;
-    }
-    
-    #voltairebloggrid270323 .card .info .card_title {
-        margin: 10px 0 !important;
-        font-size: 20px;
-    }
-    
-    #voltairebloggrid270323 .category {
-        font-size: 12px;
-    }
-    
-    #voltairebloggrid270323 .date {
-        font-size: 14px;
-    }
-    #voltairebloggrid270323 .header {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    #voltairebloggrid270323 .header .header_right {
-        max-width: 100%;
+    .wrapper {
         margin-top: 20px;
+        padding: 0 80px;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 80px;
+    }
+}
+
+@media only screen and (max-width: 780px) {
+    .wrapper {
+        padding: 0 10px;
+        display: grid;
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        gap: 50px;
+    }
+
+    .header .header_title {
+        font-size: 18px;
+    }
+
+    .header .header_navigation .header_nav_item {
+        margin: 0 10px;
+        font-size: 10px;
+    }
+
+    .header .header_navigation {
+        align-items: center;
+        margin-top: 30px;
         justify-content: flex-start;
     }
-    
-    #voltairebloggrid270323 .tag {
-        padding: 10px 30px;
-        font-size: 12px;
-        margin-right: 6px;
-        margin-bottom: 10px;
-    }
-    
-    #voltairebloggrid270323 .wrapper {
-        margin: 30px 0;
-        grid-template-columns: repeat(1, minmax(0, 1fr));
-        gap: 30px;
-    }
-    
-    #voltairebloggrid270323 .wrapper  .card {
-        min-height: 400px;
-    }
-    
-    #voltairebloggrid270323 .wrapper  .card.highlight {
-        grid-column: span 1 / span 1;
-        max-height: 400px;
+
+    .content .section_title {
+        font-size: 18px;
     }
 
-    #voltairebloggrid270323 .container .action_btn  {
-        height: 40px;
+    .card_footer .action_btn {
+        font-size: 16px;
+        padding: 10px 40px;
+        min-width: 80%;
     }
 
-    #voltairebloggrid270323 .container .action_btn .libelle {
+    .card .card_header .card_header_image {
+        width: 70%;
+    }
+
+    .card .card_header .card_header_text {
+        width: 30%;
         font-size: 12px;
+    }
+    
+    
+    .card .card_body .card_body_state {
+        font-size: 12px;
+    }
+    
+    .card_body_tile {
+        font-size: 12px;
+    }
+
+    .card_body_tile p {
+        font-size: 13px;
     }
 }
