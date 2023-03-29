@@ -82,6 +82,7 @@ a {
     font-size: 15px;
     cursor: pointer;
     text-align: center;
+    font-family: 'Polaris-light';
 }
 
 .header .header_navigation .header_nav_item.active {
@@ -147,6 +148,7 @@ a {
     margin-left: 15px;
     font-weight: 300;
     font-size: 15px;
+    font-family: 'Polaris-Book';
 }
 
 .detail_date {
