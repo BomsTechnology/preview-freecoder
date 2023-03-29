@@ -4,6 +4,23 @@
     box-sizing: border-box;
 }
 
+@font-face {
+   font-family: 'Polaris';
+   src: url('https://cdn.shopify.com/s/files/1/0685/1369/3970/files/Polaris-Heavy.ttf?v=1675260288') format('truetype');
+}
+@font-face {
+   font-family: 'Polaris-light';
+   src: url('https://cdn.shopify.com/s/files/1/0685/1369/3970/files/Polaris-Light.ttf?v=1671102192') format('truetype');
+}
+@font-face {
+  font-family: 'Polaris-Book';
+  src: url('https://cdn.shopify.com/s/files/1/0685/1369/3970/files/Polaris-Book_041e58d5-7c8f-46b8-8ff9-073ba12da0a9.ttf?v=1677167746') format('truetype');
+}
+@font-face {
+  font-family: 'Polaris-medium';
+  src: url('https://cdn.shopify.com/s/files/1/0685/1369/3970/files/Polaris-Medium.ttf?v=1678705059') format('truetype');
+}
+
 body {
     font-family: sans-serif;
     width: 100%;
@@ -15,6 +32,7 @@ body {
     height: 100%;
     background-color: #fff;
     color: #000;
+    font-family: 'Polaris';
 }
 
 .container {
