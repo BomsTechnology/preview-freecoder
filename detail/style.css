@@ -91,7 +91,7 @@ a {
 
 .content {
     width: 100%;
-    max-width: 90%;
+    max-width: 1500px;
     margin: 10px auto;
     display: flex;
     align-items: flex-start;
