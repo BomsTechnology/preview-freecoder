@@ -341,7 +341,6 @@ a {
 }
 
 .detail_footer .cancel_btn p {
-    text-transform: uppercase;
     font-size: 20px;
     margin-bottom: 5px;
     font-family: 'Polaris-light';
