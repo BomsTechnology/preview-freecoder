@@ -33,6 +33,7 @@ body {
     background-color: #fff;
     color: #000;
     font-family: 'Polaris';
+
 }
 
 .container {
@@ -89,6 +90,7 @@ body {
     display: flex;
     align-items: flex-start;
     flex-direction: row;
+    padding: 0 10px;
 }
 
 .section_title {
