@@ -83,8 +83,8 @@ body {
 }
 
 .content {
-    width: 1500px;
-    max-width: 90%;
+    width: 100%;
+    max-width: 1500px;
     margin: 10px auto;
     display: flex;
     align-items: flex-start;
@@ -99,7 +99,8 @@ body {
     display: flex;
     align-items: center;
     margin: 0 auto;
-    max-width: 90%;
+    width: 100%;
+    max-width: 1500px;
     margin-top: 10px;
 }
 
