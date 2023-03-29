@@ -84,7 +84,7 @@ body {
 
 .content {
     width: 100%;
-    max-width: 1200px;
+    max-width: 1500px;
     margin: 30px auto;
 }
 
@@ -164,7 +164,7 @@ body {
     font-weight: 400;
     margin: 10px 0;
     text-transform: uppercase;
-    font-family: 'Polaris-light';
+    font-family: 'Polaris-Book';
 }
 
 .card_body_tile {
