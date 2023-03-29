@@ -75,6 +75,7 @@ body {
     font-size: 15px;
     cursor: pointer;
     text-align: center;
+    font-family: 'Polaris-light';
 }
 
 .header .header_navigation .header_nav_item.active {
@@ -129,6 +130,7 @@ body {
     margin-left: 15px;
     font-weight: 300;
     font-size: 15px;
+    font-family: 'Polaris-Book';
 }
 
 .detail_container {
@@ -150,6 +152,7 @@ body {
     font-weight: 300;
     font-size: 16px;
     margin-bottom: 5px;
+    font-family: 'Polaris-Book';
 }
 
 .detail_header .right {
@@ -158,6 +161,7 @@ body {
     align-items: flex-end;
     font-weight: 300;
     font-size: 16px;
+    font-family: 'Polaris-Book';
 }
 
 .detail_list {
@@ -228,6 +232,10 @@ body {
 .card_detail_text .type, 
 .card_detail_text .qte {
     text-transform: uppercase;
+}
+
+.card_detail_text .type {
+font-family: 'Polaris-Book';
 }
 
 .card_price {
@@ -306,6 +314,7 @@ input {
     font-weight: 500;
     font-size: 14px;
     text-align: center;
+    font-family: 'Polaris-Book';
 }
 
 .explian_container .explain a {
