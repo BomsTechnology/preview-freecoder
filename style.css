@@ -75,6 +75,7 @@ body {
     font-size: 15px;
     cursor: pointer;
     text-align: center;
+    font-family: 'Polaris-light';
 }
 
 .header .header_navigation .header_nav_item.active {
