@@ -164,6 +164,7 @@ body {
     font-weight: 400;
     margin: 10px 0;
     text-transform: uppercase;
+    font-family: 'Polaris-light';
 }
 
 .card_body_tile {
@@ -182,6 +183,7 @@ body {
     margin-left: 15px;
     font-weight: 300;
     font-size: 15px;
+    font-family: 'Polaris-light';
 }
 
 .card_body_date {
@@ -192,10 +194,12 @@ body {
 .card_body_date p {
     color: gray;
     margin-bottom: 5px;
+    font-family: 'Polaris-light';
 }
 
 .card_body_date h3 {
     font-weight: 500;
+    font-family: 'Polaris-medium';
 }
 
 .card_footer {
