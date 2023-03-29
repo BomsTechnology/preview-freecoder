@@ -76,6 +76,7 @@ body {
     font-size: 15px;
     cursor: pointer;
     text-align: center;
+    font-family: 'Polaris-light';
 }
 
 .header .header_navigation .header_nav_item.active {
@@ -127,6 +128,7 @@ body {
     width: 100%;
     font-weight: 300;
     font-size: 16px;
+    font-family: 'Polaris-light';
 }
 
 .container_info .container_info_item .edit_btn {
@@ -137,6 +139,7 @@ body {
     font-weight: 600;
     padding: 8px 30px;
     border-radius: 5px;
+     font-family: 'Polaris-medium';
 
 }
 
