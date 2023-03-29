@@ -27,7 +27,7 @@ body {
     height: 100%;
 }
 
-#q4orderdetail290323 {
+#q4fidelity290323 {
     width: 100%;
     height: 100%;
     background-color: #fff;
@@ -39,6 +39,7 @@ body {
     width: 100%;
     height: 100%;
     position: relative;
+     font-family: 'Polaris';
 }
 
 .header {
