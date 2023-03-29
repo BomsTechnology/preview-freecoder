@@ -130,6 +130,7 @@ a {
     font-weight: 400;
     margin: 10px 0;
     text-transform: uppercase;
+    font-family: 'Polaris-Book';
 }
 
 .detail_tile {
@@ -176,6 +177,7 @@ a {
     font-weight: 500;
     padding: 10px 15px;
     border-radius: 10px;
+    font-family: 'Polaris-medium';
 }
 
 .detail_container {
@@ -248,6 +250,10 @@ a {
 .card_detail_text .type, 
 .card_detail_text .qte {
     text-transform: uppercase;
+}
+
+.card_detail_text .type {
+    font-family: 'Polaris-medium';
 }
 
 .card_price {
