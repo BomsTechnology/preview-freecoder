@@ -1,126 +1,172 @@
-const steps = Array.from(document.querySelectorAll('#custdecosection210323 .step'));
+import products from './data.js';
 
-let currentStep = 0;
+const gridContainer = document.querySelector('#gridselectproduct130323 .product_grid');
+const selectedProductContainer = document.querySelector('#gridselectproduct130323 .selected_product_container');
+const btnAddToCart = document.querySelector('#gridselectproduct130323 .add_to_cart');
+const containerPrice = document.querySelector('#gridselectproduct130323 .container_pack_price');
+const pack3 = document.querySelector('#gridselectproduct130323 .switch_pack #pack_3');
+const pack6 = document.querySelector('#gridselectproduct130323 .switch_pack #pack_6');
 
-steps.forEach((step, index) => {
-    step.querySelector('.next_btn').addEventListener('click', function(e) {
-        e.preventDefault();
-        if((currentStep < steps.length - 1) && step.classList.contains('complete')){
-            currentStep = index + 1;
-            steps[index].classList.add('finish');
-            steps[currentStep].classList.add('active');
-        }
-    });
+const pack3Price = {
+    old: '',
+    current: '$39',
+};
 
-    step.querySelector('.back_btn').addEventListener('click', function(e) {
-        e.preventDefault();
-        if(currentStep > 0){
-            currentStep = index - 1;
-            steps[index].classList.remove('active');
-            steps[currentStep].classList.remove('finish');
-        }
-    });
+const pack6Price = {
+    old: '$59',
+    current: '$54',
+};
+
+let size = 3;
+let productsSelected = [];
+
+let html = '';
+products.forEach((product) => {
+    html += `
+        <div class="product_card"  onMouseOver="this.style.backgroundColor='${product.color}'" onMouseOut="!this.classList.contains('active') ? this.style.backgroundColor='transparent' : null" data-id="${product.id}">
+            <div class="product_image">
+                <img src="${product.featured_image}" class="featured_image" alt="">
+                <img src="${product.hover_image}" class="hover_image" alt="">
+            </div>
+            <h3 class="product_title">${product.title}</h3>
+            <button type="button" class="product_add">Add</button>
+            <div class="plus_minus_container">
+                <div class="minus">-</div>
+                <div class="selected_number">1</div>
+                <div class="plus">+</div>
+            </div>
+        </div>  `;
 });
 
-// Verification for step 1
-const step1Input = Array.from(steps[0].querySelectorAll('input[type="text"]'));
-step1Input.forEach((input, index) => {
-    input.addEventListener('input', function(e) {
-        if(step1Input[0].value != "" && step1Input[1].value != ""){
-            steps[0].classList.add('complete');
-        }else{
-            steps[0].classList.remove('complete');
+gridContainer.innerHTML = html;
+
+const productCards = document.querySelectorAll('#gridselectproduct130323 .product_card');
+
+productCards.forEach((card, cardIndex) => {
+
+    card.querySelector('.product_add').addEventListener('click', function(e) {
+        if(productsSelected.length < size){
+            card.classList.add('active');
+            productsSelected.push(products[cardIndex]);
+            renderSelectedProducts();
+
+            btnAddToCart.innerHTML =  productsSelected.length == size  ? `Add To Cart` : `Pick ${size - (productsSelected.length)} more boxes`;
+            btnAddToCart.disabled = productsSelected.length == size ? false : true;
+            gridContainer.classList.add(productsSelected.length == size ? 'complete' : null);
         }
     });
-});
 
-// Verification for step 2
-const step2Input = Array.from(steps[1].querySelectorAll('input[type="radio"]'));
-const step2InputYes = steps[1].querySelector('#step2_1_yes');
-const YesinputsStep2 = Array.from(step2InputYes.querySelectorAll('input[type="text"]'));
-step2Input.forEach((input, index) => {
-    input.addEventListener('click', function(e) {
-        if(e.target.checked && e.target.value == 'no'){
-            steps[1].classList.add('complete');
-            step2InputYes.classList.add('hide');
-        }else if(e.target.value == 'yes'){
-            step2InputYes.classList.remove('hide');
-            if(YesinputsStep2[0].value != "" && YesinputsStep2[1].value != ""){
-                steps[1].classList.add('complete');
-            }else{
-                steps[1].classList.remove('complete');
-            }
+
+    card.querySelector('.plus').addEventListener('click', function(e) {
+        if(productsSelected.length < size){
+            productsSelected.push(products[cardIndex]);
+            setActiveCard(card, 'add');
+            renderSelectedProducts();
         }
     });
-});
 
-YesinputsStep2.forEach((input, index) => {
-    input.addEventListener('input', function(e) {
-        if(YesinputsStep2[0].value != "" && YesinputsStep2[1].value != ""){
-            steps[1].classList.add('complete');
-        }else{
-            steps[1].classList.remove('complete');
+    card.querySelector('.minus').addEventListener('click', function(e) {
+        if(productsSelected.length > 0){
+            let deleteIndex = productsSelected.indexOf(products[cardIndex]);
+            productsSelected.splice(deleteIndex, 1);
+            setActiveCard(card, 'remove');
+            renderSelectedProducts();
         }
     });
+
 });
 
+pack3.addEventListener('click', function(e) {
+    pack6.classList.remove('active');
+    pack3.classList.add('active');
+    size = 3;
+    renderSelectedProducts();
 
-// Verification for step 3
-const textInputStep3 = Array.from(steps[2].querySelectorAll('input[type="text"]'));
-const question3Inputs = Array.from(steps[2].querySelectorAll('#step3_3 input[type="radio"]'));
-const Quest3Yes = steps[2].querySelector('#step3_3_yes');
-const Quest3No = steps[2].querySelector('#step3_3_no');
-
-
-textInputStep3.forEach((input, index) => {
-    input.addEventListener('input', function(e) {
-        if(textInputStep3[0].value != "" && textInputStep3[1].value != ""){
-            steps[2].classList.add('complete');
-        }else{
-            steps[2].classList.remove('complete');
+    for(let i = (productsSelected.length - 1); i > 0; i--){
+        if(productsSelected[i] && i >= size ){
+            let deleteElt = Array.from(productCards).filter((p) => {
+                return  p.getAttribute('data-id') ===  productsSelected[i].id;
+            });
+            deleteElt.length > 0 ? productsSelected.splice(i, 1) : null;
+            deleteElt.length > 0 ? setActiveCard(deleteElt[0], 'remove') : null;
         }
-    });
-});
-
-
-question3Inputs.forEach((input, index) => {
-    input.addEventListener('click', function(e) {
-        if(e.target.checked && e.target.value == 'no'){
-            Quest3Yes.classList.add('hide');
-            Quest3No.classList.remove('hide');
-        }else if(e.target.value == 'yes'){
-            Quest3No.classList.add('hide');
-            Quest3Yes.classList.remove('hide');
-            if(textInputStep3[0].value != "" && textInputStep3[1].value != "" && Quest3Yes.children[0].value != ""){
-                steps[2].classList.add('complete');
-            }else{
-                steps[2].classList.remove('complete');
-            }
-        }
-    });
-});
-
-Quest3Yes.children[0].addEventListener('input', function(e){
-    if(textInputStep3[0].value != "" && textInputStep3[1].value != "" && Quest3Yes.children[0].value != ""){
-        steps[2].classList.add('complete');
-    }else{
-        steps[2].classList.remove('complete');
     }
+
+    setActiveCard();
+    setPrice(pack3Price);
+    document.querySelector('#gridselectproduct130323 .free').innerHTML = '2 bought + 1 free';
 });
 
 
-// Verification for step 4
-const questionStep4 = Array.from(steps[3].querySelectorAll('.question'));
-questionStep4.forEach((question, index) => {
-    question.querySelectorAll('input[type="radio"]').forEach((input, index) => {
-        input.addEventListener('click', function(e) {
-            let quest1IsChecked = questionStep4[0].querySelector('input[type="radio"]:checked');
-            let quest2IsChecked = questionStep4[1].querySelector('input[type="radio"]:checked');
-            if(quest2IsChecked && quest1IsChecked ){
-                steps[3].classList.add('complete');
-            }else{
-                steps[3].classList.remove('complete');
-            }
-        });
-    });
-})
+pack6.addEventListener('click', function(e) {
+    pack3.classList.remove('active');
+    pack6.classList.add('active');
+    size = 6;
+    renderSelectedProducts();
+
+    setActiveCard();
+    setPrice(pack6Price);
+    document.querySelector('#gridselectproduct130323 .free').innerHTML = '4 bought + 2 free';
+});
+
+
+function renderSelectedProducts () {
+    let html = "";
+    for(let i = 0; i < size; i++){
+        html +=  productsSelected[i] ? ` 
+            <div class="product_selected active">
+                <span class="remove_btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    </svg>                                                   
+                </span>
+                <img src="${productsSelected[i].featured_image}" class="featured_image" alt="">
+            </div>` : 
+            ` <div class="product_selected"></div>`;
+    }
+    selectedProductContainer.innerHTML = html;
+    setCloseBtn ();
+}
+
+function setCloseBtn () {
+    selectedProductContainer.querySelectorAll('.remove_btn').forEach((btn, index) => {
+        btn.addEventListener('click', function(e) {
+            let deleteElt = Array.from(productCards).filter((p) => {
+               return  p.getAttribute('data-id') ===  productsSelected[index].id
+            });
+            deleteElt.length > 0 ? productsSelected.splice(index, 1) : null;
+            deleteElt.length > 0 ? setActiveCard(deleteElt[0], 'remove') : null;
+            renderSelectedProducts();
+        })
+    })
+};
+
+function setActiveCard(elt, type) {
+    if(type == 'add'){
+        elt.querySelector('.selected_number').innerHTML = parseInt(elt.querySelector('.selected_number').innerHTML) + 1;
+    }else if(type == 'remove'){
+        if(parseInt(elt.querySelector('.selected_number').innerHTML) === 1){
+            elt.classList.remove('active');
+            elt.style.backgroundColor='transparent' 
+        }else{
+            elt.querySelector('.selected_number').innerHTML = parseInt(elt.querySelector('.selected_number').innerHTML) - 1;
+        }
+    }
+
+    btnAddToCart.innerHTML = productsSelected.length == size  ? `Add To Cart` :  `Pick ${-(- size + (productsSelected.length))} more boxes`;
+    btnAddToCart.disabled = productsSelected.length == size ? false : true;
+    productsSelected.length == size ? gridContainer.classList.add('complete') : gridContainer.classList.remove('complete');
+}
+
+function setPrice(price) {
+    if(price.old != ''){
+        containerPrice.querySelector('.old_pack_price').style.display = 'block';
+        containerPrice.querySelector('.old_pack_price').innerHTML = price.old;
+    }else{
+        containerPrice.querySelector('.old_pack_price').style.display = 'none';
+    }
+
+    containerPrice.querySelector('.current_pack_price').innerHTML = price.current;
+}
+
+renderSelectedProducts()
