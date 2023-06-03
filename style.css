@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    width: 100%;
+    height: 100%;
+    background-color: #f8fafc;
+}
+
+#selectedpackxxx20 {
+    width: 100%;
+    height: 100%;
+    font-family: 'Poppins';
+    background-color: #f8fafc;
+    color: #000;
+    position: relative;
+    padding: 40px 20px;
+}
+
+#selectedpackxxx20 .container {
+    max-width: 700px;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+#selectedpackxxx20 .items_container {
+    max-width: 100%;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+#selectedpackxxx20 .add_to_cart {
+    box-shadow: inset 0 0 0 2px #e84393;
+    pointer-events: none;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 0 150px;
+    width: 100%;
+    margin: 0 auto;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer !important;
+    transition: background .15s,color .15s;
+    position: relative;
+    display: inline-block;
+    top: 0;
+    height: 70px;
+    padding: 0 40px;
+    overflow: hidden;
+    white-space: nowrap;
+    vertical-align: top;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: #e84393;
+    color: #ffff;
+    margin-top: 20px;
+}
+
+.cust_radio {
+    width: 100%;
+}
+
+.cust_radio_ctn {
+    width: 100%;
+    border: 3px solid #b2bec3;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10px;
+    cursor: pointer;
+}
+
+.cust_radio input {
+    display: none;
+}
+
+.cust_radio input:checked + .cust_radio_ctn {
+    background-color: #ffeef8;
+    border: 3px solid #e84393;
+}
+
+.cust_radio input:checked + .cust_radio_ctn .radio_circle  {
+    background-color: #e84393;
+}
+
+.cust_radio input:checked + .cust_radio_ctn .list_select  {
+    display: flex;
+}
+
+.cust_radio input:checked + .cust_radio_ctn .radio_subtitle  {
+    display: block;
+}
+
+.cust_radio input:checked + .cust_radio_ctn .container_pack_price  {
+    font-weight: 600 !important;
+    font-size: 18px !important;
+}
+
+.cust_radio_ctn_text {
+    max-width: 93%;
+    width: 100%;
+    font-size: 20px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.radio_circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    background-color: #dfe6e9;
+}
+
+.radio_detail {
+    display: none;
+    font-size: 14px;
+}
+
+.radio_title {
+    font-size: 22px;
+}
+
+.radio_subtitle {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    display: none;
+}
+
+.list_select_item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+.list_select {
+    margin-top: 10px;
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+.list_select_item label {
+    font-size: 14px;
+    font-weight: 600;
+    display: block;
+}
+
+.list_select_item select {
+    display: block;
+    background-color: #fff;
+    border: 1px solid #e84393;
+    padding: 5px 10px;
+    font-size: 18px;
+    min-width: 30%;
+    font-weight: 600;
+    border-radius: 5px;
+}
+
+#selectedpackxxx20 .container_pack_price {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    color: #e84393;
+}
+
+#selectedpackxxx20 .old_pack_price {
+    text-decoration: line-through;
+    margin-left: 10px;
+    color: #636e72;
+    font-size: 18px;
+}
+
+#selectedpackxxx20 .min_text {
+    font-size: 20px;
+    width: 100%;
+    font-weight: 400;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+@media only screen and (max-width: 780px) {
+
+    #selectedpackxxx20 .add_to_cart  {
+        font-size: 12px;
+    }
+
+    #selectedpackxxx20 .cust_radio_ctn_text {
+        font-size: 14px;
+    }
+
+    #selectedpackxxx20 .min_text {
+        font-size: 16px;
+    }
+
+    .radio_detail {
+        font-size: 12px;
+    }
+
+    .radio_circle {
+        width: 12px;
+        height: 12px;
+    }
+
+    #selectedpackxxx20 .add_to_cart {
+        margin-top: 20px;
+    }
+
+    .radio_title {
+        font-size: 18px;
+    }
+    
+    .radio_subtitle {
+        font-size: 14px;
+    }
+
+}
