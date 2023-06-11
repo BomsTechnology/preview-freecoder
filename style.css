@@ -232,6 +232,7 @@ body {
     font-size: 16px;
     -webkit-appearance: none;
     -moz-appearance: none;
+    color: #000;
 }
 
 #newbcustomizeralienx .cust_input {
@@ -245,6 +246,7 @@ body {
     outline: none;
     -webkit-appearance: none;
     -moz-appearance: none;
+    color: #000;
 }
 
 #newbcustomizeralienx label {
