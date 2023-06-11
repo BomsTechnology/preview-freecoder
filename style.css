@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,700;0,800;1,400;1,500;1,600;1,700&display=swap');
 
 * {
     margin: 0;
@@ -7,238 +7,351 @@
 }
 
 body {
-    font-family: sans-serif;
     width: 100%;
-    height: 100%;
-    background-color: #f8fafc;
 }
 
-#selectedpackxxx20 {
-    width: 100%;
-    height: 100%;
-    font-family: 'Poppins';
-    background-color: #f8fafc;
-    color: #000;
+#newbcustomizeralienx {
+    font-family: 'Poppins', sans-serif;
+    width: 100vw;
+    height: 100vh;
     position: relative;
-    padding: 40px 20px;
 }
 
-#selectedpackxxx20 .container {
-    max-width: 700px;
-    width: 100%;
-    height: 100%;
-    margin: 0 auto;
-    overflow: hidden;
+#newbcustomizeralienx .newbcustomizeralienx_container {
+    position: relative;
     display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
     flex-direction: column;
-}
-
-#selectedpackxxx20 .items_container {
-    max-width: 100%;
-    height: 100%;
-    width: 100%;
-    display: flex;
+    align-items: center;
     justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    width: 100%;
+    height: 100%;
     position: relative;
-    gap: 10px;
-    margin-top: 20px;
 }
 
-#selectedpackxxx20 .add_to_cart {
-    box-shadow: inset 0 0 0 2px #e84393;
-    pointer-events: none;
-    font-size: 20px;
-    font-weight: 700;
-    padding: 0 150px;
-    width: 100%;
-    margin: 0 auto;
-    border: none;
-    border-radius: 50px;
-    cursor: pointer !important;
-    transition: background .15s,color .15s;
-    position: relative;
-    display: inline-block;
-    top: 0;
-    height: 70px;
-    padding: 0 40px;
-    overflow: hidden;
-    white-space: nowrap;
-    vertical-align: top;
-    text-align: center;
-    text-transform: uppercase;
-    background-color: #e84393;
-    color: #ffff;
-    margin-top: 20px;
-}
-
-.cust_radio {
-    width: 100%;
-}
-
-.cust_radio_ctn {
-    width: 100%;
-    border: 3px solid #b2bec3;
-    border-radius: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 10px;
+#newbcustomizeralienx .newbcustomizeralienx_btn_close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    border: 1px solid #000;
+    background: #fff;
+    padding: 5px;
+    z-index: 20;
     cursor: pointer;
 }
 
-.cust_radio input {
-    display: none;
-}
-
-.cust_radio input:checked + .cust_radio_ctn {
-    background-color: #ffeef8;
-    border: 3px solid #e84393;
-}
-
-.cust_radio input:checked + .cust_radio_ctn .radio_circle  {
-    background-color: #e84393;
-}
-
-.cust_radio input:checked + .cust_radio_ctn .list_select  {
-    display: flex;
-}
-
-.cust_radio input:checked + .cust_radio_ctn .radio_subtitle  {
-    display: block;
-}
-
-.cust_radio input:checked + .cust_radio_ctn .container_pack_price  {
-    font-weight: 600 !important;
-    font-size: 18px !important;
-}
-
-.cust_radio_ctn_text {
-    max-width: 93%;
+#newbcustomizeralienx .newbcustomizeralienx_btn_close svg {
     width: 100%;
-    font-size: 20px;
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
-    align-items: flex-start;
+    height: 100%;
 }
 
-.radio_circle {
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    border: 2px solid #fff;
-    background-color: #dfe6e9;
-}
-
-.radio_detail {
-    display: none;
-    font-size: 14px;
-}
-
-.radio_title {
-    font-size: 22px;
-}
-
-.radio_subtitle {
-    font-size: 16px;
+#newbcustomizeralienx .unbld {
     font-weight: 600;
-    margin-bottom: 5px;
-    display: none;
+    text-decoration: underline;
 }
 
-.list_select_item {
+#newbcustomizeralienx .newbcustomizeralienx_footer {
+    border-bottom: 8px solid rgb(255, 183, 74);
+    text-align: center;
+    padding: 15px 10px;
+    font-size: 16px;
+    width: 100%;
+    flex-shrink: 1;
+}
+
+#newbcustomizeralienx .newbcustomizeralienx_content {
+    flex-grow: 1;
+    width: 100%;
+    position: relative;
+    background-image: url('./bg.jpg');
+    overflow: hidden;
+}
+
+#newbcustomizeralienx .newbcustomizeralienx_step {
+    background-color: transparent;
+    position: absolute;
+    max-width: 1500px;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    gap: 10px;
+    padding-bottom: 10px;
+    transform: translateX(150%);
+    transition: all 500ms;
 }
 
-.list_select {
-    margin-top: 10px;
-    display: none;
-    flex-direction: column;
-    gap: 10px;
-    width: 100%;
+#newbcustomizeralienx .newbcustomizeralienx_step.active {
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    transition: all 500ms;
 }
 
-.list_select_item label {
-    font-size: 14px;
-    font-weight: 600;
-    display: block;
+#newbcustomizeralienx .newbcustomizeralienx_step.active.finish {
+    left: 0;
+    top: 0;
+    transform: translateX(-100%);
+    transition: all 500ms;
 }
 
-.list_select_item select {
-    display: block;
-    background-color: #fff;
-    border: 1px solid #e84393;
-    padding: 5px 10px;
-    font-size: 18px;
-    min-width: 30%;
-    font-weight: 600;
-    border-radius: 5px;
-}
-
-#selectedpackxxx20 .container_pack_price {
+#newbcustomizeralienx .newbcustomizeralienx_step_footer {
     display: flex;
-    text-align: center;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+#newbcustomizeralienx .action_btn {
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: 700;
+    outline: none;
+    border-radius: 10px;
+    display: block;
+    border-style: solid;
+    border-width: 1px;
+    display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 14px;
-    color: #e84393;
+    width: 200px;
+    cursor: pointer;
 }
 
-#selectedpackxxx20 .old_pack_price {
-    text-decoration: line-through;
-    margin-left: 10px;
-    color: #636e72;
-    font-size: 18px;
+#newbcustomizeralienx .action_btn.next {
+    background-color: #000;
+    color: #fff;
+    border-color: #000;
 }
 
-#selectedpackxxx20 .min_text {
-    font-size: 20px;
+#newbcustomizeralienx .action_btn.prev {
+    background-color: #fff;
+    color: #000;
+    border-color: #000;
+}
+
+#newbcustomizeralienx .newbcustomizeralienx_step_level {
+    background-color: rgb(255, 183, 74);
+    color: #000;
+    border-radius: 10px;
+    padding: 5px 10px;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+#newbcustomizeralienx .newbcustomizeralienx_step_header {
+    position: relative;
+    max-width: 100%;
     width: 100%;
+    padding: 80px 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#newbcustomizeralienx .newbcustomizeralienx_h_heading {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: normal !important;
+    margin: 5px 0;
+    text-align: center;
+}
+
+#newbcustomizeralienx .newbcustomizeralienx_h_description {
+    font-size: 18px;
     font-weight: 400;
-    text-align: left;
-    text-transform: uppercase;
+    line-height: normal !important;   
+    text-align: center;
+}
+
+#newbcustomizeralienx .newbcustomizeralienx_step_content {
+    padding-bottom: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+#newbcustomizeralienx .newbcustomizeralienx_step-display_text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    line-height: normal !important;
+    text-align: center;
+}
+
+#newbcustomizeralienx .newbcustomizeralienx_step-display_text .big_text {
+    font-size: 70px;
+}
+
+#newbcustomizeralienx .newbcustomizeralienx_step-display_text .medium_text {
+    font-size: 40px;
+}
+
+#newbcustomizeralienx .newbcustomizeralienx_step-display_text .small_text {
+    font-size: 20px;
+}
+
+#newbcustomizeralienx .newbcustomizeralienx_step-flex_select {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+}
+
+#newbcustomizeralienx select.cust_select {
+    background-color: transparent;
+    border: 1.5px solid #000;
+    background-image: url('./arrow.png');
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: 30px 50px;
+    padding: 10px;
+    width: 250px;
+    display: block;
+    border-radius: 10px;
+    font-size: 16px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+#newbcustomizeralienx .cust_input {
+    background-color: transparent;
+    border: 1.5px solid #000;
+    padding: 10px;
+    width: 250px;
+    border-radius: 10px;
+    display: block;
+    font-size: 16px;
+    outline: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+#newbcustomizeralienx label {
+    display: block;
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+#newbcustomizeralienx .step_input {
+    margin-bottom: 20px;
+    max-width: 500px;
+    width: 100%;
+}
+
+#newbcustomizeralienx .step_input label {
+    font-size: 16px;
+}
+
+#newbcustomizeralienx .step_input input {
+    width: 100% !important;
+    padding: 15px;
+    font-size: 18px;
 }
 
 @media only screen and (max-width: 780px) {
-
-    #selectedpackxxx20 .add_to_cart  {
+    #newbcustomizeralienx .newbcustomizeralienx_step_level {
         font-size: 12px;
     }
-
-    #selectedpackxxx20 .cust_radio_ctn_text {
+    
+    #newbcustomizeralienx .newbcustomizeralienx_step_header {
+        padding: 120px 20px 100px 20px;
+    }
+    
+    #newbcustomizeralienx .newbcustomizeralienx_h_heading {
+        font-size: 30px;
+    }
+    
+    #newbcustomizeralienx .newbcustomizeralienx_h_description {
         font-size: 14px;
     }
 
-    #selectedpackxxx20 .min_text {
+    #newbcustomizeralienx .newbcustomizeralienx_btn_close {
+        height: 30px;
+        width: 30px;
+    }
+
+    #newbcustomizeralienx .newbcustomizeralienx_step-flex_select {
+        gap: 15px;
+        margin-bottom: 40px;
+    }
+
+    #newbcustomizeralienx select.cust_select {
+        font-size: 12px;
+    }
+    
+    #newbcustomizeralienx .cust_input {
+        font-size: 12px;
+    }
+    
+    #newbcustomizeralienx label {
+        font-size: 10px;
+    }
+
+    #newbcustomizeralienx .newbcustomizeralienx_step-display_text .big_text {
+        font-size: 30px;
+        line-height: 1.3;
+    }
+    
+    #newbcustomizeralienx .newbcustomizeralienx_step-display_text .medium_text {
+        font-size: 20px;
+    }
+    
+    #newbcustomizeralienx .newbcustomizeralienx_step-display_text .small_text {
         font-size: 16px;
     }
 
-    .radio_detail {
+    #newbcustomizeralienx .action_btn {
+        font-size: 14px;
+        width: 200px;
+    }
+
+    #newbcustomizeralienx .newbcustomizeralienx_step_content {
+        padding-bottom: 60px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    #newbcustomizeralienx .newbcustomizeralienx_step_footer {
+        gap: 10px;
+    }
+    #newbcustomizeralienx .newbcustomizeralienx_footer {
+        border-bottom: 4px solid rgb(255, 183, 74);
+        padding: 8px;
         font-size: 12px;
     }
-
-    .radio_circle {
-        width: 12px;
-        height: 12px;
-    }
-
-    #selectedpackxxx20 .add_to_cart {
-        margin-top: 20px;
-    }
-
-    .radio_title {
-        font-size: 18px;
+    #newbcustomizeralienx .step_input {
+        margin-bottom: 20px;
+        max-width: 300px;
+        width: 100%;
     }
     
-    .radio_subtitle {
+    #newbcustomizeralienx .step_input label {
+        font-size: 12px;
+    }
+    
+    #newbcustomizeralienx .step_input input {
+        width: 100% !important;
+        padding: 10px;
         font-size: 14px;
     }
-
 }
