@@ -110,6 +110,7 @@ body {
     width: 100%;
     flex-wrap: wrap;
     gap: 20px;
+    flex-direction: row;
 }
 
 #newbcustomizeralienx .action_btn {
@@ -336,6 +337,7 @@ body {
 
     #newbcustomizeralienx .newbcustomizeralienx_step_footer {
         gap: 10px;
+        flex-direction: column;
     }
     #newbcustomizeralienx .newbcustomizeralienx_footer {
         border-bottom: 4px solid rgb(255, 183, 74);
