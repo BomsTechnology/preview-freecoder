@@ -3,842 +3,227 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+        body {
+            width: 100%;
+        }
+        #hotnailfooterx{
+            width: 100%;
+            background-color: #f5f5f5;
+        }
+        #hotnailfooterx img {
+            max-width: 100%;
+            width: auto;
+            height: auto;
+            display: block;
+        }
+        #hotnailfooterx footer {
+            width: 100%;
+            margin: 0;
+            padding-left: 30px;
+            padding-right: 30px;
+            padding-bottom: 40px;
+            padding-top: 60px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        #hotnailfooterx a {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+        .hotnailfooterx_head {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: row;
+            gap: 40px;
+        }
+        .hotnailfooterx_head_left {
+            max-width: 700px;
+            text-align: right;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 23px;
+            line-height: normal;
+        }
+        .hotnailfooterx_head_right {
+            width: 100%;
+            max-width: 400px;
+            text-align: left;
+        }
+        .hotnailfooterx_links {
+            margin-top: 70px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            max-width: 900px;
+            width: 100%;
+            font-size: 14px !important;
+            text-align: left;
+            line-height: 1 !important;
+            text-transform: uppercase;
+        }
+        .hotnailfooterx_links_item_head {
+            margin-bottom: 10px;
+            max-width: 90px;
+            font-size: 14px;
+            font-weight: 700;
+        }
+        .hotnailfooterx_links_item_link {
+            margin-bottom: 10px;
+            max-width: 250px;
+        }
+        .hotnailfooterx_text_links {
+            text-transform: uppercase !important;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            font-size: 14px !important;
+        }
+        .hotnailfooterx_text {
+            font-size: 14px !important;
+            text-transform: uppercase !important;
+            margin: 0 !important;
+            margin-top: 20px !important;
+        }
+        .hotnailfooterx_img_w {
+            display: block;
+            margin: 20px 0;
+            height: 30px !important;
+        }
+        .hotnailfooterx_head_news_letter {
+            width: 100%;
+            position: relative;
+            margin-bottom: 10px;
+        }
+        .hotnailfooterx_head_right p {
+            margin: 0 !important;
+            font-size: 14px;
+        }
+        .hotnailfooterx_head_news_letter button {
+            border: none;
+            background: transparent;
+            position: absolute;
+            bottom: -10px;
+            right: 0;
+        }
+        .hotnailfooterx_head_news_letter button svg {
+            width: 40px;
+            color: #000;
+        }
+        .hotnailfooterx_head_news_letter input {
+            width: 100%;
+            padding: 5px 0;
+            border: none;
+            border-bottom: 1px solid #000;
+            font-size: 14px;
+            background: transparent;
+        }
+        .hotnailfooterx_head_news_letter input::placeholder {
+            opacity: 1;
+            color: #000;
+        }
+        @media only screen and (max-width: 780px) {
+            .hotnailfooterx_head {
+                flex-direction: column;
+                gap: 20px;
+            }
+            .hotnailfooterx_head_left {
+            max-width: 90%;
+            text-align: center;
+            font-size: 16px;
+        }
+        .hotnailfooterx_head_right {
+            max-width: 90%;
+        }
+        .hotnailfooterx_head_right p {
+            font-size: 12px;
+        }
+        .hotnailfooterx_text_links {
+            font-size: 10px !important;
+        }
+        .hotnailfooterx_text {
+            font-size: 10px !important;
+        }
+        .hotnailfooterx_links {
+            margin-top: 40px;
+            font-size: 10px !important;
+            gap: 40px;
+        }
+        .hotnailfooterx_links_item_head {
+            font-size: 10px;
+        }
+        .hotnailfooterx_links_item_link {
+            margin-bottom: 10px;
+            max-width: 250px;
+        }
+        .hotnailfooterx_head_news_letter input {
+            font-size: 12px;
+        }
+        }
+    </style>
 </head>
 <body>
-    <section id="newbcustomizeralienx">
-        <div class="newbcustomizeralienx_container">
-            <button type="button" class="newbcustomizeralienx_btn_close">
-                <span>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                      </svg>                      
-                </span>
-            </button>
-            <div class="newbcustomizeralienx_content">
-                <div class="newbcustomizeralienx_step active" id="step_1">
-                    <div class="newbcustomizeralienx_step_header">
-                        <div class="newbcustomizeralienx_step_level">Etape 1/4</div>
-                        <h2 class="newbcustomizeralienx_h_heading">Votre Moto</h2>
-                        <p class="newbcustomizeralienx_h_description"></p>
-                    </div>
-                    <div class="newbcustomizeralienx_step_content">
-
-                            <div class="step_input">
-                                <label for="expl_font">Quel est le modèle de votre moto ?</label>
-                                <input type="text" class="cust_input" placeholder="Reiji MRT Pro">
-                            </div>
-
-                            <div class="step_input">
-                                <label for="expl_font">Quel est l'année de votre moto ?</label>
-                                <input type="text" class="cust_input" placeholder="2017">
-                            </div>
-                    </div>
-                    <div class="newbcustomizeralienx_step_footer">
-                        <button class="action_btn prev" style="display: none;">
-                            <span>Précedent</span>
-                        </button>
-                        <button class="action_btn next">
-                            <span>Suivant</span>
-                        </button>
-                    </div>
+    <section id="hotnailfooterx">
+        <footer>
+            <div class="hotnailfooterx_head">
+                <div class="hotnailfooterx_head_left">
+                    MELDE DICH FÜR EXKLUSIVE ANGEBOTE UND 10€
+                    RABATT AUF DEINE NÄCHSTE BESTELLUNG
                 </div>
-                <div class="newbcustomizeralienx_step" id="step_2">
-                    <div class="newbcustomizeralienx_step_header">
-                        <div class="newbcustomizeralienx_step_level">Etape 2/4</div>
-                        <h2 class="newbcustomizeralienx_h_heading">Vos Carrénages</h2>
-                        <p class="newbcustomizeralienx_h_description">Avez-vous changé votre plaque phare ou garde boue ?</p>
-                    </div>
-                    <div class="newbcustomizeralienx_step_content">
-                        <div class="newbcustomizeralienx_step-grid_inpt_rad">
-                            <input type="radio" name="step_2" id="step_2_1">
-                            <label for="step_2_1" class="grid_inpt_rad_item">
-                                <img src="https://alienarts.co/cdn/shop/files/Plaque-phare-min_1.jpg?v=1682481170">
-                                <div class="grid_inpt_rad_item_overlay">
-                                    <span>
-                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="">
-                                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                          </svg>                                          
-                                    </span>
-                                </div>
-                              </label>
-                            <input type="radio" name="step_2" id="step_2_2">
-                            <label for="step_2_2" class="grid_inpt_rad_item">
-                                <img src="https://alienarts.co/cdn/shop/files/Gardeboue-min_1.jpg?v=1682481279">
-                                <div class="grid_inpt_rad_item_overlay">
-                                    <span>
-                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="">
-                                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                          </svg>                                          
-                                    </span>
-                                </div>
-                              </label>
-                            <input type="radio" name="step_2" id="step_2_3">
-                            <label for="step_2_3" class="grid_inpt_rad_item">
-                                <img src="https://alienarts.co/cdn/shop/files/Lesdeux-min_1.jpg?v=1682481223">
-                                <div class="grid_inpt_rad_item_overlay">
-                                    <span>
-                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="">
-                                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                          </svg>                                          
-                                    </span>
-                                </div>
-                              </label>
-                            <input type="radio" name="step_2" id="step_2_4">
-                            <label for="step_2_4" class="grid_inpt_rad_item">
-                                <p>NON</p>
-                                <div class="grid_inpt_rad_item_overlay">
-                                    <span>
-                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="">
-                                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                          </svg>                                          
-                                    </span>
-                                </div>
-                              </label>
-                        </div>
-
-                        <div class="step_input">
-                            <label for="plaque_phare">Modèle et année de votre plaque phare</label>
-                            <select name="" id="plaque_phare" class="cust_select">
-                                <option value="">Poppins</option>
-                                <option value="">Montserrat</option>
-                            </select>
-                        </div>
-
-                        <div class="step_input">
-                            <label for="expl_font">Autre de plaque phare</label>
-                            <input type="text" class="cust_input">
-                        </div>
-
-                        <div class="step_input">
-                            <label for="plaque_phare">Modèle et année de votre garde boue</label>
-                            <select name="" id="plaque_phare" class="cust_select">
-                                <option value="">Poppins</option>
-                                <option value="">Montserrat</option>
-                            </select>
-                        </div>
-
-                        <div class="step_input">
-                            <label for="expl_font">Autre modèle de garde boue</label>
-                            <input type="text" class="cust_input">
-                        </div>
-                    </div>
-                    <div class="newbcustomizeralienx_step_footer">
-                        <button class="action_btn prev">
-                            <span>Précedent</span>
+                <div class="hotnailfooterx_head_right">
+                    <form class="hotnailfooterx_head_news_letter">
+                        <input type="email" name="" id="" placeholder="EMAIL FOR NEWSLETTER">
+                        <button type="submit">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
+                          </svg>
                         </button>
-                        <button class="action_btn next">
-                            <span>Suivant</span>
-                        </button>
-                    </div>
-                </div>
-                <div class="newbcustomizeralienx_step" id="step_3_1">
-                    <div class="newbcustomizeralienx_step_header">
-                        <div class="newbcustomizeralienx_step_level">Etape 3/4</div>
-                        <h2 class="newbcustomizeralienx_h_heading">Informations d'identité</h2>
-                        <p class="newbcustomizeralienx_h_description"></p>
-                    </div>
-                    <div class="newbcustomizeralienx_step_content">
-
-                            <div class="step_input">
-                                <label for="expl_font">Prénom/Pseudo</label>
-                                <input type="text" class="cust_input" placeholder="BetaBy Thomas">
-                            </div>
-
-                            <div class="step_input">
-                                <label for="expl_font">Numéro de course</label>
-                                <input type="text" class="cust_input" placeholder="534">
-                            </div>
-                    </div>
-                    <div class="newbcustomizeralienx_step_footer">
-                        <button class="action_btn prev">
-                            <span>Précedent</span>
-                        </button>
-                        <button class="action_btn next">
-                            <span>Suivant</span>
-                        </button>
-                    </div>
-                </div>
-                <div class="newbcustomizeralienx_step" id="step_3_2">
-                    <div class="newbcustomizeralienx_step_header">
-                        <div class="newbcustomizeralienx_step_level">Etape 3/4</div>
-                        <h2 class="newbcustomizeralienx_h_heading">Couleurs générale</h2>
-                        <p class="newbcustomizeralienx_h_description"></p>
-                    </div>
-                    <div class="newbcustomizeralienx_step_content">
-                        <div class="newbcustomizeralienx_step-flex_color">
-                            <input type="radio" name="color_1" id="color_1" checked>
-                            <label for="color_1" class="lbl_color" style="background-color: red;"></label>
-                            <input type="radio" name="color_1" id="color_2">
-                            <label for="color_2" class="lbl_color" style="background-color: gold;"></label>
-                            <input type="radio" name="color_1" id="color_3">
-                            <label for="color_3" class="lbl_color" style="background-color: green;"></label>
-                            <input type="radio" name="color_1" id="color_4">
-                            <label for="color_4" class="lbl_color" style="background-color: blue;"></label>
-                        </div>
-
-                        <div class="swiper color_slider">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <input type="radio" name="color_item" id="color_item_1">
-                                    <label for="color_item_1" class="lbl_color_item">
-                                        <img src="./palette.png" alt="">
-                                        <div class="grid_inpt_rad_item_overlay">
-                                            <span>
-                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="">
-                                                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                                  </svg>                                          
-                                            </span>
-                                        </div>
-                                    </label>
-                                </div>
-                                <div class="swiper-slide">
-                                    <input type="radio" name="color_item" id="color_item_2">
-                                    <label for="color_item_2" class="lbl_color_item">
-                                        <img src="./palette.png" alt="">
-                                        <div class="grid_inpt_rad_item_overlay">
-                                            <span>
-                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="">
-                                                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                                  </svg>                                          
-                                            </span>
-                                        </div>
-                                    </label>
-                                </div>
-                                <div class="swiper-slide">
-                                    <input type="radio" name="color_item" id="color_item_3">
-                                    <label for="color_item_3" class="lbl_color_item">
-                                        <img src="./palette.png" alt="">
-                                        <div class="grid_inpt_rad_item_overlay">
-                                            <span>
-                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="">
-                                                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                                  </svg>                                          
-                                            </span>
-                                        </div>
-                                    </label>
-                                </div>
-                                <div class="swiper-slide">
-                                    <input type="radio" name="color_item" id="color_item_4">
-                                    <label for="color_item_4" class="lbl_color_item">
-                                        <img src="./palette.png" alt="">
-                                        <div class="grid_inpt_rad_item_overlay">
-                                            <span>
-                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="">
-                                                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                                  </svg>                                          
-                                            </span>
-                                        </div>
-                                    </label>
-                                </div>
-                                <div class="swiper-slide">
-                                    <input type="radio" name="color_item" id="color_item_5">
-                                    <label for="color_item_5" class="lbl_color_item">
-                                        <img src="./palette.png" alt="">
-                                        <div class="grid_inpt_rad_item_overlay">
-                                            <span>
-                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="">
-                                                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                                  </svg>                                          
-                                            </span>
-                                        </div>
-                                    </label>
-                                </div>
-                                <div class="swiper-slide">
-                                    <input type="radio" name="color_item" id="color_item_6">
-                                    <label for="color_item_6" class="lbl_color_item">
-                                        <img src="./palette.png" alt="">
-                                        <div class="grid_inpt_rad_item_overlay">
-                                            <span>
-                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="">
-                                                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                                  </svg>                                          
-                                            </span>
-                                        </div>
-                                    </label>
-                                </div>
-                                <div class="swiper-slide">
-                                    <input type="radio" name="color_item" id="color_item_7">
-                                    <label for="color_item_7" class="lbl_color_item">
-                                        <img src="./palette.png" alt="">
-                                        <div class="grid_inpt_rad_item_overlay">
-                                            <span>
-                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="">
-                                                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                                  </svg>                                          
-                                            </span>
-                                        </div>
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
-                        </div>
-
-                        <label for="cust_color_picker" class="cust_color_picker_lbl">
-                            <span>Inserer Votre code couleur</span>
-                            <input type="color" id="cust_color_picker">
-                        </label>
-                        
-                    </div>
-                    <div class="newbcustomizeralienx_step_footer">
-                        <button class="action_btn prev">
-                            <span>Précedent</span>
-                        </button>
-                        <button class="action_btn next">
-                            <span>Suivant</span>
-                        </button>
-                    </div>
-                </div>
-                <div class="newbcustomizeralienx_step" id="step_3_3">
-                    <div class="newbcustomizeralienx_step_header">
-                        <div class="newbcustomizeralienx_step_level">Etape 3/4</div>
-                        <h2 class="newbcustomizeralienx_h_heading">Description Générale</h2>
-                        <p class="newbcustomizeralienx_h_description">.</p>
-                    </div>
-                    <div class="newbcustomizeralienx_step_content">
-                        <p class="newbcustomizeralienx_h_description" style="font-weight: 700;">Indications *</p>
-                       <ul class="newbcustomizeralienx_indication_list">
-                            <li class="newbcustomizeralienx_indication_list_item">
-                                <span class="list_style_indic"></span>
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                </p>
-                                <span class="list_style_delete_btn">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0" />
-                                    </svg>                                      
-                                </span>
-                            </li>
-                            <li class="newbcustomizeralienx_indication_list_item">
-                                <span class="list_style_indic"></span>
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                </p>
-                                <span class="list_style_delete_btn">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0" />
-                                    </svg>                                      
-                                </span>
-                            </li>
-                            <li class="newbcustomizeralienx_indication_list_item">
-                                <span class="list_style_indic"></span>
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                </p>
-                                <span class="list_style_delete_btn">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0" />
-                                    </svg>                                      
-                                </span>
-                            </li>
-                       </ul>
-                       <form id="form_add_indic">
-                            <input type="text" class="in_add_indic" placeholder="Ajouter une indication">
-                       </form>
-
-                       <p class="newbcustomizeralienx_h_description" style="font-weight: 700; margin-top: 30px;">Ajouter vos inspirations :</p>
-                       <input type="file" name="cust_upload" id="cust_upload">
-                       <label for="cust_upload" class="lbl_cust_upload">
-                            <span>Charger des images (.jpg, .png,..)</span>
-                       </label>
-                       <div class="list_cust_upload">
-                            <div class="list_cust_upload_item">
-                                <span class="list_cust_upload_item_img">
-                                    <img src="http://juju58.j.u.pic.centerblog.net/o/8ae90b7a.jpg" alt="">
-                                </span>
-                                <span class="list_cust_upload_item_delete_btn">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0" />
-                                    </svg> 
-                                </span>
-                            </div>
-                            <div class="list_cust_upload_item">
-                                <span class="list_cust_upload_item_img">
-                                    <img src="http://juju58.j.u.pic.centerblog.net/o/8ae90b7a.jpg" alt="">
-                                </span>
-                                <span class="list_cust_upload_item_delete_btn">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0" />
-                                    </svg> 
-                                </span>
-                            </div>
-                            <div class="list_cust_upload_item">
-                                <span class="list_cust_upload_item_img">
-                                    <img src="http://juju58.j.u.pic.centerblog.net/o/8ae90b7a.jpg" alt="">
-                                </span>
-                                <span class="list_cust_upload_item_delete_btn">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0" />
-                                    </svg> 
-                                </span>
-                            </div>
-                            <div class="list_cust_upload_item">
-                                <span class="list_cust_upload_item_img">
-                                    <img src="http://juju58.j.u.pic.centerblog.net/o/8ae90b7a.jpg" alt="">
-                                </span>
-                                <span class="list_cust_upload_item_delete_btn">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0" />
-                                    </svg> 
-                                </span>
-                            </div>
-                            <div class="list_cust_upload_item">
-                                <span class="list_cust_upload_item_img">
-                                    <img src="http://juju58.j.u.pic.centerblog.net/o/8ae90b7a.jpg" alt="">
-                                </span>
-                                <span class="list_cust_upload_item_delete_btn">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0" />
-                                    </svg> 
-                                </span>
-                            </div>
-                       </div>
-                    </div>
-                    <div class="newbcustomizeralienx_step_footer">
-                        <button class="action_btn prev">
-                            <span>Précedent</span>
-                        </button>
-                        <button class="action_btn next">
-                            <span>Suivant</span>
-                        </button>
-                    </div>
-                </div>
-                <div class="newbcustomizeralienx_step" id="step_3_4">
-                    <div class="newbcustomizeralienx_step_header">
-                        <div class="newbcustomizeralienx_step_level">Etape 3/4</div>
-                        <h2 class="newbcustomizeralienx_h_heading">Choix de la police</h2>
-                        <p class="newbcustomizeralienx_h_description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, fugit autem.</p>
-                    </div>
-                    <div class="newbcustomizeralienx_step_content">
-                        <div class="newbcustomizeralienx_step-flex_select">
-                            <div>
-                                <label for="expl_font">Exemple</label>
-                                <input type="text" class="cust_input">
-                            </div>
-                            <div>
-                                <label for="expl_font">Police</label>
-                                <select name="" id="expl_font" class="cust_select">
-                                    <option value="">Poppins</option>
-                                    <option value="">Montserrat</option>
-                                </select>
-                            </div>
-                            <div>
-                                <label for="weight_font">Taille</label>
-                                <select name="" id="weight_font" class="cust_select">
-                                    <option value="">Bold</option>
-                                    <option value="">Medium</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="newbcustomizeralienx_step-display_text">
-                            <p class="big_text">Betaby Thomas 350</p>
-                            <p class="medium_text">Betaby Thomas 350</p>
-                            <p class="small_text">Betaby Thomas 350</p>
-                        </div>
-                    </div>
-                    <div class="newbcustomizeralienx_step_footer">
-                        <button class="action_btn prev">
-                            <span>Précedent</span>
-                        </button>
-                        <button class="action_btn next">
-                            <span>Suivant</span>
-                        </button>
-                    </div>
-                </div>
-                <div class="newbcustomizeralienx_step" id="step_3_5">
-                    <div class="newbcustomizeralienx_step_header">
-                        <div class="newbcustomizeralienx_step_level">Etape 3/4</div>
-                        <h2 class="newbcustomizeralienx_h_heading">Placement des sponsors</h2>
-                        <p class="newbcustomizeralienx_h_description"></p>
-                    </div>
-                    <div class="newbcustomizeralienx_step_content">
-                        <div class="ctn_img_pos_spons">
-                            <img src="./img.jpg" alt="">
-                        </div>
-                        <div class="newbcustomizeralienx_step-grid_sponsor_in">
-                            <div>
-                                <label for="expl_font">Sponsor 1</label>
-                                <div class="sponsor_in-container">
-                                    <input class="sponsor_in" type="text" placeholder="Ajouter le sponsor 1">
-                                    <button
-                                      class="sponsor_in-clear-button"
-                                      aria-label="Clear input"
-                                      title="Clear input"
-                                    >
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                                    </svg>
-                                    </button>
-                                  </div> 
-                            </div>  
-                            <div>
-                                <label for="expl_font">Sponsor 2</label>
-                                <div class="sponsor_in-container">
-                                    <input class="sponsor_in" type="text" placeholder="Ajouter le sponsor 2">
-                                    <button
-                                      class="sponsor_in-clear-button"
-                                      aria-label="Clear input"
-                                      title="Clear input"
-                                    >
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                                    </svg>
-                                    </button>
-                                  </div> 
-                            </div>  
-                            <div>
-                                <label for="expl_font">Sponsor 3</label>
-                                <div class="sponsor_in-container">
-                                    <input class="sponsor_in" type="text" placeholder="Ajouter le sponsor 3">
-                                    <button
-                                      class="sponsor_in-clear-button"
-                                      aria-label="Clear input"
-                                      title="Clear input"
-                                    >
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                                    </svg>
-                                    </button>
-                                  </div> 
-                            </div>  
-                            <div>
-                                <label for="expl_font">Sponsor 4</label>
-                                <div class="sponsor_in-container">
-                                    <input class="sponsor_in" type="text" placeholder="Ajouter le sponsor 4">
-                                    <button
-                                      class="sponsor_in-clear-button"
-                                      aria-label="Clear input"
-                                      title="Clear input"
-                                    >
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                                    </svg>
-                                    </button>
-                                  </div> 
-                            </div>  
-                            <div>
-                                <label for="expl_font">Sponsor 5</label>
-                                <div class="sponsor_in-container">
-                                    <input class="sponsor_in" type="text" placeholder="Ajouter le sponsor 5">
-                                    <button
-                                      class="sponsor_in-clear-button"
-                                      aria-label="Clear input"
-                                      title="Clear input"
-                                    >
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                                    </svg>
-                                    </button>
-                                  </div> 
-                            </div>  
-                            <div>
-                                <label for="expl_font">Sponsor 6</label>
-                                <div class="sponsor_in-container">
-                                    <input class="sponsor_in" type="text" placeholder="Ajouter le sponsor 6">
-                                    <button
-                                      class="sponsor_in-clear-button"
-                                      aria-label="Clear input"
-                                      title="Clear input"
-                                    >
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                                    </svg>
-                                    </button>
-                                  </div> 
-                            </div>  
-                            <div>
-                                <label for="expl_font">Sponsor 7</label>
-                                <div class="sponsor_in-container">
-                                    <input class="sponsor_in" type="text" placeholder="Ajouter le sponsor 7">
-                                    <button
-                                      class="sponsor_in-clear-button"
-                                      aria-label="Clear input"
-                                      title="Clear input"
-                                    >
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                                    </svg>
-                                    </button>
-                                  </div> 
-                            </div>  
-                            <div>
-                                <label for="expl_font">Sponsor 8</label>
-                                <div class="sponsor_in-container">
-                                    <input class="sponsor_in" type="text" placeholder="Ajouter le sponsor 8">
-                                    <button
-                                      class="sponsor_in-clear-button"
-                                      aria-label="Clear input"
-                                      title="Clear input"
-                                    >
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                                    </svg>
-                                    </button>
-                                  </div> 
-                            </div>  
-                            <div>
-                                <label for="expl_font">Sponsor 9</label>
-                                <div class="sponsor_in-container">
-                                    <input class="sponsor_in" type="text" placeholder="Ajouter le sponsor 9">
-                                    <button
-                                      class="sponsor_in-clear-button"
-                                      aria-label="Clear input"
-                                      title="Clear input"
-                                    >
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                                    </svg>
-                                    </button>
-                                  </div> 
-                            </div>  
-                            <div>
-                                <label for="expl_font">Sponsor 10</label>
-                                <div class="sponsor_in-container">
-                                    <input class="sponsor_in" type="text" placeholder="Ajouter le sponsor 10">
-                                    <button
-                                      class="sponsor_in-clear-button"
-                                      aria-label="Clear input"
-                                      title="Clear input"
-                                    >
-                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="">
-                                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                                        </svg>
-                                    </button>
-                                  </div> 
-                            </div>  
-                            <div>
-                                <label for="expl_font">Sponsor 11</label>
-                                <div class="sponsor_in-container">
-                                    <input class="sponsor_in" type="text" placeholder="Ajouter le sponsor 11">
-                                    <button
-                                      class="sponsor_in-clear-button"
-                                      aria-label="Clear input"
-                                      title="Clear input"
-                                    >
-                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="">
-                                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                                        </svg>                                      
-                                    </button>
-                                  </div> 
-                            </div>                            
-                        </div>
-                    </div>
-                    <div class="newbcustomizeralienx_step_footer">
-                        <button class="action_btn prev">
-                            <span>Précedent</span>
-                        </button>
-                        <button class="action_btn next">
-                            <span>Suivant</span>
-                        </button>
-                    </div>
-                </div>
-                <div class="newbcustomizeralienx_step" id="step_4">
-                    <div class="newbcustomizeralienx_step_header">
-                        <div class="newbcustomizeralienx_step_level">Etape 4/4</div>
-                        <h2 class="newbcustomizeralienx_h_heading">Options/ Finition</h2>
-                    </div>
-                    
-                    <div class="newbcustomizeralienx_step_content">
-                        <p class="newbcustomizeralienx_h_description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, fugit autem.</p>
-                        <div class="newbcustomizeralienx_step-grid_inpt_rad">
-                            <input type="radio" name="step_4_1" id="step_4_1_1">
-                            <label for="step_4_1_1" class="grid_inpt_rad_item">
-                                <img src="https://alienarts.co/cdn/shop/files/Plaque-phare-min_1.jpg?v=1682481170">
-                                <div class="grid_inpt_rad_item_overlay">
-                                    <span>
-                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="">
-                                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                          </svg>                                          
-                                    </span>
-                                </div>
-                            </label>
-                            <input type="radio" name="step_4_1" id="step_4_1_2">
-                            <label for="step_4_1_2" class="grid_inpt_rad_item">
-                                <img src="https://alienarts.co/cdn/shop/files/Gardeboue-min_1.jpg?v=1682481279">
-                                <div class="grid_inpt_rad_item_overlay">
-                                    <span>
-                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="">
-                                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                          </svg>                                          
-                                    </span>
-                                </div>
-                              </label>
-                            <input type="radio" name="step_4_1" id="step_4_1_3">
-                            <label for="step_4_1_3" class="grid_inpt_rad_item">
-                                <img src="https://alienarts.co/cdn/shop/files/Lesdeux-min_1.jpg?v=1682481223">
-                                <div class="grid_inpt_rad_item_overlay">
-                                    <span>
-                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="">
-                                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                          </svg>                                          
-                                    </span>
-                                </div>
-                              </label>
-                        </div>
-
-                        <p class="newbcustomizeralienx_h_description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, fugit autem.</p>
-                        <div class="newbcustomizeralienx_step-grid_inpt_rad">
-                            <input type="radio" name="step_4_2" id="step_4_2_1">
-                            <label for="step_4_2_1" class="grid_inpt_rad_item">
-                                <img src="https://alienarts.co/cdn/shop/files/Plaque-phare-min_1.jpg?v=1682481170">
-                                <div class="grid_inpt_rad_item_overlay">
-                                    <span>
-                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="">
-                                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                          </svg>                                          
-                                    </span>
-                                </div>
-                              </label>
-                            <input type="radio" name="step_4_2" id="step_4_2_2">
-                            <label for="step_4_2_2" class="grid_inpt_rad_item">
-                                <img src="https://alienarts.co/cdn/shop/files/Gardeboue-min_1.jpg?v=1682481279">
-                                <div class="grid_inpt_rad_item_overlay">
-                                    <span>
-                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="">
-                                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                          </svg>                                          
-                                    </span>
-                                </div>
-                              </label>
-                            <input type="radio" name="step_4_2" id="step_4_2_3">
-                            <label for="step_4_2_3" class="grid_inpt_rad_item">
-                                <img src="https://alienarts.co/cdn/shop/files/Lesdeux-min_1.jpg?v=1682481223">
-                                <div class="grid_inpt_rad_item_overlay">
-                                    <span>
-                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="">
-                                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                          </svg>                                          
-                                    </span>
-                                </div>
-                              </label>
-                        </div>
-
-                        <p class="newbcustomizeralienx_h_description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, fugit autem.</p>
-                        <div class="newbcustomizeralienx_step-grid_inpt_rad">
-                            <input type="checkbox" name="step_4_3" id="step_4_3_1">
-                            <label for="step_4_3_1" class="grid_inpt_rad_item">
-                                <img src="https://alienarts.co/cdn/shop/files/Plaque-phare-min_1.jpg?v=1682481170">
-                                <div class="grid_inpt_rad_item_overlay">
-                                    <span>
-                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="">
-                                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                          </svg>                                          
-                                    </span>
-                                </div>
-                              </label>
-                            <input type="checkbox" name="step_4_3" id="step_4_3_2">
-                            <label for="step_4_3_2" class="grid_inpt_rad_item">
-                                <img src="https://alienarts.co/cdn/shop/files/Gardeboue-min_1.jpg?v=1682481279">
-                                <div class="grid_inpt_rad_item_overlay">
-                                    <span>
-                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="">
-                                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                          </svg>                                          
-                                    </span>
-                                </div>
-                              </label>
-                            <input type="checkbox" name="step_4_3" id="step_4_3_3">
-                            <label for="step_4_3_3" class="grid_inpt_rad_item">
-                                <img src="https://alienarts.co/cdn/shop/files/Lesdeux-min_1.jpg?v=1682481223">
-                                <div class="grid_inpt_rad_item_overlay">
-                                    <span>
-                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="">
-                                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                          </svg>                                          
-                                    </span>
-                                </div>
-                              </label>
-                              <input type="checkbox" name="step_4_3" id="step_4_3_4">
-                              <label for="step_4_3_4" class="grid_inpt_rad_item">
-                                  <img src="https://alienarts.co/cdn/shop/files/Plaque-phare-min_1.jpg?v=1682481170">
-                                  <div class="grid_inpt_rad_item_overlay">
-                                      <span>
-                                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="">
-                                              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                            </svg>                                          
-                                      </span>
-                                  </div>
-                                </label>
-                              <input type="checkbox" name="step_4_3" id="step_4_3_5">
-                              <label for="step_4_3_5" class="grid_inpt_rad_item">
-                                  <img src="https://alienarts.co/cdn/shop/files/Gardeboue-min_1.jpg?v=1682481279">
-                                  <div class="grid_inpt_rad_item_overlay">
-                                      <span>
-                                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="">
-                                              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                            </svg>                                          
-                                      </span>
-                                  </div>
-                                </label>
-                              <input type="checkbox" name="step_4_3" id="step_4_3_6">
-                              <label for="step_4_3_6" class="grid_inpt_rad_item">
-                                  <img src="https://alienarts.co/cdn/shop/files/Lesdeux-min_1.jpg?v=1682481223">
-                                  <div class="grid_inpt_rad_item_overlay">
-                                      <span>
-                                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="">
-                                              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                            </svg>                                          
-                                      </span>
-                                  </div>
-                                </label>
-                        </div>
-                    </div>
-
-                    <div class="newbcustomizeralienx_step_footer">
-                        <button class="action_btn prev">
-                            <span>Précedent</span>
-                        </button>
-                        <button class="action_btn next">
-                            <span>Terminer</span>
-                        </button>
-                    </div>
-                    <div class="newbcustomizeralienx_price">
-                     Total à payer: 135 €
-                    </div>
+                    </form>
+                    <p>
+                        Mit dem Absenden stimmst du unserer
+                        Datenschutzerklärung zu
+                    </p>
                 </div>
             </div>
-            <div class="newbcustomizeralienx_footer">
-                Kit déco Builder par <span class="unbld">AlienArt</span>
+            <div class="hotnailfooterx_links">
+                <div class="hotnailfooterx_links_item">
+                    <h5 class="hotnailfooterx_links_item_head">Product information</h5>
+                    <a href="#" class="hotnailfooterx_links_item_link">faq</a>
+                    <a href="#" class="hotnailfooterx_links_item_link">blog</a>
+                </div>
+                <div class="hotnailfooterx_links_item">
+                    <h5 class="hotnailfooterx_links_item_head">Brauchst du hifle ?</h5>
+                    <a href="#" class="hotnailfooterx_links_item_link">Deine bestellung verfolgen</a>
+                    <a href="#" class="hotnailfooterx_links_item_link">zum kundeservice</a>
+                </div>
+                <div class="hotnailfooterx_links_item">
+                    <h5 class="hotnailfooterx_links_item_head">legal</h5>
+                    <a href="#" class="hotnailfooterx_links_item_link">impressum</a>
+                    <a href="#" class="hotnailfooterx_links_item_link">ruckgabe-und umtaushbestimmungen</a>
+                    <a href="#" class="hotnailfooterx_links_item_link">legal notice</a>
+                </div>
             </div>
-        </div>
+            <p class="hotnailfooterx_text">we accept</p>
+            <img src="./images/5.png" alt="" class="hotnailfooterx_img_w">
+            <div class="hotnailfooterx_text_links">
+                <a href="#" class="hotnailfooterx_text_links_item">instagram</a>
+                <a href="#" class="hotnailfooterx_text_links_item">tiktok</a>
+                <a href="#" class="hotnailfooterx_text_links_item">youtube</a>
+            </div>
+        </footer>
     </section>
-    <script src="./index.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-    <script>
-      var swiper = new Swiper(".color_slider", {
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-        slidesPerView: 1,
-        spaceBetween: 10,
-        breakpoints: {
-            320: {
-            slidesPerView: 2,
-            spaceBetween: 20
-            },
-            780: {
-            slidesPerView: 3,
-            spaceBetween: 30
-            },
-            1000: {
-            slidesPerView: 6,
-            spaceBetween: 40
-            }
-        }
-      });
-    </script>
 </body>
 </html>
