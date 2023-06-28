@@ -1,58 +1,133 @@
-export default  [
+export const dimensions = [
     {
-        "id": '1',
-        "title": 'Baby Boomer',
-        "featured_image": 'https://cdn.shopify.com/s/files/1/0590/2948/7803/products/IMG_8404_700x.png?v=1661102061',
-        "hover_image": 'https://cdn.shopify.com/s/files/1/0590/2948/7803/products/Creamer_700x.jpg?v=1661102061',
-        "color": '#ecf0f1', 
+        "title": "1 Ligne",
+        "size": "56 x 11 mm",
+        "svg": '<svg viewBox="0 0 150 90" ><path d="M19.51 58a13 13 0 0 1 0-25.92h111a13 13 0 0 1 0 25.92z" fill="#d5d5d5"></path><path d="M130.49 32.47a12.53 12.53 0 0 1 0 25.06h-111a12.53 12.53 0 0 1 0-25.06h111m0-.85h-111a13.38 13.38 0 0 0 0 26.76h111a13.38 13.38 0 0 0 0-26.76z" fill="#5b5b5b"></path></svg>',
     },
     {
-        "id": '2',
-        "title": 'Aura',
-        "featured_image": 'https://cdn.shopify.com/s/files/1/0590/2948/7803/products/HNB-FICHEPRODUIT_9a5f7c3f-2da2-4b53-90c5-7f96b3a12232_700x.png?v=1661083781',
-        "hover_image": 'https://cdn.shopify.com/s/files/1/0590/2948/7803/products/1039413C-1887-4032-84AC-B5126DF4714F_700x.jpg?v=1661083781',
-        "color": '#dff9fb', 
+        "title": "2 Lignes",
+        "size": "56 x 15 mm",
+        "svg": '<svg data-name="Calque 1" viewBox="0 0 150 90" class="forme forme-ETV2L thumb"><path d="M24.47 62.83a17.83 17.83 0 0 1 0-35.66h101.06a17.83 17.83 0 1 1 0 35.66z" fill="#d5d5d5" fill-rule="evenodd"></path><path d="M125.53 27.6a17.4 17.4 0 1 1 0 34.8H24.47a17.4 17.4 0 0 1 0-34.8h101.06m0-.85H24.47a18.25 18.25 0 0 0 0 36.5h101.06a18.25 18.25 0 0 0 0-36.5z" fill="#5b5b5b"></path></svg>',
+    },
+];
+
+export const fonts = [
+    "Ubuntu",
+    "Quicksand",
+    "Pacifico",
+    "Righteous",
+    "Gloria Hallelujah",
+];
+
+export const bgColors = [
+    {
+        "text": "White",
+        "value": "#fff",
     },
     {
-        "id": '3',
-        "title": 'Baby Purple',
-        "featured_image": 'https://cdn.shopify.com/s/files/1/0590/2948/7803/products/HNB-FICHEPRODUIT_97de9612-ec94-430d-9339-f6a2edc85b11_700x.png?v=1658131803',
-        "hover_image": 'https://cdn.shopify.com/s/files/1/0590/2948/7803/products/DSC01466copie_700x.jpg?v=1658131803',
-        "color": '#7ed6df', 
+        "text": "Turquoise",
+        "value": "#1abc9c",
     },
     {
-        "id": '4',
-        "title": 'Baby Ocean',
-        "featured_image": 'https://cdn.shopify.com/s/files/1/0590/2948/7803/products/HNB-FICHEPRODUIT_4_700x.png?v=1655370224',
-        "hover_image": 'https://cdn.shopify.com/s/files/1/0590/2948/7803/products/DSC01464_f5845475-87dd-462c-9e21-8164a28e0ca8_700x.jpg?v=1655406779',
-        "color": '#d2dae2', 
+        "text": "Sun FLower",
+        "value": "#f1c40f",
     },
     {
-        "id": '5',
-        "title": 'Chocolate Chip',
-        "featured_image": 'https://cdn.shopify.com/s/files/1/0590/2948/7803/products/92_700x.png?v=1675869876',
-        "hover_image": 'https://cdn.shopify.com/s/files/1/0590/2948/7803/products/80_700x.png?v=1676202981',
-        "color": '#fab1a0', 
+        "text": "Turquoise",
+        "value": "#1abc9c",
     },
     {
-        "id": '6',
-        "title": 'Cloud Nine',
-        "featured_image": 'https://cdn.shopify.com/s/files/1/0590/2948/7803/products/HNBphotocontent_5_700x.png?v=1675869953',
-        "hover_image": 'https://cdn.shopify.com/s/files/1/0590/2948/7803/products/HNBphotocontent_6_700x.png?v=1676202986',
-        "color": '#81ecec', 
+        "text": "Pumpkin",
+        "value": "#d35400",
     },
     {
-        "id": '7',
-        "title": 'Coffee Date',
-        "featured_image": 'https://cdn.shopify.com/s/files/1/0590/2948/7803/products/79_700x.png?v=1675786401',
-        "hover_image": 'https://cdn.shopify.com/s/files/1/0590/2948/7803/products/HNBphotocontent_700x.png?v=1675786543',
-        "color": '#e17055', 
+        "text": "Alizarin",
+        "value": "#e74c3c",
     },
     {
-        "id": '8',
-        "title": 'Green Peace',
-        "featured_image": 'https://cdn.shopify.com/s/files/1/0590/2948/7803/products/IMG_5512_700x.jpg?v=1655370253',
-        "hover_image": 'https://cdn.shopify.com/s/files/1/0590/2948/7803/products/DSC01456_700x.jpg?v=1655406820',
-        "color": '#55efc4', 
+        "text": "Wisteria",
+        "value": "#8e44ad",
+    },
+    {
+        "text": "Midnight",
+        "value": "#2c3e50",
+    },
+    {
+        "text": "Turquoise",
+        "value": "#1abc9c",
+    },
+];
+
+export const textColors = [
+    {
+        "text": "Dark",
+        "value": "#000",
+    },
+    {
+        "text": "Lucky Point",
+        "value": "#2c2c54",
+    },
+    {
+        "text": "Alamedia Ochre",
+        "value": "#cc8e35",
+    },
+    {
+        "text": "Palm Spring",
+        "value": "#218c74",
+    },
+    {
+        "text": "Devil BLue",
+        "value": "#227093",
+    },
+];
+
+
+export const dessins = [
+    {
+        "path": "https://www.c-monetiquette.fr/assets/pictos/poly/ETQChatF.svg",
+        "name": "Chat"
+    },
+    {
+        "path": "https://www.c-monetiquette.fr/assets/pictos/poly/ETQChienBeagleF.svg",
+        "name": "Chien"
+    },
+    {
+        "path": "https://www.c-monetiquette.fr/assets/pictos/poly/ETQAbeilleF.svg",
+        "name": "Abeille"
+    },
+    {
+        "path": "https://www.c-monetiquette.fr/assets/pictos/poly/ETQBallonFootF.svg",
+        "name": "Ballon Foot"
+    },
+    {
+        "path": "https://www.c-monetiquette.fr/assets/pictos/poly/ETQBallonBasketC.svg",
+        "name": "Ballon Basket"
+    },
+];
+
+export const variants = [
+    {
+        "id": "1",
+        "title": "20",
+        "min_price": "10€",
+        "max_price": "",
+    },
+    {
+        "id": "2",
+        "title": "30",
+        "min_price": "20€",
+        "max_price": "",
+    },
+    {
+        "id": "3",
+        "title": "40",
+        "min_price": "35€",
+        "max_price": "50€",
+    },
+    {
+        "id": "4",
+        "title": "50",
+        "min_price": "40€",
+        "max_price": "0€",
     },
 ];
