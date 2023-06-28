@@ -48,14 +48,7 @@ document.querySelectorAll('#customprdtform  .customprdtform_formitem_item_input'
         }else{
             e.target.classList.remove('error');
         }
-        if(e.target.value.length <= 10){
-            prevText[0].style.fontSize = `18px`;
-            
-        }else if(e.target.value.length <= 14){
-            prevText[0].style.fontSize = `14px`;
-        }else{
-            prevText[0].style.fontSize = `10px`;
-        }
+
         if(index == 0){
             productCustom.text = e.target.value;
             document.querySelector('#customprdtform #customprdtform__submit-form input[name="properties[Texte]"]').value = productCustom.text;
